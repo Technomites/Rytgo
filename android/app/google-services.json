@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "594805765315",
+    "project_id": "nbs-customer",
+    "storage_bucket": "nbs-customer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594805765315:android:11ed30dc32e7308daa9e76",
+        "android_client_info": {
+          "package_name": "com.nowbuysell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594805765315-pre7hq0cuiq8nd19ljv6fv34blfb91b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABZdOpeXCSV4LBovtTaaj1FhQRxFUugM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594805765315-pre7hq0cuiq8nd19ljv6fv34blfb91b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

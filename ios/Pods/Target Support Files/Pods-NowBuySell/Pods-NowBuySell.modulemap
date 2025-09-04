@@ -1,0 +1,6 @@
+module Pods_NowBuySell {
+  umbrella header "Pods-NowBuySell-umbrella.h"
+
+  export *
+  module * { export * }
+}

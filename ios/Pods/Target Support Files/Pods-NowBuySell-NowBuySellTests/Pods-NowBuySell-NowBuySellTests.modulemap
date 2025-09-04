@@ -1,0 +1,6 @@
+module Pods_NowBuySell_NowBuySellTests {
+  umbrella header "Pods-NowBuySell-NowBuySellTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>594805765315-3qb73cofj0mkpjlv1m5fu8us8hdklqd4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.594805765315-3qb73cofj0mkpjlv1m5fu8us8hdklqd4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCP5nOouNegXwZhxSa-y_UdnW_dy22ZKMc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>594805765315</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nowbuysell</string>
+	<key>PROJECT_ID</key>
+	<string>nbs-customer</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nbs-customer.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:594805765315:ios:f37ab91405f2bf80aa9e76</string>
+</dict>
+</plist>
