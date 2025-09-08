@@ -28,8 +28,6 @@ import ContactSellerHeader from '../../shared/components/ContactSellerHeader';
 import ContactSellerBody from '../../shared/components/ContactSellerBody';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {UsereProfileData, _setLanguage} from '../../shared/Constant/Constant';
-import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView';
-import SeeMore from 'react-native-see-more-inline';
 import HTMLView from 'react-native-htmlview';
 import {useSelector, useDispatch} from 'react-redux';
 import SuccessFailModel from '../../shared/components/SuccessFailModel';
@@ -54,6 +52,7 @@ import * as openGuestPopup from '../../redux/action/Guestpopupaction';
 import AccessDeniedModel from '../../shared/components/AccessDeniedModel';
 import CallnowPopup from '../../shared/components/CallnowPopup';
 import LocalizedStrings from 'react-native-localization';
+import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
 
 // create a component
 const PropertyDeatils = props => {

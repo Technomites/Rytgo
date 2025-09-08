@@ -7,12 +7,11 @@ import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
 //import {Store} from '../NowBuySell/src/redux/Store/ConfigureStore';
-import {Store} from '../NowBuySell/src/redux/Store/ConfigureStore';
-
 import messaging from '@react-native-firebase/messaging';
 import PushNotification from 'react-native-push-notification'; //firebase
-
+import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 import {Provider} from 'react-redux';
+import { Store } from './src/redux/Store/ConfigureStore';
 
 //const store = ConfigureStore();
 
@@ -38,4 +37,4 @@ PushNotification.createChannel(
 messaging().setBackgroundMessageHandler(async remoteMessage => {
   console.log('Message handled in the background!', remoteMessage);
 });
-AppRegistry.registerComponent(appName, () => RNRedux);
+AppRegistry.registerComponent(appName, () => gestureHandlerRootHOC(RNRedux));
