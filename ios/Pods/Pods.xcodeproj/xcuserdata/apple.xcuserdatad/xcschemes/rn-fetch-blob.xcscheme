@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "64F427905796B33B78A704063422979D"
-               BuildableName = "librn-fetch-blob.a"
+               BuildableName = "rn_fetch_blob.framework"
                BlueprintName = "rn-fetch-blob"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4D860D74A1B212654C3BE7C7EA22465"
-               BuildableName = "libPods-NowBuySell.a"
+               BuildableName = "Pods_NowBuySell.framework"
                BlueprintName = "Pods-NowBuySell"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

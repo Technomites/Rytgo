@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "039CABE69F209F96FC48554D726456EE"
-               BuildableName = "libRNCPushNotificationIOS.a"
+               BuildableName = "RNCPushNotificationIOS.framework"
                BlueprintName = "RNCPushNotificationIOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

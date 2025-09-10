@@ -1,1 +1,1 @@
-../../../../../node_modules/react-native-reanimated/ios/LayoutReanimation/REAAnimationsManager.h
+../../../../../node_modules/react-native-reanimated/apple/LayoutReanimation/REAAnimationsManager.h

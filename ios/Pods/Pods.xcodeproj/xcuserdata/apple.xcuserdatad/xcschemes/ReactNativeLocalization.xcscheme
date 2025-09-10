@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E0ACD398BF9A6F5A3F945FC112ED99B4"
-               BuildableName = "libReactNativeLocalization.a"
+               BuildableName = "ReactNativeLocalization.framework"
                BlueprintName = "ReactNativeLocalization"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

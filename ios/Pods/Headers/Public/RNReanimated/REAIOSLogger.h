@@ -1,1 +1,1 @@
-../../../../../node_modules/react-native-reanimated/ios/native/REAIOSLogger.h
+../../../../../node_modules/react-native-reanimated/apple/native/REAIOSLogger.h

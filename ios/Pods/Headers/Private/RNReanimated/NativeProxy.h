@@ -1,1 +1,1 @@
-../../../../../node_modules/react-native-reanimated/ios/native/NativeProxy.h
+../../../../../node_modules/react-native-reanimated/apple/native/NativeProxy.h

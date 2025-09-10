@@ -1,1 +1,1 @@
-../../../../../node_modules/react-native-reanimated/ios/native/NativeMethods.h
+../../../../../node_modules/react-native-reanimated/apple/native/NativeMethods.h

@@ -1,4 +1,4 @@
-module Pods_NowBuySell {
+framework module Pods_NowBuySell {
   umbrella header "Pods-NowBuySell-umbrella.h"
 
   export *

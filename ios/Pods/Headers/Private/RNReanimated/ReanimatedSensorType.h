@@ -1,1 +1,1 @@
-../../../../../node_modules/react-native-reanimated/ios/sensor/ReanimatedSensorType.h
+../../../../../node_modules/react-native-reanimated/apple/sensor/ReanimatedSensorType.h

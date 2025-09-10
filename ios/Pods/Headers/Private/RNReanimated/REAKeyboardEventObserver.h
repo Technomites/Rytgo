@@ -1,1 +1,1 @@
-../../../../../node_modules/react-native-reanimated/ios/keyboardObserver/REAKeyboardEventObserver.h
+../../../../../node_modules/react-native-reanimated/apple/keyboardObserver/REAKeyboardEventObserver.h

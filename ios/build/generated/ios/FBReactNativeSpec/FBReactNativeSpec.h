@@ -22,7 +22,7 @@
 #import <React/RCTCxxConvert.h>
 #import <React/RCTManagedPointer.h>
 #import <ReactCommon/RCTTurboModule.h>
-#import <folly/Optional.h>
+#import <optional>
 #import <vector>
 
 
@@ -51,18 +51,18 @@ namespace facebook {
 namespace JS {
   namespace NativeAccessibilityManager {
     struct SpecSetAccessibilityContentSizeMultipliersJSMultipliers {
-      folly::Optional<double> extraSmall() const;
-      folly::Optional<double> small() const;
-      folly::Optional<double> medium() const;
-      folly::Optional<double> large() const;
-      folly::Optional<double> extraLarge() const;
-      folly::Optional<double> extraExtraLarge() const;
-      folly::Optional<double> extraExtraExtraLarge() const;
-      folly::Optional<double> accessibilityMedium() const;
-      folly::Optional<double> accessibilityLarge() const;
-      folly::Optional<double> accessibilityExtraLarge() const;
-      folly::Optional<double> accessibilityExtraExtraLarge() const;
-      folly::Optional<double> accessibilityExtraExtraExtraLarge() const;
+      std::optional<double> extraSmall() const;
+      std::optional<double> small() const;
+      std::optional<double> medium() const;
+      std::optional<double> large() const;
+      std::optional<double> extraLarge() const;
+      std::optional<double> extraExtraLarge() const;
+      std::optional<double> extraExtraExtraLarge() const;
+      std::optional<double> accessibilityMedium() const;
+      std::optional<double> accessibilityLarge() const;
+      std::optional<double> accessibilityExtraLarge() const;
+      std::optional<double> accessibilityExtraExtraLarge() const;
+      std::optional<double> accessibilityExtraExtraExtraLarge() const;
 
       SpecSetAccessibilityContentSizeMultipliersJSMultipliers(NSDictionary *const v) : _v(v) {}
     private:
@@ -77,7 +77,7 @@ namespace JS {
 namespace JS {
   namespace NativeAccessibilityManager {
     struct SpecAnnounceForAccessibilityWithOptionsOptions {
-      folly::Optional<bool> queue() const;
+      std::optional<bool> queue() const;
 
       SpecAnnounceForAccessibilityWithOptionsOptions(NSDictionary *const v) : _v(v) {}
     private:
@@ -99,6 +99,8 @@ namespace JS {
                             onError:(RCTResponseSenderBlock)onError;
 - (void)getCurrentReduceMotionState:(RCTResponseSenderBlock)onSuccess
                             onError:(RCTResponseSenderBlock)onError;
+- (void)getCurrentPrefersCrossFadeTransitionsState:(RCTResponseSenderBlock)onSuccess
+                                           onError:(RCTResponseSenderBlock)onError;
 - (void)getCurrentReduceTransparencyState:(RCTResponseSenderBlock)onSuccess
                                   onError:(RCTResponseSenderBlock)onError;
 - (void)getCurrentVoiceOverState:(RCTResponseSenderBlock)onSuccess
@@ -126,14 +128,14 @@ namespace JS {
     struct SpecShowActionSheetWithOptionsOptions {
       NSString *title() const;
       NSString *message() const;
-      folly::Optional<facebook::react::LazyVector<NSString *>> options() const;
-      folly::Optional<facebook::react::LazyVector<double>> destructiveButtonIndices() const;
-      folly::Optional<double> cancelButtonIndex() const;
-      folly::Optional<double> anchor() const;
-      folly::Optional<double> tintColor() const;
-      folly::Optional<double> cancelButtonTintColor() const;
+      std::optional<facebook::react::LazyVector<NSString *>> options() const;
+      std::optional<facebook::react::LazyVector<double>> destructiveButtonIndices() const;
+      std::optional<double> cancelButtonIndex() const;
+      std::optional<double> anchor() const;
+      std::optional<double> tintColor() const;
+      std::optional<double> cancelButtonTintColor() const;
       NSString *userInterfaceStyle() const;
-      folly::Optional<facebook::react::LazyVector<double>> disabledButtonIndices() const;
+      std::optional<facebook::react::LazyVector<double>> disabledButtonIndices() const;
 
       SpecShowActionSheetWithOptionsOptions(NSDictionary *const v) : _v(v) {}
     private:
@@ -151,10 +153,10 @@ namespace JS {
       NSString *message() const;
       NSString *url() const;
       NSString *subject() const;
-      folly::Optional<double> anchor() const;
-      folly::Optional<double> tintColor() const;
-      folly::Optional<double> cancelButtonTintColor() const;
-      folly::Optional<facebook::react::LazyVector<NSString *>> excludedActivityTypes() const;
+      std::optional<double> anchor() const;
+      std::optional<double> tintColor() const;
+      std::optional<double> cancelButtonTintColor() const;
+      std::optional<facebook::react::LazyVector<NSString *>> excludedActivityTypes() const;
       NSString *userInterfaceStyle() const;
 
       SpecShowShareActionSheetWithOptionsOptions(NSDictionary *const v) : _v(v) {}
@@ -174,6 +176,7 @@ namespace JS {
 - (void)showShareActionSheetWithOptions:(JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions &)options
                         failureCallback:(RCTResponseSenderBlock)failureCallback
                         successCallback:(RCTResponseSenderBlock)successCallback;
+- (void)dismissActionSheet;
 
 @end
 namespace facebook {
@@ -192,12 +195,14 @@ namespace JS {
     struct Args {
       NSString *title() const;
       NSString *message() const;
-      folly::Optional<facebook::react::LazyVector<id<NSObject> >> buttons() const;
+      std::optional<facebook::react::LazyVector<id<NSObject> >> buttons() const;
       NSString *type() const;
       NSString *defaultValue() const;
       NSString *cancelButtonKey() const;
       NSString *destructiveButtonKey() const;
+      NSString *preferredButtonKey() const;
       NSString *keyboardType() const;
+      NSString *userInterfaceStyle() const;
 
       Args(NSDictionary *const v) : _v(v) {}
     private:
@@ -230,7 +235,7 @@ namespace JS {
   namespace NativeAnimatedModule {
     struct EventMapping {
       facebook::react::LazyVector<NSString *> nativeEventPath() const;
-      folly::Optional<double> animatedValueTag() const;
+      std::optional<double> animatedValueTag() const;
 
       EventMapping(NSDictionary *const v) : _v(v) {}
     private:
@@ -248,6 +253,8 @@ namespace JS {
 - (void)finishOperationBatch;
 - (void)createAnimatedNode:(double)tag
                     config:(NSDictionary *)config;
+- (void)updateAnimatedNodeConfig:(double)tag
+                          config:(NSDictionary *)config;
 - (void)getValue:(double)tag
 saveValueCallback:(RCTResponseSenderBlock)saveValueCallback;
 - (void)startListeningToAnimatedNodeValue:(double)tag;
@@ -281,6 +288,7 @@ saveValueCallback:(RCTResponseSenderBlock)saveValueCallback;
                     animatedNodeTag:(double)animatedNodeTag;
 - (void)addListener:(NSString *)eventName;
 - (void)removeListeners:(double)count;
+- (void)queueAndExecuteBatchedOperations:(NSArray *)operationsAndArgs;
 
 @end
 namespace facebook {
@@ -298,7 +306,7 @@ namespace JS {
   namespace NativeAnimatedTurboModule {
     struct EventMapping {
       facebook::react::LazyVector<NSString *> nativeEventPath() const;
-      folly::Optional<double> animatedValueTag() const;
+      std::optional<double> animatedValueTag() const;
 
       EventMapping(NSDictionary *const v) : _v(v) {}
     private:
@@ -316,6 +324,8 @@ namespace JS {
 - (void)finishOperationBatch;
 - (void)createAnimatedNode:(double)tag
                     config:(NSDictionary *)config;
+- (void)updateAnimatedNodeConfig:(double)tag
+                          config:(NSDictionary *)config;
 - (void)getValue:(double)tag
 saveValueCallback:(RCTResponseSenderBlock)saveValueCallback;
 - (void)startListeningToAnimatedNodeValue:(double)tag;
@@ -349,6 +359,7 @@ saveValueCallback:(RCTResponseSenderBlock)saveValueCallback;
                     animatedNodeTag:(double)animatedNodeTag;
 - (void)addListener:(NSString *)eventName;
 - (void)removeListeners:(double)count;
+- (void)queueAndExecuteBatchedOperations:(NSArray *)operationsAndArgs;
 
 @end
 namespace facebook {
@@ -432,6 +443,7 @@ namespace facebook {
 @protocol NativeAppearanceSpec <RCTBridgeModule, RCTTurboModule>
 
 - (NSString * _Nullable)getColorScheme;
+- (void)setColorScheme:(NSString *)colorScheme;
 - (void)addListener:(NSString *)eventName;
 - (void)removeListeners:(double)count;
 
@@ -444,58 +456,6 @@ namespace facebook {
     class JSI_EXPORT NativeAppearanceSpecJSI : public ObjCTurboModule {
     public:
       NativeAppearanceSpecJSI(const ObjCTurboModule::InitParams &params);
-    };
-  } // namespace react
-} // namespace facebook
-
-@protocol NativeAsyncLocalStorageSpec <RCTBridgeModule, RCTTurboModule>
-
-- (void)multiGet:(NSArray *)keys
-        callback:(RCTResponseSenderBlock)callback;
-- (void)multiSet:(NSArray *)kvPairs
-        callback:(RCTResponseSenderBlock)callback;
-- (void)multiMerge:(NSArray *)kvPairs
-          callback:(RCTResponseSenderBlock)callback;
-- (void)multiRemove:(NSArray *)keys
-           callback:(RCTResponseSenderBlock)callback;
-- (void)clear:(RCTResponseSenderBlock)callback;
-- (void)getAllKeys:(RCTResponseSenderBlock)callback;
-
-@end
-namespace facebook {
-  namespace react {
-    /**
-     * ObjC++ class for module 'NativeAsyncLocalStorage'
-     */
-    class JSI_EXPORT NativeAsyncLocalStorageSpecJSI : public ObjCTurboModule {
-    public:
-      NativeAsyncLocalStorageSpecJSI(const ObjCTurboModule::InitParams &params);
-    };
-  } // namespace react
-} // namespace facebook
-
-@protocol NativeAsyncSQLiteDBStorageSpec <RCTBridgeModule, RCTTurboModule>
-
-- (void)multiGet:(NSArray *)keys
-        callback:(RCTResponseSenderBlock)callback;
-- (void)multiSet:(NSArray *)kvPairs
-        callback:(RCTResponseSenderBlock)callback;
-- (void)multiMerge:(NSArray *)kvPairs
-          callback:(RCTResponseSenderBlock)callback;
-- (void)multiRemove:(NSArray *)keys
-           callback:(RCTResponseSenderBlock)callback;
-- (void)clear:(RCTResponseSenderBlock)callback;
-- (void)getAllKeys:(RCTResponseSenderBlock)callback;
-
-@end
-namespace facebook {
-  namespace react {
-    /**
-     * ObjC++ class for module 'NativeAsyncSQLiteDBStorage'
-     */
-    class JSI_EXPORT NativeAsyncSQLiteDBStorageSpecJSI : public ObjCTurboModule {
-    public:
-      NativeAsyncSQLiteDBStorageSpecJSI(const ObjCTurboModule::InitParams &params);
     };
   } // namespace react
 } // namespace facebook
@@ -660,21 +620,22 @@ namespace facebook {
   } // namespace react
 } // namespace facebook
 
-@protocol NativeDevSplitBundleLoaderSpec <RCTBridgeModule, RCTTurboModule>
+@protocol NativeDevToolsSettingsManagerSpec <RCTBridgeModule, RCTTurboModule>
 
-- (void)loadBundle:(NSString *)bundlePath
-           resolve:(RCTPromiseResolveBlock)resolve
-            reject:(RCTPromiseRejectBlock)reject;
+- (void)setConsolePatchSettings:(NSString *)newConsolePatchSettings;
+- (NSString * _Nullable)getConsolePatchSettings;
+- (void)setProfilingSettings:(NSString *)newProfilingSettings;
+- (NSString * _Nullable)getProfilingSettings;
 
 @end
 namespace facebook {
   namespace react {
     /**
-     * ObjC++ class for module 'NativeDevSplitBundleLoader'
+     * ObjC++ class for module 'NativeDevToolsSettingsManager'
      */
-    class JSI_EXPORT NativeDevSplitBundleLoaderSpecJSI : public ObjCTurboModule {
+    class JSI_EXPORT NativeDevToolsSettingsManagerSpecJSI : public ObjCTurboModule {
     public:
-      NativeDevSplitBundleLoaderSpecJSI(const ObjCTurboModule::InitParams &params);
+      NativeDevToolsSettingsManagerSpecJSI(const ObjCTurboModule::InitParams &params);
     };
   } // namespace react
 } // namespace facebook
@@ -762,10 +723,10 @@ namespace JS {
 
       struct Builder {
         struct Input {
-          folly::Optional<JS::NativeDeviceInfo::DisplayMetrics::Builder> window;
-          folly::Optional<JS::NativeDeviceInfo::DisplayMetrics::Builder> screen;
-          folly::Optional<JS::NativeDeviceInfo::DisplayMetricsAndroid::Builder> windowPhysicalPixels;
-          folly::Optional<JS::NativeDeviceInfo::DisplayMetricsAndroid::Builder> screenPhysicalPixels;
+          std::optional<JS::NativeDeviceInfo::DisplayMetrics::Builder> window;
+          std::optional<JS::NativeDeviceInfo::DisplayMetrics::Builder> screen;
+          std::optional<JS::NativeDeviceInfo::DisplayMetricsAndroid::Builder> windowPhysicalPixels;
+          std::optional<JS::NativeDeviceInfo::DisplayMetricsAndroid::Builder> screenPhysicalPixels;
         };
 
         /** Initialize with a set of values */
@@ -793,7 +754,7 @@ namespace JS {
       struct Builder {
         struct Input {
           RCTRequired<JS::NativeDeviceInfo::DimensionsPayload::Builder> Dimensions;
-          folly::Optional<bool> isIPhoneX_deprecated;
+          std::optional<bool> isIPhoneX_deprecated;
         };
 
         /** Initialize with a set of values */
@@ -834,11 +795,11 @@ namespace facebook {
 namespace JS {
   namespace NativeExceptionsManager {
     struct StackFrame {
-      folly::Optional<double> column() const;
+      std::optional<double> column() const;
       NSString *file() const;
-      folly::Optional<double> lineNumber() const;
+      std::optional<double> lineNumber() const;
       NSString *methodName() const;
-      folly::Optional<bool> collapse() const;
+      std::optional<bool> collapse() const;
 
       StackFrame(NSDictionary *const v) : _v(v) {}
     private:
@@ -924,8 +885,8 @@ namespace facebook {
 namespace JS {
   namespace NativeFrameRateLogger {
     struct SpecSetGlobalOptionsOptions {
-      folly::Optional<bool> debug() const;
-      folly::Optional<bool> reportStackTraces() const;
+      std::optional<bool> debug() const;
+      std::optional<bool> reportStackTraces() const;
 
       SpecSetGlobalOptionsOptions(NSDictionary *const v) : _v(v) {}
     private:
@@ -982,9 +943,9 @@ namespace JS {
 
       struct Builder {
         struct Input {
-          RCTRequired<bool> isRTL;
           RCTRequired<bool> doLeftAndRightSwapInRTL;
-          RCTRequired<NSString *> localeIdentifier;
+          RCTRequired<bool> isRTL;
+          NSString *localeIdentifier;
         };
 
         /** Initialize with a set of values */
@@ -1078,9 +1039,9 @@ namespace JS {
     struct Options {
       JS::NativeImageEditor::OptionsOffset offset() const;
       JS::NativeImageEditor::OptionsSize size() const;
-      folly::Optional<JS::NativeImageEditor::OptionsDisplaySize> displaySize() const;
+      std::optional<JS::NativeImageEditor::OptionsDisplaySize> displaySize() const;
       NSString *resizeMode() const;
-      folly::Optional<bool> allowExternalStorage() const;
+      std::optional<bool> allowExternalStorage() const;
 
       Options(NSDictionary *const v) : _v(v) {}
     private:
@@ -1145,63 +1106,6 @@ namespace facebook {
     };
   } // namespace react
 } // namespace facebook
-namespace JS {
-  namespace NativeImagePickerIOS {
-    struct SpecOpenCameraDialogConfig {
-      bool unmirrorFrontFacingCamera() const;
-      bool videoMode() const;
-
-      SpecOpenCameraDialogConfig(NSDictionary *const v) : _v(v) {}
-    private:
-      NSDictionary *_v;
-    };
-  }
-}
-
-@interface RCTCxxConvert (NativeImagePickerIOS_SpecOpenCameraDialogConfig)
-+ (RCTManagedPointer *)JS_NativeImagePickerIOS_SpecOpenCameraDialogConfig:(id)json;
-@end
-namespace JS {
-  namespace NativeImagePickerIOS {
-    struct SpecOpenSelectDialogConfig {
-      bool showImages() const;
-      bool showVideos() const;
-
-      SpecOpenSelectDialogConfig(NSDictionary *const v) : _v(v) {}
-    private:
-      NSDictionary *_v;
-    };
-  }
-}
-
-@interface RCTCxxConvert (NativeImagePickerIOS_SpecOpenSelectDialogConfig)
-+ (RCTManagedPointer *)JS_NativeImagePickerIOS_SpecOpenSelectDialogConfig:(id)json;
-@end
-@protocol NativeImagePickerIOSSpec <RCTBridgeModule, RCTTurboModule>
-
-- (void)canRecordVideos:(RCTResponseSenderBlock)callback;
-- (void)canUseCamera:(RCTResponseSenderBlock)callback;
-- (void)openCameraDialog:(JS::NativeImagePickerIOS::SpecOpenCameraDialogConfig &)config
-         successCallback:(RCTResponseSenderBlock)successCallback
-          cancelCallback:(RCTResponseSenderBlock)cancelCallback;
-- (void)openSelectDialog:(JS::NativeImagePickerIOS::SpecOpenSelectDialogConfig &)config
-         successCallback:(RCTResponseSenderBlock)successCallback
-          cancelCallback:(RCTResponseSenderBlock)cancelCallback;
-- (void)clearAllPendingVideos;
-- (void)removePendingVideo:(NSString *)url;
-
-@end
-namespace facebook {
-  namespace react {
-    /**
-     * ObjC++ class for module 'NativeImagePickerIOS'
-     */
-    class JSI_EXPORT NativeImagePickerIOSSpecJSI : public ObjCTurboModule {
-    public:
-      NativeImagePickerIOSSpecJSI(const ObjCTurboModule::InitParams &params);
-    };
-  } // namespace react
-} // namespace facebook
 
 @protocol NativeImageStoreIOSSpec <RCTBridgeModule, RCTTurboModule>
 
@@ -1261,54 +1165,6 @@ namespace facebook {
     class JSI_EXPORT NativeJSCSamplingProfilerSpecJSI : public ObjCTurboModule {
     public:
       NativeJSCSamplingProfilerSpecJSI(const ObjCTurboModule::InitParams &params);
-    };
-  } // namespace react
-} // namespace facebook
-namespace JS {
-  namespace NativeJSDevSupport {
-    struct Constants {
-
-      struct Builder {
-        struct Input {
-          RCTRequired<double> ERROR_CODE_EXCEPTION;
-          RCTRequired<double> ERROR_CODE_VIEW_NOT_FOUND;
-        };
-
-        /** Initialize with a set of values */
-        Builder(const Input i);
-        /** Initialize with an existing Constants */
-        Builder(Constants i);
-        /** Builds the object. Generally used only by the infrastructure. */
-        NSDictionary *buildUnsafeRawValue() const { return _factory(); };
-      private:
-        NSDictionary *(^_factory)(void);
-      };
-
-      static Constants fromUnsafeRawValue(NSDictionary *const v) { return {v}; }
-      NSDictionary *unsafeRawValue() const { return _v; }
-    private:
-      Constants(NSDictionary *const v) : _v(v) {}
-      NSDictionary *_v;
-    };
-  }
-}
-@protocol NativeJSDevSupportSpec <RCTBridgeModule, RCTTurboModule>
-
-- (void)onSuccess:(NSString *)data;
-- (void)onFailure:(double)errorCode
-            error:(NSString *)error;
-- (facebook::react::ModuleConstants<JS::NativeJSDevSupport::Constants::Builder>)constantsToExport;
-- (facebook::react::ModuleConstants<JS::NativeJSDevSupport::Constants::Builder>)getConstants;
-
-@end
-namespace facebook {
-  namespace react {
-    /**
-     * ObjC++ class for module 'NativeJSDevSupport'
-     */
-    class JSI_EXPORT NativeJSDevSupportSpecJSI : public ObjCTurboModule {
-    public:
-      NativeJSDevSupportSpecJSI(const ObjCTurboModule::InitParams &params);
     };
   } // namespace react
 } // namespace facebook
@@ -1446,7 +1302,7 @@ namespace JS {
           RCTRequired<double> major;
           RCTRequired<double> minor;
           RCTRequired<double> patch;
-          RCTRequired<folly::Optional<double>> prerelease;
+          RCTRequired<std::optional<double>> prerelease;
         };
 
         /** Initialize with a set of values */
@@ -1474,6 +1330,7 @@ namespace JS {
       struct Builder {
         struct Input {
           RCTRequired<bool> isTesting;
+          std::optional<bool> isDisableAnimations;
           RCTRequired<JS::NativePlatformConstantsIOS::ConstantsReactNativeVersion::Builder> reactNativeVersion;
           RCTRequired<bool> forceTouchAvailable;
           RCTRequired<NSString *> osVersion;
@@ -1537,14 +1394,15 @@ namespace JS {
   namespace NativePushNotificationManagerIOS {
     struct Notification {
       NSString *alertTitle() const;
-      folly::Optional<double> fireDate() const;
+      std::optional<double> fireDate() const;
       NSString *alertBody() const;
       NSString *alertAction() const;
       id<NSObject> _Nullable userInfo() const;
       NSString *category() const;
       NSString *repeatInterval() const;
-      folly::Optional<double> applicationIconBadgeNumber() const;
-      folly::Optional<bool> isSilent() const;
+      std::optional<double> applicationIconBadgeNumber() const;
+      std::optional<bool> isSilent() const;
+      NSString *soundName() const;
 
       Notification(NSDictionary *const v) : _v(v) {}
     private:
@@ -1783,7 +1641,7 @@ namespace JS {
       struct Builder {
         struct Input {
           RCTRequired<double> HEIGHT;
-          folly::Optional<double> DEFAULT_BACKGROUND_COLOR;
+          std::optional<double> DEFAULT_BACKGROUND_COLOR;
         };
 
         /** Initialize with a set of values */
@@ -1916,67 +1774,67 @@ namespace facebook {
   } // namespace react
 } // namespace facebook
 
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraSmall() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraSmall() const
 {
   id const p = _v[@"extraSmall"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::small() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::small() const
 {
   id const p = _v[@"small"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::medium() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::medium() const
 {
   id const p = _v[@"medium"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::large() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::large() const
 {
   id const p = _v[@"large"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraLarge() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraLarge() const
 {
   id const p = _v[@"extraLarge"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraExtraLarge() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraExtraLarge() const
 {
   id const p = _v[@"extraExtraLarge"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraExtraExtraLarge() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::extraExtraExtraLarge() const
 {
   id const p = _v[@"extraExtraExtraLarge"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityMedium() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityMedium() const
 {
   id const p = _v[@"accessibilityMedium"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityLarge() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityLarge() const
 {
   id const p = _v[@"accessibilityLarge"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityExtraLarge() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityExtraLarge() const
 {
   id const p = _v[@"accessibilityExtraLarge"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityExtraExtraLarge() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityExtraExtraLarge() const
 {
   id const p = _v[@"accessibilityExtraExtraLarge"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityExtraExtraExtraLarge() const
+inline std::optional<double> JS::NativeAccessibilityManager::SpecSetAccessibilityContentSizeMultipliersJSMultipliers::accessibilityExtraExtraExtraLarge() const
 {
   id const p = _v[@"accessibilityExtraExtraExtraLarge"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<bool> JS::NativeAccessibilityManager::SpecAnnounceForAccessibilityWithOptionsOptions::queue() const
+inline std::optional<bool> JS::NativeAccessibilityManager::SpecAnnounceForAccessibilityWithOptionsOptions::queue() const
 {
   id const p = _v[@"queue"];
   return RCTBridgingToOptionalBool(p);
@@ -1991,32 +1849,32 @@ inline NSString *JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOpt
   id const p = _v[@"message"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<facebook::react::LazyVector<NSString *>> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::options() const
+inline std::optional<facebook::react::LazyVector<NSString *>> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::options() const
 {
   id const p = _v[@"options"];
   return RCTBridgingToOptionalVec(p, ^NSString *(id itemValue_0) { return RCTBridgingToString(itemValue_0); });
 }
-inline folly::Optional<facebook::react::LazyVector<double>> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::destructiveButtonIndices() const
+inline std::optional<facebook::react::LazyVector<double>> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::destructiveButtonIndices() const
 {
   id const p = _v[@"destructiveButtonIndices"];
   return RCTBridgingToOptionalVec(p, ^double(id itemValue_0) { return RCTBridgingToDouble(itemValue_0); });
 }
-inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::cancelButtonIndex() const
+inline std::optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::cancelButtonIndex() const
 {
   id const p = _v[@"cancelButtonIndex"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::anchor() const
+inline std::optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::anchor() const
 {
   id const p = _v[@"anchor"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::tintColor() const
+inline std::optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::tintColor() const
 {
   id const p = _v[@"tintColor"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::cancelButtonTintColor() const
+inline std::optional<double> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::cancelButtonTintColor() const
 {
   id const p = _v[@"cancelButtonTintColor"];
   return RCTBridgingToOptionalDouble(p);
@@ -2026,7 +1884,7 @@ inline NSString *JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOpt
   id const p = _v[@"userInterfaceStyle"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<facebook::react::LazyVector<double>> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::disabledButtonIndices() const
+inline std::optional<facebook::react::LazyVector<double>> JS::NativeActionSheetManager::SpecShowActionSheetWithOptionsOptions::disabledButtonIndices() const
 {
   id const p = _v[@"disabledButtonIndices"];
   return RCTBridgingToOptionalVec(p, ^double(id itemValue_0) { return RCTBridgingToDouble(itemValue_0); });
@@ -2046,22 +1904,22 @@ inline NSString *JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptio
   id const p = _v[@"subject"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::anchor() const
+inline std::optional<double> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::anchor() const
 {
   id const p = _v[@"anchor"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::tintColor() const
+inline std::optional<double> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::tintColor() const
 {
   id const p = _v[@"tintColor"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::cancelButtonTintColor() const
+inline std::optional<double> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::cancelButtonTintColor() const
 {
   id const p = _v[@"cancelButtonTintColor"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<facebook::react::LazyVector<NSString *>> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::excludedActivityTypes() const
+inline std::optional<facebook::react::LazyVector<NSString *>> JS::NativeActionSheetManager::SpecShowShareActionSheetWithOptionsOptions::excludedActivityTypes() const
 {
   id const p = _v[@"excludedActivityTypes"];
   return RCTBridgingToOptionalVec(p, ^NSString *(id itemValue_0) { return RCTBridgingToString(itemValue_0); });
@@ -2081,7 +1939,7 @@ inline NSString *JS::NativeAlertManager::Args::message() const
   id const p = _v[@"message"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<facebook::react::LazyVector<id<NSObject> >> JS::NativeAlertManager::Args::buttons() const
+inline std::optional<facebook::react::LazyVector<id<NSObject> >> JS::NativeAlertManager::Args::buttons() const
 {
   id const p = _v[@"buttons"];
   return RCTBridgingToOptionalVec(p, ^id<NSObject> (id itemValue_0) { return itemValue_0; });
@@ -2106,9 +1964,19 @@ inline NSString *JS::NativeAlertManager::Args::destructiveButtonKey() const
   id const p = _v[@"destructiveButtonKey"];
   return RCTBridgingToOptionalString(p);
 }
+inline NSString *JS::NativeAlertManager::Args::preferredButtonKey() const
+{
+  id const p = _v[@"preferredButtonKey"];
+  return RCTBridgingToOptionalString(p);
+}
 inline NSString *JS::NativeAlertManager::Args::keyboardType() const
 {
   id const p = _v[@"keyboardType"];
+  return RCTBridgingToOptionalString(p);
+}
+inline NSString *JS::NativeAlertManager::Args::userInterfaceStyle() const
+{
+  id const p = _v[@"userInterfaceStyle"];
   return RCTBridgingToOptionalString(p);
 }
 inline facebook::react::LazyVector<NSString *> JS::NativeAnimatedModule::EventMapping::nativeEventPath() const
@@ -2116,7 +1984,7 @@ inline facebook::react::LazyVector<NSString *> JS::NativeAnimatedModule::EventMa
   id const p = _v[@"nativeEventPath"];
   return RCTBridgingToVec(p, ^NSString *(id itemValue_0) { return RCTBridgingToString(itemValue_0); });
 }
-inline folly::Optional<double> JS::NativeAnimatedModule::EventMapping::animatedValueTag() const
+inline std::optional<double> JS::NativeAnimatedModule::EventMapping::animatedValueTag() const
 {
   id const p = _v[@"animatedValueTag"];
   return RCTBridgingToOptionalDouble(p);
@@ -2126,7 +1994,7 @@ inline facebook::react::LazyVector<NSString *> JS::NativeAnimatedTurboModule::Ev
   id const p = _v[@"nativeEventPath"];
   return RCTBridgingToVec(p, ^NSString *(id itemValue_0) { return RCTBridgingToString(itemValue_0); });
 }
-inline folly::Optional<double> JS::NativeAnimatedTurboModule::EventMapping::animatedValueTag() const
+inline std::optional<double> JS::NativeAnimatedTurboModule::EventMapping::animatedValueTag() const
 {
   id const p = _v[@"animatedValueTag"];
   return RCTBridgingToOptionalDouble(p);
@@ -2141,8 +2009,6 @@ inline JS::NativeAppState::Constants::Builder::Builder(const Input i) : _factory
 inline JS::NativeAppState::Constants::Builder::Builder(Constants i) : _factory(^{
   return i.unsafeRawValue();
 }) {}
-
-
 
 inline JS::NativeBlobModule::Constants::Builder::Builder(const Input i) : _factory(^{
   NSMutableDictionary *d = [NSMutableDictionary new];
@@ -2197,13 +2063,13 @@ inline JS::NativeDeviceInfo::DisplayMetricsAndroid::Builder::Builder(DisplayMetr
 inline JS::NativeDeviceInfo::DimensionsPayload::Builder::Builder(const Input i) : _factory(^{
   NSMutableDictionary *d = [NSMutableDictionary new];
   auto window = i.window;
-  d[@"window"] = window.hasValue() ? window.value().buildUnsafeRawValue() : nil;
+  d[@"window"] = window.has_value() ? window.value().buildUnsafeRawValue() : nil;
   auto screen = i.screen;
-  d[@"screen"] = screen.hasValue() ? screen.value().buildUnsafeRawValue() : nil;
+  d[@"screen"] = screen.has_value() ? screen.value().buildUnsafeRawValue() : nil;
   auto windowPhysicalPixels = i.windowPhysicalPixels;
-  d[@"windowPhysicalPixels"] = windowPhysicalPixels.hasValue() ? windowPhysicalPixels.value().buildUnsafeRawValue() : nil;
+  d[@"windowPhysicalPixels"] = windowPhysicalPixels.has_value() ? windowPhysicalPixels.value().buildUnsafeRawValue() : nil;
   auto screenPhysicalPixels = i.screenPhysicalPixels;
-  d[@"screenPhysicalPixels"] = screenPhysicalPixels.hasValue() ? screenPhysicalPixels.value().buildUnsafeRawValue() : nil;
+  d[@"screenPhysicalPixels"] = screenPhysicalPixels.has_value() ? screenPhysicalPixels.value().buildUnsafeRawValue() : nil;
   return d;
 }) {}
 inline JS::NativeDeviceInfo::DimensionsPayload::Builder::Builder(DimensionsPayload i) : _factory(^{
@@ -2214,13 +2080,13 @@ inline JS::NativeDeviceInfo::Constants::Builder::Builder(const Input i) : _facto
   auto Dimensions = i.Dimensions.get();
   d[@"Dimensions"] = Dimensions.buildUnsafeRawValue();
   auto isIPhoneX_deprecated = i.isIPhoneX_deprecated;
-  d[@"isIPhoneX_deprecated"] = isIPhoneX_deprecated.hasValue() ? @((BOOL)isIPhoneX_deprecated.value()) : nil;
+  d[@"isIPhoneX_deprecated"] = isIPhoneX_deprecated.has_value() ? @((BOOL)isIPhoneX_deprecated.value()) : nil;
   return d;
 }) {}
 inline JS::NativeDeviceInfo::Constants::Builder::Builder(Constants i) : _factory(^{
   return i.unsafeRawValue();
 }) {}
-inline folly::Optional<double> JS::NativeExceptionsManager::StackFrame::column() const
+inline std::optional<double> JS::NativeExceptionsManager::StackFrame::column() const
 {
   id const p = _v[@"column"];
   return RCTBridgingToOptionalDouble(p);
@@ -2230,7 +2096,7 @@ inline NSString *JS::NativeExceptionsManager::StackFrame::file() const
   id const p = _v[@"file"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<double> JS::NativeExceptionsManager::StackFrame::lineNumber() const
+inline std::optional<double> JS::NativeExceptionsManager::StackFrame::lineNumber() const
 {
   id const p = _v[@"lineNumber"];
   return RCTBridgingToOptionalDouble(p);
@@ -2240,7 +2106,7 @@ inline NSString *JS::NativeExceptionsManager::StackFrame::methodName() const
   id const p = _v[@"methodName"];
   return RCTBridgingToString(p);
 }
-inline folly::Optional<bool> JS::NativeExceptionsManager::StackFrame::collapse() const
+inline std::optional<bool> JS::NativeExceptionsManager::StackFrame::collapse() const
 {
   id const p = _v[@"collapse"];
   return RCTBridgingToOptionalBool(p);
@@ -2286,12 +2152,12 @@ inline id<NSObject> _Nullable JS::NativeExceptionsManager::ExceptionData::extraD
   return p;
 }
 
-inline folly::Optional<bool> JS::NativeFrameRateLogger::SpecSetGlobalOptionsOptions::debug() const
+inline std::optional<bool> JS::NativeFrameRateLogger::SpecSetGlobalOptionsOptions::debug() const
 {
   id const p = _v[@"debug"];
   return RCTBridgingToOptionalBool(p);
 }
-inline folly::Optional<bool> JS::NativeFrameRateLogger::SpecSetGlobalOptionsOptions::reportStackTraces() const
+inline std::optional<bool> JS::NativeFrameRateLogger::SpecSetGlobalOptionsOptions::reportStackTraces() const
 {
   id const p = _v[@"reportStackTraces"];
   return RCTBridgingToOptionalBool(p);
@@ -2299,11 +2165,11 @@ inline folly::Optional<bool> JS::NativeFrameRateLogger::SpecSetGlobalOptionsOpti
 
 inline JS::NativeI18nManager::Constants::Builder::Builder(const Input i) : _factory(^{
   NSMutableDictionary *d = [NSMutableDictionary new];
-  auto isRTL = i.isRTL.get();
-  d[@"isRTL"] = @(isRTL);
   auto doLeftAndRightSwapInRTL = i.doLeftAndRightSwapInRTL.get();
   d[@"doLeftAndRightSwapInRTL"] = @(doLeftAndRightSwapInRTL);
-  auto localeIdentifier = i.localeIdentifier.get();
+  auto isRTL = i.isRTL.get();
+  d[@"isRTL"] = @(isRTL);
+  auto localeIdentifier = i.localeIdentifier;
   d[@"localeIdentifier"] = localeIdentifier;
   return d;
 }) {}
@@ -2350,56 +2216,25 @@ inline JS::NativeImageEditor::OptionsSize JS::NativeImageEditor::Options::size()
   id const p = _v[@"size"];
   return JS::NativeImageEditor::OptionsSize(p);
 }
-inline folly::Optional<JS::NativeImageEditor::OptionsDisplaySize> JS::NativeImageEditor::Options::displaySize() const
+inline std::optional<JS::NativeImageEditor::OptionsDisplaySize> JS::NativeImageEditor::Options::displaySize() const
 {
   id const p = _v[@"displaySize"];
-  return (p == nil ? folly::none : folly::make_optional(JS::NativeImageEditor::OptionsDisplaySize(p)));
+  return (p == nil ? std::nullopt : std::make_optional(JS::NativeImageEditor::OptionsDisplaySize(p)));
 }
 inline NSString *JS::NativeImageEditor::Options::resizeMode() const
 {
   id const p = _v[@"resizeMode"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<bool> JS::NativeImageEditor::Options::allowExternalStorage() const
+inline std::optional<bool> JS::NativeImageEditor::Options::allowExternalStorage() const
 {
   id const p = _v[@"allowExternalStorage"];
   return RCTBridgingToOptionalBool(p);
 }
 
-inline bool JS::NativeImagePickerIOS::SpecOpenCameraDialogConfig::unmirrorFrontFacingCamera() const
-{
-  id const p = _v[@"unmirrorFrontFacingCamera"];
-  return RCTBridgingToBool(p);
-}
-inline bool JS::NativeImagePickerIOS::SpecOpenCameraDialogConfig::videoMode() const
-{
-  id const p = _v[@"videoMode"];
-  return RCTBridgingToBool(p);
-}
-inline bool JS::NativeImagePickerIOS::SpecOpenSelectDialogConfig::showImages() const
-{
-  id const p = _v[@"showImages"];
-  return RCTBridgingToBool(p);
-}
-inline bool JS::NativeImagePickerIOS::SpecOpenSelectDialogConfig::showVideos() const
-{
-  id const p = _v[@"showVideos"];
-  return RCTBridgingToBool(p);
-}
 
 
 
-inline JS::NativeJSDevSupport::Constants::Builder::Builder(const Input i) : _factory(^{
-  NSMutableDictionary *d = [NSMutableDictionary new];
-  auto ERROR_CODE_EXCEPTION = i.ERROR_CODE_EXCEPTION.get();
-  d[@"ERROR_CODE_EXCEPTION"] = @(ERROR_CODE_EXCEPTION);
-  auto ERROR_CODE_VIEW_NOT_FOUND = i.ERROR_CODE_VIEW_NOT_FOUND.get();
-  d[@"ERROR_CODE_VIEW_NOT_FOUND"] = @(ERROR_CODE_VIEW_NOT_FOUND);
-  return d;
-}) {}
-inline JS::NativeJSDevSupport::Constants::Builder::Builder(Constants i) : _factory(^{
-  return i.unsafeRawValue();
-}) {}
 
 
 
@@ -2453,7 +2288,7 @@ inline JS::NativePlatformConstantsIOS::ConstantsReactNativeVersion::Builder::Bui
   auto patch = i.patch.get();
   d[@"patch"] = @(patch);
   auto prerelease = i.prerelease.get();
-  d[@"prerelease"] = prerelease.hasValue() ? @((double)prerelease.value()) : nil;
+  d[@"prerelease"] = prerelease.has_value() ? @((double)prerelease.value()) : nil;
   return d;
 }) {}
 inline JS::NativePlatformConstantsIOS::ConstantsReactNativeVersion::Builder::Builder(ConstantsReactNativeVersion i) : _factory(^{
@@ -2463,6 +2298,8 @@ inline JS::NativePlatformConstantsIOS::Constants::Builder::Builder(const Input i
   NSMutableDictionary *d = [NSMutableDictionary new];
   auto isTesting = i.isTesting.get();
   d[@"isTesting"] = @(isTesting);
+  auto isDisableAnimations = i.isDisableAnimations;
+  d[@"isDisableAnimations"] = isDisableAnimations.has_value() ? @((BOOL)isDisableAnimations.value()) : nil;
   auto reactNativeVersion = i.reactNativeVersion.get();
   d[@"reactNativeVersion"] = reactNativeVersion.buildUnsafeRawValue();
   auto forceTouchAvailable = i.forceTouchAvailable.get();
@@ -2498,7 +2335,7 @@ inline NSString *JS::NativePushNotificationManagerIOS::Notification::alertTitle(
   id const p = _v[@"alertTitle"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<double> JS::NativePushNotificationManagerIOS::Notification::fireDate() const
+inline std::optional<double> JS::NativePushNotificationManagerIOS::Notification::fireDate() const
 {
   id const p = _v[@"fireDate"];
   return RCTBridgingToOptionalDouble(p);
@@ -2528,15 +2365,20 @@ inline NSString *JS::NativePushNotificationManagerIOS::Notification::repeatInter
   id const p = _v[@"repeatInterval"];
   return RCTBridgingToOptionalString(p);
 }
-inline folly::Optional<double> JS::NativePushNotificationManagerIOS::Notification::applicationIconBadgeNumber() const
+inline std::optional<double> JS::NativePushNotificationManagerIOS::Notification::applicationIconBadgeNumber() const
 {
   id const p = _v[@"applicationIconBadgeNumber"];
   return RCTBridgingToOptionalDouble(p);
 }
-inline folly::Optional<bool> JS::NativePushNotificationManagerIOS::Notification::isSilent() const
+inline std::optional<bool> JS::NativePushNotificationManagerIOS::Notification::isSilent() const
 {
   id const p = _v[@"isSilent"];
   return RCTBridgingToOptionalBool(p);
+}
+inline NSString *JS::NativePushNotificationManagerIOS::Notification::soundName() const
+{
+  id const p = _v[@"soundName"];
+  return RCTBridgingToOptionalString(p);
 }
 
 
@@ -2574,7 +2416,7 @@ inline JS::NativeStatusBarManagerIOS::Constants::Builder::Builder(const Input i)
   auto HEIGHT = i.HEIGHT.get();
   d[@"HEIGHT"] = @(HEIGHT);
   auto DEFAULT_BACKGROUND_COLOR = i.DEFAULT_BACKGROUND_COLOR;
-  d[@"DEFAULT_BACKGROUND_COLOR"] = DEFAULT_BACKGROUND_COLOR.hasValue() ? @((double)DEFAULT_BACKGROUND_COLOR.value()) : nil;
+  d[@"DEFAULT_BACKGROUND_COLOR"] = DEFAULT_BACKGROUND_COLOR.has_value() ? @((double)DEFAULT_BACKGROUND_COLOR.value()) : nil;
   return d;
 }) {}
 inline JS::NativeStatusBarManagerIOS::Constants::Builder::Builder(Constants i) : _factory(^{

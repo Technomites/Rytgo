@@ -1,1 +1,1 @@
-../../../../../node_modules/react-native-reanimated/ios/RNGestureHandlerStateManager.h
+../../../../../node_modules/react-native-reanimated/apple/RNGestureHandlerStateManager.h
