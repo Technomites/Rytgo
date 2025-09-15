@@ -39,6 +39,7 @@ import {
 
 import {_setUsereProfileData} from '../../shared/Constant/Constant';
 import {localizedString} from '../../shared/localization/localization';
+import { FontFamily } from '../../shared/themes/theme';
 
 const AccountInfo = props => {
   const [name, setname] = useState('');
@@ -544,7 +545,7 @@ const styleSheet = StyleSheet.create({
   },
   CreateButtonText: {
     color: '#FFFFFF',
-    fontFamily: 'Inter-Medium',
+    fontFamily: FontFamily.Medium,
   },
   Button: {
     height: 50,
@@ -589,7 +590,7 @@ const styleSheet = StyleSheet.create({
   },
   ClassNameText: {
     fontSize: 13,
-    fontFamily: 'Inter-Bold',
+    fontFamily:FontFamily.Bold,
     color: '#111111',
     opacity: 0.4,
   },

@@ -11,6 +11,7 @@ import {
 import FlatButton from '../components/FlatButton';
 import AIcon from 'react-native-vector-icons/Entypo';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { colors, FontFamily } from '../themes/theme';
 // create a component
 const Blogs = props => {
   const {RtlStyles, isRtl} = useRtlContext();
@@ -61,7 +62,7 @@ const Blogs = props => {
                 //height: 30,
                 paddingVertical: 4,
                 marginRight: 20,
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 borderRadius: 2,
               }}
               labelStyle={{fontSize: 11}}
@@ -82,7 +83,7 @@ const Blogs = props => {
             style={{
               color: 'black',
               fontSize: 12,
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.Bold,
               textAlign: isRtl ? 'right' : 'left',
             }}>
             {props.item?.title}
@@ -92,7 +93,7 @@ const Blogs = props => {
             style={{
               color: '#989898',
               fontSize: 11,
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               marginTop: 3,
               textAlign: isRtl ? 'right' : 'left',
             }}>
@@ -140,7 +141,7 @@ const Blogs = props => {
             <Text
               style={{
                 fontSize: 11,
-                color: '#0989B8',
+                color: colors.blue,
                 fontWeight: 'bold',
                 marginTop: 1,
                 marginLeft: 20,

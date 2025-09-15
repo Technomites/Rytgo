@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
+import { colors, FontFamily } from '../themes/theme';
 
 // create a component
 const SliderRange = props => {
@@ -33,7 +34,7 @@ const SliderRange = props => {
             color: '#191919',
             fontSize: 14,
             marginTop: 5,
-            fontFamily: 'Inter-SemiBold',
+            fontFamily: FontFamily.SemiBold,
             // backgroundColor: 'yellow',
           }}>
           {props.title}
@@ -49,8 +50,8 @@ const SliderRange = props => {
           <Text
             style={{
               fontSize: 10,
-              fontFamily: 'Inter-SemiBold',
-              color: '#0989B8',
+              fontFamily: FontFamily.SemiBold,
+              color: colors.blue,
               // marginBottom: 10,
             }}>
             {/* {'Range(' + props.range[0] + ',' + props.range[1] === 0
@@ -72,8 +73,8 @@ const SliderRange = props => {
           <Text
             style={{
               fontSize: 10,
-              fontFamily: 'Inter-SemiBold',
-              color: '#0989B8',
+              fontFamily: FontFamily.SemiBold,
+              color: colors.blue,
               marginLeft: 4,
             }}>
           </Text> */}
@@ -87,8 +88,8 @@ const SliderRange = props => {
             <Text
               style={{
                 fontSize: 10,
-                fontFamily: 'Inter-SemiBold',
-                color: '#0989B8',
+                fontFamily: FontFamily.SemiBold,
+                color: colors.blue,
                 // marginBottom: 10,
               }}>
               Range (100 -300)
@@ -122,7 +123,7 @@ const SliderRange = props => {
           // backgroundColor: 'red',
         }}
         markerStyle={{
-          backgroundColor: '#0989B8',
+          backgroundColor: colors.blue,
           height: 14,
           width: 14,
         }}
@@ -131,7 +132,7 @@ const SliderRange = props => {
           // backgroundColor: 'white',
         }}
         selectedStyle={{
-          backgroundColor: '#0989B8',
+          backgroundColor: colors.blue,
         }}
         values={[props.initialvalue[0], props.initialvalue[1]]}
       />
@@ -156,8 +157,8 @@ const SliderRange = props => {
           <Text
             style={{
               marginLeft: 4,
-              fontFamily: 'Inter-Medium',
-              color: '#0989B8',
+              fontFamily: FontFamily.Medium,
+              color: colors.blue,
               fontSize: 12,
             }}>
             {props.name}
@@ -165,8 +166,8 @@ const SliderRange = props => {
           <Text
             style={{
               marginLeft: 4,
-              fontFamily: 'Inter-Medium',
-              color: '#0989B8',
+              fontFamily: FontFamily.Medium,
+              color: colors.blue,
               fontSize: 12,
             }}>
             {props.range[0]}
@@ -184,8 +185,8 @@ const SliderRange = props => {
           <Text
             style={{
               marginLeft: 4,
-              fontFamily: 'Inter-Medium',
-              color: '#0989B8',
+              fontFamily: FontFamily.Medium,
+              color: colors.blue,
               fontSize: 12,
             }}>
             {props.name}
@@ -193,8 +194,8 @@ const SliderRange = props => {
           <Text
             style={{
               marginLeft: 4,
-              fontFamily: 'Inter-Medium',
-              color: '#0989B8',
+              fontFamily: FontFamily.Medium,
+              color: colors.blue,
               fontSize: 12,
             }}>
             {props.range[1] === 0 ? props.maxprice : props.range[1]}

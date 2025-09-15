@@ -4,6 +4,7 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native';
 
 import FilterPropertytag from '../../shared/components/FilterPropertytag';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { colors } from '../themes/theme';
 
 // create a component
 const FilterCard = props => {
@@ -47,7 +48,7 @@ const FilterCard = props => {
             style={{
               color: '#191919',
               fontSize: 17,
-              fontFamily: 'Inter-SemiBold',
+              fontFamily: FontFamily.SemiBold,
               marginTop: 16,
               textAlign: isRtl ? 'right' : 'left',
             }}>
@@ -67,9 +68,9 @@ const FilterCard = props => {
             <View style={{alignItems: 'center', justifyContent: 'center'}}>
               <Text
                 style={{
-                  color: '#0989B8',
+                  color: colors.blue,
                   fontSize: 14,
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.SemiBold,
                   padding: 1,
                 }}>
                 {/* Show More.. */}

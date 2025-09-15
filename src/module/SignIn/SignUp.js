@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   KeyboardAvoidingView,
 } from 'react-native';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import {ScrollView} from 'react-native-gesture-handler';
 import Text from '../../shared/components/DerivedText';
 import FlatButton from '../../shared/components/FlatButton';
@@ -281,7 +281,7 @@ const SignIn2 = ({navigation, route}) => {
                     textAlign: 'center',
                     fontSize: 11,
                     color: 'red',
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginBottom: 5,
                   }}>
                   {errorValidation}
@@ -290,7 +290,7 @@ const SignIn2 = ({navigation, route}) => {
                   label="Sign UP"
                   buttonStyle={{
                     width: '90%',
-                    backgroundColor: '#0989B8',
+                    backgroundColor: colors.blue,
                     paddingVertical: 14,
                     //marginVertical: 15,
                   }}
@@ -301,14 +301,14 @@ const SignIn2 = ({navigation, route}) => {
                     navigation.replace('SignIn2');
                   }}>
                   <Text
-                    style={{color: '#19191960', fontFamily: 'Inter-Medium'}}>
+                    style={{color: '#19191960', fontFamily: FontFamily.Medium}}>
                     {/* {localizedString.signUpAlreadyAccount} */}
                     Already have an account
                   </Text>
                   <Text
                     style={{
-                      color: '#0989B8',
-                      fontFamily: 'Inter-Medium',
+                      color: colors.blue,
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       textAlign: 'center',
                       textTransform: 'uppercase',

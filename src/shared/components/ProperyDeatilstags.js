@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const Properytags = props => {
@@ -13,7 +14,7 @@ const Properytags = props => {
         style={{
           color: '#191919',
           fontSize: 12,
-          fontFamily: 'Inter-SemiBold',
+          fontFamily: FontFamily.SemiBold,
           textAlign: isRtl ? 'right' : 'left',
           // textAlign: 'center',
         }}>
@@ -23,7 +24,7 @@ const Properytags = props => {
         style={{
           color: '#989898',
           fontSize: 10,
-          fontFamily: 'Inter-SemiBold',
+          fontFamily: FontFamily.SemiBold,
           textAlign: isRtl ? 'right' : 'left',
         }}>
         {props.value}

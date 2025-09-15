@@ -11,6 +11,7 @@ import {
 import Loader from '../../shared/components/Loader';
 import HorizontalLine from '../../shared/components/HorizontalLine';
 import {localizedString} from '../../shared/localization/localization';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
 const RequestDeatilsMotor = props => {
@@ -78,7 +79,7 @@ const RequestDeatilsMotor = props => {
             style={{
               marginLeft: 22,
               color: '#141414',
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
             }}>
             {localizedString.lookingMotor}
           </Text>
@@ -94,13 +95,13 @@ const RequestDeatilsMotor = props => {
               justifyContent: 'center',
               marginLeft: 10,
               padding: 5,
-              backgroundColor: '#0989B8',
+              backgroundColor: colors.blue,
             }}>
             <Text
               style={{
                 color: 'white',
                 fontSize: 11,
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
               }}>
               {localizedString.saleText}
             </Text>
@@ -116,7 +117,7 @@ const RequestDeatilsMotor = props => {
             style={{
               //marginLeft: 12,
               color: '#141414',
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
               textAlign: 'left',
             }}>
             {localizedString.descriptionText}
@@ -126,7 +127,7 @@ const RequestDeatilsMotor = props => {
             style={{
               //marginLeft: 12,
               color: '#989898',
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               fontSize: 12,
             }}>
             {deattils?.description}
@@ -154,7 +155,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -163,7 +164,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.make?.name}
@@ -173,7 +174,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -182,7 +183,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.model?.name}
@@ -203,7 +204,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -212,7 +213,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.color}
@@ -222,7 +223,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -231,7 +232,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.doors}
@@ -252,7 +253,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -261,7 +262,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
                 textAlign: 'left',
               }}>
@@ -272,7 +273,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
               }}>
               {localizedString.kmDriven}
@@ -280,7 +281,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
                 textAlign: 'left',
               }}>
@@ -306,7 +307,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -315,7 +316,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.cylinders}
@@ -325,7 +326,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -334,7 +335,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {'AED ' +
@@ -359,7 +360,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -368,7 +369,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.minYear + '-' + deattils?.maxYear}
@@ -378,7 +379,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -387,7 +388,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.regionalSpecification}
@@ -408,7 +409,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -417,7 +418,7 @@ const RequestDeatilsMotor = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.warranty ? 'Yes' : 'No'}

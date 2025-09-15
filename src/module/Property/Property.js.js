@@ -343,7 +343,7 @@ const Property = ({navigation, route}) => {
               style={{
                 width: 50,
                 height: 50,
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>

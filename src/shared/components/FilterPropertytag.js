@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 // import RadioButton from 'react-native-radio-button';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const FilterPropertytag = props => {
@@ -33,7 +34,7 @@ const FilterPropertytag = props => {
               color: '#989898',
               fontSize: 13,
               padding: 10,
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               //marginTop: 16,
             }}>
             {props.item.name}
@@ -44,7 +45,7 @@ const FilterPropertytag = props => {
             color: '#989898',
             fontSize: 13,
             padding: 10,
-            fontFamily: 'Inter-Medium',
+            fontFamily: FontFamily.Medium,
           }}>
           {props.name === 'Property'
             ? props.type === 'Sale'

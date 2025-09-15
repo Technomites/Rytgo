@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
 import {localizedString} from '../../shared/localization/localization';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
@@ -204,9 +204,9 @@ const MyAlert = props => {
                 <Text
                   style={{
                     fontWeight: '400',
-                    color: '#0989B8',
+                    color: colors.blue,
                     fontSize: 12,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 1,
                     textTransform: 'uppercase',
                   }}>

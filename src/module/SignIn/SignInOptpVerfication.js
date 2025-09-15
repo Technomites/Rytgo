@@ -12,7 +12,7 @@ import {
 import Text from '../../shared/components/DerivedText';
 import FlatButton from '../../shared/components/FlatButton';
 import Input from '../../shared/components/Input';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 import {verifyOtp, ResendOtp} from '../../shared/ApiMiddleware/api';
 import {localizedString} from '../../shared/localization/localization';
@@ -171,7 +171,7 @@ const SignInOptpVerfication = ({navigation, route}) => {
                   // onCodeChanged = {code => { this.setState({code})}}
                   autoFocusOnLoad={false}
                   codeInputFieldStyle={styles.codeinput}
-                  codeInputHighlightStyle={{borderColor: '#0989B8'}}
+                  codeInputHighlightStyle={{borderColor: colors.blue}}
                   //clearInputs={isEmptyString(code)}
                   onCodeChanged={code => {
                     settcode(code);
@@ -186,7 +186,7 @@ const SignInOptpVerfication = ({navigation, route}) => {
                 label={localizedString.proceedHolder}
                 buttonStyle={{
                   width: '90%',
-                  backgroundColor: '#0989B8',
+                  backgroundColor: colors.blue,
                   paddingVertical: 14,
                 }}
                 labelStyle={{fontSize: 14, textTransform: 'uppercase'}}
@@ -214,7 +214,7 @@ const SignInOptpVerfication = ({navigation, route}) => {
                 textAlign: 'center',
                 fontSize: 11,
                 color: 'red',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 marginBottom: 5,
               }}>
               {errorValidation}
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
   },
 
   underlineStyleHighLighted: {
-    borderColor: '#0989B8',
+    borderColor: colors.blue,
   },
   codeinput: {
     borderRadius: 13,

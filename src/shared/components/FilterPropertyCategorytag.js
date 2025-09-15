@@ -4,6 +4,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Iconcheck from 'react-native-vector-icons/Ionicons';
 import IconUncheck from 'react-native-vector-icons/Fontisto';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const FilterPropertyCategorytag = props => {
@@ -47,7 +48,7 @@ const FilterPropertyCategorytag = props => {
                 color: '#989898',
                 fontSize: 13,
                 padding: 10,
-                fontFamily: 'Inter-Medium',
+                fontFamily:FontFamily.Medium,
                 //marginTop: 16,
               }}>
               {props.item.name}
@@ -58,7 +59,7 @@ const FilterPropertyCategorytag = props => {
               color: '#989898',
               fontSize: 13,
               padding: 10,
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
             }}>
             {props.name === 'Property' ? props.item.count : props.item.count}
           </Text>

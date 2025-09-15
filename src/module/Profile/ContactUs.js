@@ -10,7 +10,7 @@ import {
   Linking,
   TouchableOpacity,
 } from 'react-native';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
 import FlatButton from '../../shared/components/FlatButton';
 import MyInput from '../../shared/components/MyInput';
@@ -146,7 +146,7 @@ const ContactUs = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 17,
               }}>
               {localizedString.getintouchText}
@@ -165,7 +165,7 @@ const ContactUs = props => {
               <Text
                 style={{
                   color: '#191919',
-                  fontFamily: 'Inter-SemiBold',
+                  fontFamily: FontFamily.SemiBold,
                   fontSize: 14,
                   marginLeft: 8,
                 }}>
@@ -186,7 +186,7 @@ const ContactUs = props => {
               <Text
                 style={{
                   color: '#191919',
-                  fontFamily: 'Inter-SemiBold',
+                  fontFamily: FontFamily.SemiBold,
                   fontSize: 14,
                   marginLeft: 8,
                 }}>
@@ -330,7 +330,7 @@ const ContactUs = props => {
               onPress={ContactUs}
               buttonStyle={{
                 width: '89%',
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
               }}></FlatButton>
           </View>
           <PopUpModel

@@ -31,6 +31,7 @@ import {
 import Loader from '../../shared/components/Loader';
 import {localizedString} from '../../shared/localization/localization';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { FontFamily } from '../../shared/themes/theme';
 // create a component
 const BannerProperty = ({navigation, route}) => {
   const {RtlStyles, isRtl} = useRtlContext();
@@ -243,7 +244,7 @@ const BannerProperty = ({navigation, route}) => {
                 style={{
                   textAlign: 'center',
                   color: '#191919',
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.SemiBold,
                   fontSize: 18,
                 }}>
                 Property
@@ -289,7 +290,7 @@ const BannerProperty = ({navigation, route}) => {
             style={{
               width: 50,
               height: 50,
-              backgroundColor: '#0989B8',
+              backgroundColor: colors.blue,
               alignItems: 'center',
               justifyContent: 'center',
             }}>
@@ -314,7 +315,7 @@ const BannerProperty = ({navigation, route}) => {
               //backgroundColor: 'red',
             }}>
             <Text
-              style={{color: 'black', fontSize: 15, fontFamily: 'Inter-Bold'}}>
+              style={{color: 'black', fontSize: 15, fontFamily: FontFamily.SemiBold}}>
               {localizedString.featuredpropertyText}
             </Text>
           </View>
@@ -379,7 +380,7 @@ const BannerProperty = ({navigation, route}) => {
               //backgroundColor: 'red',
             }}>
             <Text
-              style={{color: 'black', fontSize: 15, fontFamily: 'Inter-Bold'}}>
+              style={{color: 'black', fontSize: 15, fontFamily: FontFamily.SemiBold}}>
               {localizedString.exploreCititesText}
             </Text>
           </View>
@@ -446,7 +447,7 @@ const BannerProperty = ({navigation, route}) => {
               style={{
                 color: 'black',
                 fontSize: 15,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.Bold,
                 marginLeft: 22,
                 marginTop: 8,
                 //padding: 16,

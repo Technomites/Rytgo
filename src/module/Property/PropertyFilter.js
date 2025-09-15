@@ -34,6 +34,7 @@ import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 import IoIcon from '../../shared/components//Icon/IoIcon';
 import {RecyclerListView, DataProvider, LayoutProvider} from 'recyclerlistview';
 import Feature from '../../shared/components/Feature';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 var searchArray = [];
 var CategoryArray = [];
@@ -337,7 +338,7 @@ const PropertyFilter = ({navigation, route}) => {
                 //bottom: 0,
                 //right: 4,
                 marginLeft: 6,
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
@@ -350,9 +351,9 @@ const PropertyFilter = ({navigation, route}) => {
               /> */}
               <Text
                 style={{
-                  color: '#0989B8',
+                  color: colors.blue,
                   fontSize: 12,
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.Bold,
                   textAlign: 'center',
                   // paddingRight: 12,
                   marginTop: 3,
@@ -407,7 +408,7 @@ const PropertyFilter = ({navigation, route}) => {
               style={{
                 color: 'black',
                 fontSize: 15,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 marginTop: 14,
               }}>
               {typee === 'Rent'

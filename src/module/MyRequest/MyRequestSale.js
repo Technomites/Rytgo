@@ -16,6 +16,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import PopUpModel from '../../shared/components/PopUp';
 import AccessDeniedModel from '../../shared/components/AccessDeniedModel';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { colors, FontFamily } from '../../shared/themes/theme';
 // import { Container } from './styles';
 
 const MyRequestSale = props => {
@@ -100,12 +101,12 @@ const MyRequestSale = props => {
               alignItems: 'center',
               //backgroundColor: 'red',
             }}>
-            <Icon name="plus" size={24} color={'#0989B8'} />
+            <Icon name="plus" size={24} color={colors.blue} />
             <Text
               style={{
                 marginLeft: 12,
                 color: '#141414',
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.Bold,
               }}>
               {localizedString.createRequestText}
             </Text>
@@ -129,7 +130,7 @@ const MyRequestSale = props => {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-              <LeftArrow name="arrowright" size={20} color={'#0989B8'} />
+              <LeftArrow name="arrowright" size={20} color={colors.blue} />
             </View>
           </View>
         </View>

@@ -19,6 +19,7 @@ import MotorListingRequest from '../module/MyRequest/MotorListingRequest';
 import PropertRentListingRequest from '../module/MyRequest/PropertRentListingRequest';
 import PropertSaleListingRequest from '../module/MyRequest/PropertSaleListingRequest';
 import {localizedString} from '../shared/localization/localization';
+import { colors, FontFamily } from '../shared/themes/theme';
 const TopTab = createMaterialTopTabNavigator();
 export function RequestabNavigator(props) {
   return (
@@ -29,7 +30,7 @@ export function RequestabNavigator(props) {
           tabBarLabelStyle: {
             fontSize: 13,
             color: '#141414',
-            fontFamily: 'Inter-Bold',
+            fontFamily: FontFamily.Bold,
             textTransform: 'none',
             flexShrink: 1,
             textAlign: 'center',
@@ -37,7 +38,7 @@ export function RequestabNavigator(props) {
             marginTop: 14,
           },
           tabBarIndicatorStyle: {
-            backgroundColor: '#0989B8',
+            backgroundColor: colors.blue,
             height: 4,
           },
 
@@ -106,7 +107,7 @@ export function ListingabNavigator(props) {
           tabBarLabelStyle: {
             fontSize: 12,
             color: '#141414',
-            fontFamily: 'Inter-Bold',
+            fontFamily: FontFamily.SemiBold,
             textTransform: 'none',
             flexShrink: 1,
             textAlign: 'center',
@@ -114,7 +115,7 @@ export function ListingabNavigator(props) {
             marginTop: 14,
           },
           tabBarIndicatorStyle: {
-            backgroundColor: '#0989B8',
+            backgroundColor: colors.blue,
             height: 4,
           },
 

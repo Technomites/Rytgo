@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Slider from '@react-native-community/slider';
+import { colors, FontFamily } from '../themes/theme';
 
 // create a component
 const SliderBar = () => {
@@ -24,7 +25,7 @@ const SliderBar = () => {
             color: '#191919',
             fontSize: 17,
             marginTop: 16,
-            fontFamily: 'Inter-SemiBold',
+            fontFamily: FontFamily.SemiBold,
           }}>
           City
         </Text>
@@ -65,16 +66,16 @@ const SliderBar = () => {
             <Text
               style={{
                 marginLeft: 4,
-                fontFamily: 'Inter-Medium',
-                color: '#0989B8',
+                fontFamily: FontFamily.Medium,
+                color: colors.blue,
               }}>
               3
             </Text>
             <Text
               style={{
                 marginLeft: 4,
-                fontFamily: 'Inter-Medium',
-                color: '#0989B8',
+                fontFamily: FontFamily.Medium,
+                color: colors.blue,
               }}>
               Beds
             </Text>

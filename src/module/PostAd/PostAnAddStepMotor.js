@@ -9,7 +9,7 @@ import {
   FlatList,
   ScrollView,
 } from 'react-native';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
 import IoIcon from '../../shared/components/Icon/IoIcon';
 import MyInput from '../../shared/components/MyInput';
@@ -437,7 +437,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#191919',
                     fontSize: 14,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 3,
                     textAlign: isRtl ? 'right' : 'left',
                   }}>
@@ -459,7 +459,7 @@ const PostAnAddStep3 = props => {
                   }}
                   placeholderStyle={{
                     color: 'black',
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     fontSize: 13,
                     marginLeft: 11,
                     textAlign: isRtl ? 'right' : 'left',
@@ -498,7 +498,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#191919',
                     fontSize: 14,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     textAlign: isRtl ? 'right' : 'left',
                     //marginTop: 2,
                   }}>
@@ -520,7 +520,7 @@ const PostAnAddStep3 = props => {
                   placeholder={localizedString.carmodelText}
                   placeholderStyle={{
                     color: 'black',
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     fontSize: 13,
                     marginLeft: 11,
                     textAlign: isRtl ? 'right' : 'left',
@@ -567,7 +567,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#191919',
                     fontSize: 14,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     textAlign: isRtl ? 'right' : 'left',
                     //marginTop: 2,
                   }}>
@@ -591,7 +591,7 @@ const PostAnAddStep3 = props => {
                   placeholder={localizedString.regionalspecificationplaceholder}
                   placeholderStyle={{
                     color: 'black',
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     fontSize: 13,
                     marginLeft: 11,
                     textAlign: isRtl ? 'right' : 'left',
@@ -621,7 +621,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#191919',
                     fontSize: 14,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     textAlign: isRtl ? 'right' : 'left',
                     //marginTop: 2,
                   }}>
@@ -643,7 +643,7 @@ const PostAnAddStep3 = props => {
                   placeholder={localizedString.transmissionplaceholder}
                   placeholderStyle={{
                     color: 'black',
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     fontSize: 13,
                     marginLeft: 11,
                     textAlign: isRtl ? 'right' : 'left',
@@ -682,7 +682,7 @@ const PostAnAddStep3 = props => {
                     style={{
                       color: '#191919',
                       fontSize: 14,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       marginTop: 2,
                       textAlign: isRtl ? 'right' : 'left',
                     }}>
@@ -704,7 +704,7 @@ const PostAnAddStep3 = props => {
                     placeholder={localizedString.yearplaceholder}
                     placeholderStyle={{
                       color: 'black',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       marginLeft: 11,
                       textAlign: isRtl ? 'right' : 'left',
@@ -744,7 +744,7 @@ const PostAnAddStep3 = props => {
                     style={{
                       color: '#191919',
                       fontSize: 14,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       marginTop: 2,
                       textAlign: isRtl ? 'right' : 'left',
                     }}>
@@ -766,7 +766,7 @@ const PostAnAddStep3 = props => {
                     placeholder={localizedString.yearplaceholder}
                     placeholderStyle={{
                       color: 'black',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       textAlign: isRtl ? 'right' : 'left',
                       marginLeft: 11,
@@ -919,7 +919,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#989898',
                     fontSize: 12,
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     marginLeft: 5,
                   }}>
                   {localizedString.warrantydeatilsText}

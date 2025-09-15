@@ -10,6 +10,7 @@ import {
 import Text from '../../shared/components/DerivedText';
 import FlatButton from '../../shared/components/FlatButton';
 import Input from '../../shared/components/Input';
+import { colors } from '../../shared/themes/theme';
 
 // create a component
 const SignInOptp = ({navigation, route}) => {
@@ -55,7 +56,7 @@ const SignInOptp = ({navigation, route}) => {
                 label="SIGN IN"
                 buttonStyle={{
                   width: '80%',
-                  backgroundColor: '#0989B8',
+                  backgroundColor: colors.blue,
                   paddingVertical: 14,
                   //marginVertical: 15,
                 }}

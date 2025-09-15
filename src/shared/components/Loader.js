@@ -12,11 +12,12 @@ import {
   ActivityIndicator,
   Modal,
 } from 'react-native';
+import { colors } from '../themes/theme';
 
 export default function LoaderActivity(props) {
   const {
     show = false,
-    color = '#0989B8',
+    color = colors.blue,
     backgroundColor = 'white',
     dimLights = 0.4,
     loadingMessage = '',

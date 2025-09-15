@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import HorizontalLine from '../components/HorizontalLine';
 import AIcon from 'react-native-vector-icons//AntDesign';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const SettingCard = props => {
@@ -34,7 +35,7 @@ const SettingCard = props => {
           <Text
             style={{
               color: '#191919',
-              fontFamily: 'Inter-SemiBold',
+              fontFamily: FontFamily.SemiBold,
               fontSize: 15,
               //marginLeft: 30,
               marginHorizontal: 18,

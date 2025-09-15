@@ -10,6 +10,7 @@ import {
 import FlatButton from '../../shared/components/FlatButton';
 import AIcon from 'react-native-vector-icons/Entypo';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { colors, FontFamily } from '../themes/theme';
 
 const NewsCard = props => {
   const {RtlStyles, isRtl} = useRtlContext();
@@ -74,7 +75,7 @@ const NewsCard = props => {
                 //height: 30,
                 paddingVertical: 4,
                 marginRight: 20,
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 borderRadius: 3,
               }}
               labelStyle={{fontSize: 11}}></FlatButton>
@@ -94,7 +95,7 @@ const NewsCard = props => {
             style={{
               color: '#191919',
               fontSize: 14,
-              fontFamily: 'Inter-SemiBold',
+              fontFamily:FontFamily.SemiBold,
               textAlign: isRtl ? 'right' : 'left',
             }}>
             {props.item?.title}
@@ -104,7 +105,7 @@ const NewsCard = props => {
             style={{
               color: '#989898',
               fontSize: 11,
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               marginTop: 4,
               textAlign: isRtl ? 'right' : 'left',
             }}>
@@ -153,7 +154,7 @@ const NewsCard = props => {
             <Text
               style={{
                 fontSize: 12,
-                color: '#0989B8',
+                color: colors.blue,
                 fontWeight: 'bold',
                 marginHorizontal: 24,
                 marginBottom: 8,

@@ -4,6 +4,7 @@ import {View, StyleSheet, Image, ImageBackground} from 'react-native';
 import Text from '../../shared/components/DerivedText';
 import FlatButton from '../../shared/components/FlatButton';
 import {localizedString} from '../../shared/localization/localization';
+import { colors } from '../../shared/themes/theme';
 
 // create a component
 const SignIn = ({navigation, route}) => {
@@ -35,14 +36,14 @@ const SignIn = ({navigation, route}) => {
             {/* Welcome to,*/}
             <Image
               resizeMode="contain"
-              style={{width: 120}}
+              style={{height:'30%',width:'30%',}}
               source={require('../../shared/assests/signIn/NowBuySell.png')}
             />
             <FlatButton
               label="Welcome"
               buttonStyle={{
                 width: '80%',
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 textTransform: 'uppercase',
               }}
               labelStyle={{
@@ -84,7 +85,6 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
   },
   buttonText: {
     fontSize: 16,

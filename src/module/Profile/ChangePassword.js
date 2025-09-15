@@ -164,7 +164,7 @@ const ChangePassword = props => {
           label={localizedString.sendText}
           buttonStyle={{
             width: '87%',
-            backgroundColor: '#0989B8',
+            backgroundColor: colors.blue,
             borderRadius: 6,
             paddingVertical: 11,
           }}

@@ -29,6 +29,7 @@ import BackHeader from '../../shared/components/BackHeader';
 import {motorMasterData} from '../../shared/Constant/Constant';
 import {localizedString} from '../../shared/localization/localization';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { FontFamily } from '../../shared/themes/theme';
 // create a component
 const MotorProperty = ({navigation, route}) => {
   const {RtlStyles, isRtl} = useRtlContext();
@@ -241,7 +242,7 @@ const MotorProperty = ({navigation, route}) => {
                 style={{
                   textAlign: 'center',
                   color: '#191919',
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.SemiBold,
                   fontSize: 18,
                 }}>
                 Motors
@@ -287,7 +288,7 @@ const MotorProperty = ({navigation, route}) => {
             style={{
               width: 50,
               height: 50,
-              backgroundColor: '#0989B8',
+              backgroundColor: colors.blue,
               alignItems: 'center',
               justifyContent: 'center',
             }}>
@@ -312,7 +313,7 @@ const MotorProperty = ({navigation, route}) => {
               //backgroundColor: 'red',
             }}>
             <Text
-              style={{color: 'black', fontSize: 15, fontFamily: 'Inter-Bold'}}>
+              style={{color: 'black', fontSize: 15, fontFamily: FontFamily.SemiBold}}>
               {localizedString.featuredmotorText}
             </Text>
           </View>
@@ -376,7 +377,7 @@ const MotorProperty = ({navigation, route}) => {
               //backgroundColor: 'red',
             }}>
             <Text
-              style={{color: 'black', fontSize: 15, fontFamily: 'Inter-Bold'}}>
+              style={{color: 'black', fontSize: 15, fontFamily: FontFamily.SemiBold}}>
               {localizedString.exploreCititesText}
             </Text>
           </View>
@@ -440,7 +441,7 @@ const MotorProperty = ({navigation, route}) => {
               style={{
                 color: 'black',
                 fontSize: 15,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.Bold,
                 marginLeft: 22,
                 marginTop: 8,
                 //padding: 16,

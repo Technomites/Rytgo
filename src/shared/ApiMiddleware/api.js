@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {accessToken, languagee} from '../../shared/Constant/Constant';
 import {setWishlist} from '../../redux/action/setWishList';
 //var base_url = 'https://staging.nowbuysell.com/api/'; //// Base url  staging
-var base_url = 'https://portal.nowbuysell.com/api/';
+var base_url = 'https://portal.rytgo.com/';
 ///https://portal.nowbuysell.com/api/
 
 let header = {

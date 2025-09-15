@@ -22,6 +22,7 @@ import Loader from '../../shared/components/Loader';
 import {localizedString} from '../../shared/localization/localization';
 import PopUpModel from '../../shared/components/PopUp';
 import {resolvePlugin} from '@babel/core';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
 const FogotPassword = ({navigation, route}) => {
@@ -151,7 +152,7 @@ const FogotPassword = ({navigation, route}) => {
                   label={localizedString.proceedText}
                   buttonStyle={{
                     width: '90%',
-                    backgroundColor: '#0989B8',
+                    backgroundColor: colors.blue,
                     paddingVertical: 14,
                     //marginVertical: 15,
                   }}
@@ -163,13 +164,13 @@ const FogotPassword = ({navigation, route}) => {
                     navigation.navigate('SignIn2');
                   }}>
                   <Text
-                    style={{color: '#19191960', fontFamily: 'Inter-Medium'}}>
+                    style={{color: '#19191960', fontFamily: FontFamily.Medium}}>
                     {localizedString.signIndonthaveAccount}
                   </Text>
                   <Text
                     style={{
-                      color: '#0989B8',
-                      fontFamily: 'Inter-Medium',
+                      color: colors.blue,
+                      fontFamily: FontFamily.Medium,
                       fontSize: 14,
                       textAlign: 'center',
                       textTransform: 'uppercase',

@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import LeftArrow from 'react-native-vector-icons/AntDesign';
+import { colors, FontFamily } from '../themes/theme';
 
 const MyRequestCard = props => {
   return (
@@ -41,7 +42,7 @@ const MyRequestCard = props => {
                 style={{
                   fontSize: 14,
                   color: '#191919',
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.Bold,
                 }}>
                 {props.item?.title}
               </Text>
@@ -51,7 +52,7 @@ const MyRequestCard = props => {
                 style={{
                   fontSize: 12,
                   color: '#191919',
-                  fontFamily: 'Inter-Medium',
+                  fontFamily: FontFamily.Medium,
                 }}>
                 {props.item?.description}
               </Text>
@@ -60,7 +61,7 @@ const MyRequestCard = props => {
                 style={{
                   fontSize: 12,
                   color: '#989898',
-                  fontFamily: 'Inter-Medium',
+                  fontFamily: FontFamily.Medium,
                 }}>
                 {props.item?.creationDate?.split('T')[0]}
               </Text>
@@ -80,7 +81,7 @@ const MyRequestCard = props => {
                   borderRadius: 22 / 2,
                   borderWidth: 1,
                   borderColor: 'white',
-                  backgroundColor: '#0989B8',
+                  backgroundColor: colors.blue,
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginHorizontal: 5,
@@ -106,14 +107,14 @@ const MyRequestCard = props => {
                 style={{
                   color: '#989898',
                   fontSize: 11,
-                  fontFamily: 'Inter-Medium',
+                  fontFamily: FontFamily.Medium,
                 }}>
                 Status
               </Text>
               <Text
                 style={{
                   color:
-                    props.item?.isFulFilled === true ? '#ff726f' : '#0989B8',
+                    props.item?.isFulFilled === true ? '#ff726f' : colors.blue,
                   fontSize: 14,
                   fontFamily: 'Inter-ExtraBold',
                 }}>
@@ -131,7 +132,7 @@ const MyRequestCard = props => {
               }}>
               <Text
                 style={{
-                  color: '#0989B8',
+                  color: colors.blue,
                   fontSize: 11,
                   fontFamily: 'Inter-ExtraBold',
                 }}>
@@ -144,7 +145,7 @@ const MyRequestCard = props => {
                   borderRadius: 20 / 2,
                   borderWidth: 1,
                   borderColor: 'white',
-                  backgroundColor: '#0989B8',
+                  backgroundColor: colors.blue,
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginHorizontal: 5,

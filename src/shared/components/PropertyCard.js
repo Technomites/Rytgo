@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 import {localizedString} from '../localization/localization';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const PropertyCard = props => {
@@ -55,7 +56,7 @@ const PropertyCard = props => {
               style={{
                 color: 'lightgray',
                 fontSize: 13,
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 textDecorationLine: 'line-through',
                 textDecorationStyle: 'solid',
               }}>
@@ -65,7 +66,7 @@ const PropertyCard = props => {
               style={{
                 color: 'white',
                 fontSize: 15,
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 textAlign: isRtl ? 'right' : 'left',
               }}>
               {localizedString.aed} {props.item?.salePrice}
@@ -82,7 +83,7 @@ const PropertyCard = props => {
           }}>
           <Text
             numberOfLines={1}
-            style={{color: 'black', fontSize: 11, fontFamily: 'Inter-Bold'}}>
+            style={{color: 'black', fontSize: 11, fontFamily: FontFamily.Bold}}>
             {props.item?.title}
           </Text>
           <Text
@@ -90,7 +91,7 @@ const PropertyCard = props => {
             style={{
               color: '#989898',
               fontSize: 10,
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
             }}>
             {props.item?.address}
           </Text>
@@ -119,7 +120,7 @@ const PropertyCard = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -136,7 +137,7 @@ const PropertyCard = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -154,7 +155,7 @@ const PropertyCard = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
                 // marginRight: 8,
@@ -172,7 +173,7 @@ const PropertyCard = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>

@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import FastImage from 'react-native-fast-image';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const Properytags = props => {
@@ -38,7 +39,7 @@ const Properytags = props => {
           color: '#989898',
           marginLeft: 3,
           fontSize: 11,
-          fontFamily: 'Inter-SemiBold',
+          fontFamily: FontFamily.SemiBold,
           //textAlign: 'center',
           //marginTop: 6,
         }}>

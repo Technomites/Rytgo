@@ -2,7 +2,7 @@ import React from 'react';
 import {View, SafeAreaView, Text, Image} from 'react-native';
 import BackHeader from '../../shared/components/BackHeader';
 import {RequestabNavigator, ListingabNavigator} from '../../navigation/TopTabs';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import HorizontalLine from '../../shared/components/HorizontalLine';
 import {localizedString} from '../../shared/localization/localization';
 
@@ -51,14 +51,14 @@ const MyRequetpropertymotorListing = props => {
             justifyContent: 'center',
           }}>
           <Text
-            style={{color: '#191919', fontSize: 13, fontFamily: 'Inter-Bold'}}>
+            style={{color: '#191919', fontSize: 13, fontFamily: FontFamily.SemiBold}}>
             {name}
           </Text>
           <Text
             style={{
               color: '#19191940',
               fontSize: 13,
-              fontFamily: 'Inter-Bold',
+              fontFamily:FontFamily.Bold,
             }}>
             {localizedString.vendorText}
           </Text>

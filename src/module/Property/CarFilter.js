@@ -23,6 +23,7 @@ import BackHeader from '../../shared/components/BackHeader';
 import {motorMasterData} from '../../shared/Constant/Constant';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 import IoIcon from '../../shared/components//Icon/IoIcon';
+import { colors, FontFamily } from '../../shared/themes/theme';
 var searchArray = [];
 var CategoryArray = [];
 var FeatureArray = [];
@@ -324,15 +325,15 @@ const CarFilter = ({navigation, route}) => {
                 //bottom: 0,
                 //right: 4,
                 marginLeft: 6,
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
               <Text
                 style={{
-                  color: '#0989B8',
+                  color: colors.blue,
                   fontSize: 12,
-                  fontFamily: 'Inter-SemiBold',
+                  fontFamily: FontFamily.SemiBold,
                   textAlign: 'center',
 
                   textTransform: 'uppercase',
@@ -383,7 +384,7 @@ const CarFilter = ({navigation, route}) => {
               style={{
                 color: 'black',
                 fontSize: 15,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 marginTop: 14,
               }}>
               {localizedString.motorText}
@@ -441,7 +442,7 @@ const CarFilter = ({navigation, route}) => {
           // top: 0,
           bottom: 0,
           right: 4,
-          backgroundColor: '#0989B8',
+          backgroundColor: colors.blue,
           alignItems: 'center',
           justifyContent: 'center',
         }}>

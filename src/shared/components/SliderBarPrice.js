@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Slider from '@react-native-community/slider';
+import { colors, FontFamily } from '../themes/theme';
 
 // create a component
 const SliderBarPrice = props => {
@@ -24,7 +25,7 @@ const SliderBarPrice = props => {
             color: '#191919',
             fontSize: 17,
             marginTop: 13,
-            fontFamily: 'Inter-SemiBold',
+            fontFamily: FontFamily.SemiBold,
           }}>
           {props.title}
         </Text>
@@ -68,8 +69,8 @@ const SliderBarPrice = props => {
             <Text
               style={{
                 marginLeft: 4,
-                fontFamily: 'Inter-Medium',
-                color: '#0989B8',
+                fontFamily: FontFamily.Medium,
+                color: colors.blue,
                 fontSize: 11,
               }}>
               {props.name}
@@ -77,8 +78,8 @@ const SliderBarPrice = props => {
             <Text
               style={{
                 marginLeft: 4,
-                fontFamily: 'Inter-Medium',
-                color: '#0989B8',
+                fontFamily: FontFamily.Medium,
+                color: colors.blue,
                 fontSize: 11,
               }}>
               0
@@ -96,8 +97,8 @@ const SliderBarPrice = props => {
             <Text
               style={{
                 marginLeft: 4,
-                fontFamily: 'Inter-Medium',
-                color: '#0989B8',
+                fontFamily: FontFamily.Medium,
+                color: colors.blue,
                 fontSize: 11,
               }}>
               {props.name}
@@ -105,8 +106,8 @@ const SliderBarPrice = props => {
             <Text
               style={{
                 marginLeft: 4,
-                fontFamily: 'Inter-Medium',
-                color: '#0989B8',
+                fontFamily: FontFamily.Medium,
+                color: colors.blue,
                 fontSize: 11,
               }}>
               {props.value === 0 ? 0 : props.value}

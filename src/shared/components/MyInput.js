@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import IoIcon from '../components/Icon/IoIcon';
-import {colors} from '../themes/theme';
+import {colors, FontFamily} from '../themes/theme';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 const MyInput = props => {
   const {RtlStyles, isRtl} = useRtlContext();
@@ -20,7 +20,7 @@ const MyInput = props => {
         style={{
           color: '#191919',
           fontWeight: '600',
-          fontFamily: 'Inter-SemiBold',
+          fontFamily: FontFamily.SemiBold,
           //backgroundColor: 'red',
           textAlign: isRtl ? 'right' : 'left',
         }}>

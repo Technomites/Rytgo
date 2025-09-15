@@ -11,6 +11,7 @@ import {
 import {localizedString} from '../localization/localization';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 import FastImage from 'react-native-fast-image';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const Feature = ({item, index}) => {
@@ -44,7 +45,7 @@ const Feature = ({item, index}) => {
               style={{
                 color: 'white',
                 fontSize: 15,
-                fontFamily: 'Inter-SemiBold',
+                fontFamily:FontFamily.SemiBold,
                 textAlign: isRtl ? 'right' : 'left',
               }}>
               {localizedString.aed} {item?.price}
@@ -61,7 +62,7 @@ const Feature = ({item, index}) => {
             style={{
               color: 'black',
               fontSize: 11,
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
               textAlign: isRtl ? 'right' : 'left',
             }}>
             {item?.title}
@@ -71,7 +72,7 @@ const Feature = ({item, index}) => {
             style={{
               color: '#989898',
               fontSize: 11,
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               textAlign: isRtl ? 'right' : 'left',
             }}>
             {item?.address}
@@ -105,7 +106,7 @@ const Feature = ({item, index}) => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -130,7 +131,7 @@ const Feature = ({item, index}) => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -153,7 +154,7 @@ const Feature = ({item, index}) => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -176,7 +177,7 @@ const Feature = ({item, index}) => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>

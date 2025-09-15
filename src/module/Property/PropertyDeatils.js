@@ -53,6 +53,7 @@ import AccessDeniedModel from '../../shared/components/AccessDeniedModel';
 import CallnowPopup from '../../shared/components/CallnowPopup';
 import LocalizedStrings from 'react-native-localization';
 import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
 const PropertyDeatils = props => {
@@ -1364,7 +1365,7 @@ const PropertyDeatils = props => {
                     <Text
                       style={{
                         fontWeight: 'bold',
-                        fontFamily: 'Inter-Medium',
+                        fontFamily: FontFamily.Medium,
                         textTransform: 'uppercase',
                         fontSize: 11,
                       }}>
@@ -1374,7 +1375,7 @@ const PropertyDeatils = props => {
                       <View
                         style={{
                           width: '100%',
-                          borderBottomColor: '#0989B8',
+                          borderBottomColor: colors.blue,
                           borderBottomWidth: 4,
                           padding: 4,
                         }}
@@ -1404,7 +1405,7 @@ const PropertyDeatils = props => {
                         fontWeight: 'bold',
                         textTransform: 'uppercase',
                         fontSize: 11,
-                        fontFamily: 'Inter-Medium',
+                        fontFamily: FontFamily.Medium,
                       }}>
                       {localizedString.videoshedule}
                     </Text>
@@ -1412,7 +1413,7 @@ const PropertyDeatils = props => {
                       <View
                         style={{
                           width: '90%',
-                          borderBottomColor: '#0989B8',
+                          borderBottomColor: colors.blue,
                           borderBottomWidth: 3,
                           padding: 4,
                         }}
@@ -1466,7 +1467,7 @@ const PropertyDeatils = props => {
                       label={localizedString.sendMessageText}
                       buttonStyle={{
                         width: '100%',
-                        backgroundColor: '#0989B8',
+                        backgroundColor: colors.blue,
                         marginTop: 20,
                         borderRadius: 8,
                         paddingVertical: 15,
@@ -1503,7 +1504,7 @@ const PropertyDeatils = props => {
                       label={localizedString.sheduledText}
                       buttonStyle={{
                         width: '100%',
-                        backgroundColor: '#0989B8',
+                        backgroundColor: colors.blue,
                         marginTop: 20,
                         borderRadius: 8,
                         paddingVertical: 15,
@@ -1597,7 +1598,7 @@ const PropertyDeatils = props => {
                   <Text
                     style={{
                       color: '#19191950',
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       fontSize: 10,
                     }}>
                     {deatils.category && deatils.category
@@ -1611,7 +1612,7 @@ const PropertyDeatils = props => {
                   <Text
                     style={{
                       color: '#19191950',
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       fontSize: 10,
                     }}>
                     {deatils.status && deatils.status
@@ -1630,7 +1631,7 @@ const PropertyDeatils = props => {
                   style={{
                     ...styles.propertyText,
                     fontSize: 18,
-                    fontFamily: 'Inter-Bold',
+                    fontFamily: FontFamily.SemiBold,
                     paddingLeft: 14,
                     textAlign: isRtl ? 'right' : 'left',
                     paddingHorizontal: 7,
@@ -1687,7 +1688,7 @@ const PropertyDeatils = props => {
                   fontSize: 12,
                   marginLeft: 5,
                   color: '#19191940',
-                  fontFamily: 'Inter-Medium',
+                  fontFamily: FontFamily.Medium,
                   //  ...RtlStyles.containerRow,
                 }}>
                 {deatils.address.address}
@@ -1731,7 +1732,7 @@ const PropertyDeatils = props => {
                     numberOfLines={2}
                     style={{
                       color: '#989898',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 9,
                       textAlign: 'center',
                     }}>
@@ -1759,7 +1760,7 @@ const PropertyDeatils = props => {
                     style={{
                       color: '#989898',
                       color: '#989898',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 9,
                     }}>
                     {deatils.baths && deatils.baths
@@ -1786,7 +1787,7 @@ const PropertyDeatils = props => {
                     style={{
                       color: '#989898',
                       color: '#989898',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 9,
                     }}>
                     {deatils.garages && deatils.garages
@@ -1813,7 +1814,7 @@ const PropertyDeatils = props => {
                     style={{
                       color: '#989898',
                       color: '#989898',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 9,
                     }}>
                     {deatils.size && deatils.size
@@ -1843,7 +1844,7 @@ const PropertyDeatils = props => {
                       style={{
                         color: '#191919',
                         fontSize: 16,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                       }}>
                       {localizedString.descriptionText}
                     </Text>
@@ -1854,13 +1855,13 @@ const PropertyDeatils = props => {
                     seeMoreText={'Read More'}
                     style={{
                       fontSize: 12,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       color: '#989898',
                       textAlign: 'center',
                     }}
                     linkStyle={{
                       fontSize: 12,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                     }}
                     linkColor="#0989B8"
                     linkPressedColor="#0989B8">
@@ -1871,7 +1872,7 @@ const PropertyDeatils = props => {
                     stylesheet={{
                       width: '96%',
                       fontSize: 12,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       //color: 'red',
                       textAlign: 'center',
                       zIndex: 2,
@@ -1884,7 +1885,7 @@ const PropertyDeatils = props => {
                     <TouchableOpacity onPress={() => setseeMore(v => !v)}>
                       <Text
                         style={{
-                          color: '#0989B8',
+                          color: colors.blue,
                           fontSize: 12,
                           fontWeight: 'bold',
                           textTransform: 'uppercase',
@@ -1917,7 +1918,7 @@ const PropertyDeatils = props => {
                         style={{
                           color: '#191919',
                           fontSize: 16,
-                          fontFamily: 'Inter-SemiBold',
+                          fontFamily: FontFamily.SemiBold,
                         }}>
                         {localizedString.featuresText}
                       </Text>
@@ -1950,7 +1951,7 @@ const PropertyDeatils = props => {
                       style={{
                         color: '#191919',
                         fontSize: 16,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                       }}>
                       {name === 'Property'
                         ? localizedString.propertyDeatils
@@ -1985,7 +1986,7 @@ const PropertyDeatils = props => {
                         style={{
                           color: '#191919',
                           fontSize: 17,
-                          fontFamily: 'Inter-SemiBold',
+                          fontFamily: FontFamily.SemiBold,
                         }}>
                         {localizedString.videoText}
                       </Text>
@@ -2029,7 +2030,7 @@ const PropertyDeatils = props => {
                             right: 0,
                             top: 58,
                             left: 160,
-                            //backgroundColor: '#0989B8',
+                            //backgroundColor: colors.blue,
                             alignItems: 'center',
                             justifyContent: 'center',
                           }}>
@@ -2065,7 +2066,7 @@ const PropertyDeatils = props => {
                     style={{
                       color: '#191919',
                       fontSize: 18,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                     }}>
                     {localizedString.locationText}
                   </Text>
@@ -2128,7 +2129,7 @@ const PropertyDeatils = props => {
                           style={{
                             color: '#191919',
                             fontSize: 18,
-                            fontFamily: 'Inter-SemiBold',
+                            fontFamily: FontFamily.SemiBold,
                             marginHorizontal: isRtl == true ? 20 : 0,
                           }}>
                           {localizedString.floorPlansText}
@@ -2150,21 +2151,21 @@ const PropertyDeatils = props => {
                       <Text
                         style={{
                           fontSize: 10,
-                          fontFamily: 'Inter-SemiBold',
+                          fontFamily: FontFamily.SemiBold,
                           fontWeight: 'bold',
                         }}>
                         {localizedString.floorText}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: 'Inter-Medium'}}>
+                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
                         {`${localizedString.sizeText}: ${deatils.size}`}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: 'Inter-Medium'}}>
+                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
                         {`${localizedString.roomText}:${deatils.rooms}`}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: 'Inter-Medium'}}>
+                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
                         {`${localizedString.bathtext}: ${deatils.baths}`}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: 'Inter-Medium'}}>
+                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
                         {`${localizedString.priceText}:${deatils.price}`}
                       </Text>
                     </View>
@@ -2344,7 +2345,7 @@ const PropertyDeatils = props => {
             label={localizedString.contactSellerText}
             buttonStyle={{
               width: '93%',
-              backgroundColor: '#0989B8',
+              backgroundColor: colors.blue,
               position: 'absolute',
               bottom: 0,
               right: 0,

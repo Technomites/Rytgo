@@ -36,6 +36,7 @@ import {localizedString} from '../../shared/localization/localization';
 import PopUpModel from '../../shared/components/PopUp';
 import {resolvePlugin} from '@babel/core';
 import {flingGestureHandlerProps} from 'react-native-gesture-handler/lib/typescript/handlers/FlingGestureHandler';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
 const SignIn2 = ({navigation, route}) => {
@@ -357,8 +358,8 @@ const SignIn2 = ({navigation, route}) => {
                         style={{
                           textAlign: 'center',
                           fontSize: 11,
-                          color: '#0989B8',
-                          fontFamily: 'Inter-SemiBold',
+                          color: colors.blue,
+                          fontFamily: FontFamily.SemiBold,
                           marginBottom: 5,
                           textTransform: 'uppercase',
                           //bottom: 6,
@@ -372,7 +373,7 @@ const SignIn2 = ({navigation, route}) => {
                     label="Sign IN"
                     buttonStyle={{
                       width: '90%',
-                      backgroundColor: '#0989B8',
+                      backgroundColor: colors.blue,
                       paddingVertical: 14,
                       //marginVertical: 15,
                     }}
@@ -384,14 +385,14 @@ const SignIn2 = ({navigation, route}) => {
                       navigation.navigate('SignUp');
                     }}>
                     <Text
-                      style={{color: '#19191960', fontFamily: 'Inter-Medium'}}>
+                      style={{color: '#19191960', fontFamily: FontFamily.Medium}}>
                       {/* {localizedString.signIndonthaveAccount} */}
                       Don't Have An Account?
                     </Text>
                     <Text
                       style={{
-                        color: '#0989B8',
-                        fontFamily: 'Inter-Medium',
+                        color: colors.blue,
+                        fontFamily: FontFamily.Medium,
                         fontSize: 14,
                         textAlign: 'center',
                         textTransform: 'uppercase',
@@ -421,8 +422,8 @@ const SignIn2 = ({navigation, route}) => {
                       }}>
                       <Text
                         style={{
-                          color: '#0989B8',
-                          fontFamily: 'Inter-Medium',
+                          color: colors.blue,
+                          fontFamily: FontFamily.Medium,
                           textAlign: 'center',
                           //marginTop: 1,
                           marginBottom: 8,

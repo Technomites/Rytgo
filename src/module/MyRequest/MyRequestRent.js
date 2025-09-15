@@ -17,6 +17,7 @@ import PopUpModel from '../../shared/components/PopUp';
 import AccessDeniedModel from '../../shared/components/AccessDeniedModel';
 import {_setLanguage} from '../../shared/Constant/Constant';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 const MyRequestRent = props => {
   const {RtlStyles, isRtl, language, setLanguage} = useRtlContext();
@@ -86,12 +87,12 @@ const MyRequestRent = props => {
               //backgroundColor: 'red',
               alignItems: 'center',
             }}>
-            <Icon name="plus" size={24} color={'#0989B8'} />
+            <Icon name="plus" size={24} color={colors.blue} />
             <Text
               style={{
                 marginLeft: 12,
                 color: '#141414',
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.Bold,
               }}>
               {localizedString.createRequestText}
             </Text>
@@ -115,7 +116,7 @@ const MyRequestRent = props => {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-              <LeftArrow name="arrowright" size={19} color={'#0989B8'} />
+              <LeftArrow name="arrowright" size={19} color={colors.blue} />
             </View>
           </View>
         </View>

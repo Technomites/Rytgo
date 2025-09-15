@@ -9,7 +9,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
 import {ScrollView} from 'react-native-gesture-handler';
 import {FeeddBlogDeatils} from '../../shared/ApiMiddleware/api';
@@ -125,7 +125,7 @@ const NewsDeatils = props => {
                   right: 0,
                   top: 70,
                   left: 160,
-                  //backgroundColor: '#0989B8',
+                  //backgroundColor: colors.blue,
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
@@ -142,7 +142,7 @@ const NewsDeatils = props => {
               style={{
                 color: '#191919',
                 fontSize: 17,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 marginTop: 14,
                 textAlign: isRtl ? 'right' : 'left',
               }}>
@@ -169,7 +169,7 @@ const NewsDeatils = props => {
               <Text
                 style={{
                   color: '#989898',
-                  fontFamily: 'Inter-SemiBold',
+                  fontFamily: FontFamily.SemiBold,
                   fontSize: 13,
                   lineHeight: 26,
                   textAlign: isRtl ? 'right' : 'justify',

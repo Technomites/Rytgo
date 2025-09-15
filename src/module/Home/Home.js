@@ -70,6 +70,7 @@ import PopUpModel from '../../shared/components/PopUp';
 import SuccessFailModel from '../../shared/components/SuccessFailModel';
 import AccessDeniedModel from '../../shared/components/AccessDeniedModel';
 import {SliderBox} from 'react-native-image-slider-box';
+import { FontFamily } from '../../shared/themes/theme';
 // create a component
 
 export const TestFunction = () => {
@@ -646,7 +647,7 @@ const Home = ({navigation, route}) => {
               style={{
                 color: 'black',
                 fontSize: 15,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
               }}>
               {localizedString.featuredmotorText}
             </Text>
@@ -706,7 +707,7 @@ const Home = ({navigation, route}) => {
               style={{
                 color: 'black',
                 fontSize: 15,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 marginTop: 14,
               }}>
               {localizedString.featuredpropertyText}
@@ -809,7 +810,7 @@ const Home = ({navigation, route}) => {
               style={{
                 color: 'black',
                 fontSize: 15,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 marginTop: 14,
               }}>
               {localizedString.blogText}
@@ -822,7 +823,7 @@ const Home = ({navigation, route}) => {
                 style={{
                   color: 'gray',
                   fontSize: 15,
-                  fontFamily: 'Inter-SemiBold',
+                  fontFamily:FontFamily.SemiBold,
                   marginTop: 14,
                 }}>
                 {localizedString.viewlAll}
@@ -862,7 +863,7 @@ const Home = ({navigation, route}) => {
                   style={{
                     color: 'black',
                     fontSize: 15,
-                    fontFamily: 'Inter-Bold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 14,
                     //padding: 16,
                   }}>
@@ -912,7 +913,7 @@ const Home = ({navigation, route}) => {
                   style={{
                     color: 'black',
                     fontSize: 15,
-                    fontFamily: 'Inter-Bold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 14,
                     //padding: 16,
                   }}>

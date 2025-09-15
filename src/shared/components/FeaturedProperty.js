@@ -11,6 +11,7 @@ import {
 import {localizedString} from '../localization/localization';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 import FastImage from 'react-native-fast-image';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const FeaturedProperty = props => {
@@ -48,7 +49,7 @@ const FeaturedProperty = props => {
               style={{
                 color: 'white',
                 fontSize: 15,
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 textAlign: isRtl ? 'right' : 'left',
               }}>
               {localizedString.aed} {props.item?.price}
@@ -65,7 +66,7 @@ const FeaturedProperty = props => {
             style={{
               color: 'black',
               fontSize: 11,
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
               textAlign: isRtl ? 'right' : 'left',
             }}>
             {props.item?.title}
@@ -75,7 +76,7 @@ const FeaturedProperty = props => {
             style={{
               color: '#989898',
               fontSize: 11,
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               textAlign: isRtl ? 'right' : 'left',
             }}>
             {props.item?.address}
@@ -109,7 +110,7 @@ const FeaturedProperty = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -134,7 +135,7 @@ const FeaturedProperty = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -157,7 +158,7 @@ const FeaturedProperty = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>
@@ -180,7 +181,7 @@ const FeaturedProperty = props => {
               style={{
                 fontSize: 9,
                 textAlign: 'center',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontWeight: '700',
                 color: '#989898',
               }}>

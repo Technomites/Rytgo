@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import {colors} from '../themes/theme';
+import {colors, FontFamily} from '../themes/theme';
 import IoIcon from './Icon/IoIcon';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {localizedString} from '../localization/localization';
@@ -61,7 +61,7 @@ const CallnowPopup = props => {
                   fontSize: 12,
                   color: '#11111180',
                   marginTop: 1,
-                  fontFamily: 'Inter-Medium',
+                  fontFamily:FontFamily.Medium,
                   // fontWeight: 'bold',
                 }}>
                 {props?.vendorData?.name}
@@ -72,7 +72,7 @@ const CallnowPopup = props => {
                 style={{
                   width: '93%',
                   padding: 10,
-                  backgroundColor: '#0989B8',
+                  backgroundColor: colors.blue,
                   height: 50,
                   borderRadius: 8,
                   justifyContent: 'space-between',
@@ -84,7 +84,7 @@ const CallnowPopup = props => {
                   style={{
                     width: '100%',
                     //   padding: 10,
-                    //   backgroundColor: '#0989B8',
+                    //   backgroundColor: colors.blue,
                     //   height: 50,
                     //   borderRadius: 8,
                     justifyContent: 'space-between',
@@ -96,7 +96,7 @@ const CallnowPopup = props => {
                       // fontWeight: '600',
                       fontSize: 12,
                       color: '#FFFFFF',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       marginTop: 1,
                       // fontWeight: 'bold',
                     }}>
@@ -107,7 +107,7 @@ const CallnowPopup = props => {
                       // fontWeight: '600',
                       fontSize: 12,
                       color: '#FFFFFF',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       marginTop: 1,
                       // fontWeight: 'bold',
                     }}>
@@ -121,7 +121,7 @@ const CallnowPopup = props => {
                 style={{
                   width: '93%',
                   padding: 10,
-                  backgroundColor: '#0989B8',
+                  backgroundColor: colors.blue,
                   height: 50,
                   borderRadius: 8,
                   justifyContent: 'space-between',
@@ -133,7 +133,7 @@ const CallnowPopup = props => {
                   style={{
                     width: '100%',
                     //   padding: 10,
-                    //   backgroundColor: '#0989B8',
+                    //   backgroundColor: colors.blue,
                     //   height: 50,
                     //   borderRadius: 8,
                     justifyContent: 'space-between',
@@ -146,7 +146,7 @@ const CallnowPopup = props => {
                       // fontWeight: '600',
                       fontSize: 12,
                       color: '#FFFFFF',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       marginTop: 1,
                       // fontWeight: 'bold',
                     }}>
@@ -157,7 +157,7 @@ const CallnowPopup = props => {
                       // fontWeight: '600',
                       fontSize: 12,
                       color: '#FFFFFF',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       marginTop: 1,
                       // fontWeight: 'bold',
                     }}>
@@ -179,7 +179,7 @@ const CallnowPopup = props => {
                     fontSize: 12,
                     color: '#11111180',
                     marginTop: 1,
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     // fontWeight: 'bold',
                   }}>
                   {localizedString.callpopupHeading}
@@ -202,7 +202,7 @@ const CallnowPopup = props => {
                       fontSize: 12,
                       color: '#11111180',
                       marginTop: 7,
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       // fontWeight: 'bold',
                     }}>
                     {localizedString.closeText}

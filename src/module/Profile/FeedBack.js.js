@@ -8,7 +8,7 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
 import FlatButton from '../../shared/components/FlatButton';
 import MyInput from '../../shared/components/MyInput';
@@ -89,14 +89,14 @@ const FeedBack = props => {
 
       <View style={{padding: 16, height: '75%'}}>
         <Text
-          style={{color: '#191919', fontFamily: 'Inter-Bold', fontSize: 15}}>
+          style={{color: '#191919', fontFamily: FontFamily.SemiBold, fontSize: 15}}>
           {localizedString.sendusFeedbackText}
         </Text>
         <View style={{flexDirection: 'row', marginTop: 4}}>
           <Text
             style={{
               color: '#11111180',
-              fontFamily: 'Inter-SemiBold',
+              fontFamily: FontFamily.SemiBold,
               fontSize: 12,
             }}>
             {localizedString.deatilfeedbackText}
@@ -129,7 +129,7 @@ const FeedBack = props => {
           label={localizedString.sendText}
           buttonStyle={{
             width: '87%',
-            backgroundColor: '#0989B8',
+            backgroundColor: colors.blue,
             borderRadius: 6,
             paddingVertical: 11,
           }}

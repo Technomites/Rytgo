@@ -1,6 +1,6 @@
 import React, {Component, createRef} from 'react';
 import {View, Image, StyleSheet, TextInput} from 'react-native';
-import {colors, fontSize, spacing, shadow} from '../themes/theme';
+import {colors, fontSize, spacing, shadow, FontFamily} from '../themes/theme';
 import DerivedText from '../components/DerivedText';
 
 type Props = {
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     //color:"red",
     //color: colors.primaryText,
     width: '100%',
-    fontFamily: 'Montserrat-Medium',
+    fontFamily: FontFamily.Medium,
   },
   image: {
     width: '100%',

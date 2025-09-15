@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import { FontFamily } from '../themes/theme';
 
 export default function CreateClassHeader(props) {
   const navigation = useNavigation();
@@ -24,7 +25,7 @@ export default function CreateClassHeader(props) {
       <Text
         style={{
           fontSize: 16,
-          fontFamily: 'Inter-Bold',
+          fontFamily: FontFamily.Bold,
           color: '#111111',
           opacity: 0.8,
           ...props.textstyle,

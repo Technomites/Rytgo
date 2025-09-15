@@ -4,6 +4,7 @@ import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {localizedString} from '../localization/localization';
 import LeftArrow from 'react-native-vector-icons/AntDesign';
 import {propertyDeatils} from '../ApiMiddleware/api';
+import { colors, FontFamily } from '../themes/theme';
 
 // create a component
 const ContactSellerBody = props => {
@@ -30,7 +31,7 @@ const ContactSellerBody = props => {
           <Text
             style={{
               color: '#989898',
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               fontSize: 11,
             }}>
             {props.permitheading}
@@ -38,7 +39,7 @@ const ContactSellerBody = props => {
           <Text
             style={{
               color: '#989898',
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               fontSize: 11,
             }}>
             {props.permitno}
@@ -49,7 +50,7 @@ const ContactSellerBody = props => {
           {/* <Text
             style={{
               color: '#989898',
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               fontSize: 12,
             }}>
             {localizedString.rERANOText}
@@ -57,7 +58,7 @@ const ContactSellerBody = props => {
           <Text
             style={{
               color: '#191919',
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.Bold,
               fontSize: 13,
               marginLeft: 1,
             }}>
@@ -71,9 +72,9 @@ const ContactSellerBody = props => {
             onPress={() => props.onpress()}>
             <Text
               style={{
-                color: '#0989B8',
+                color: colors.blue,
                 fontSize: 11,
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 marginTop: 1,
               }}>
               {props.viewlisting}
@@ -87,7 +88,7 @@ const ContactSellerBody = props => {
                 borderColor: '#D3CAD7',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 marginLeft: 4,
                 marginBottom: 6,
               }}>
@@ -103,7 +104,7 @@ const ContactSellerBody = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {localizedString.dEDNOText}
@@ -111,7 +112,7 @@ const ContactSellerBody = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
                 marginLeft: 12,
               }}>
@@ -127,7 +128,7 @@ const ContactSellerBody = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {localizedString.permitText}
@@ -135,7 +136,7 @@ const ContactSellerBody = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
                 marginLeft: 12,
               }}>

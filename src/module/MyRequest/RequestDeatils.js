@@ -12,6 +12,7 @@ import Loader from '../../shared/components/Loader';
 import HorizontalLine from '../../shared/components/HorizontalLine';
 import MapView from 'react-native-maps';
 import {localizedString} from '../../shared/localization/localization';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
 const RequestDeatils = props => {
@@ -85,7 +86,7 @@ const RequestDeatils = props => {
               marginLeft: 22,
               marginTop: 2,
               color: '#141414',
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
             }}>
             {localizedString.lookingproperttext}
           </Text>
@@ -100,13 +101,13 @@ const RequestDeatils = props => {
               alignItems: 'center',
               justifyContent: 'center',
               marginLeft: 10,
-              backgroundColor: '#0989B8',
+              backgroundColor: colors.blue,
             }}>
             <Text
               style={{
                 color: 'white',
                 fontSize: 11,
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
               }}>
               {deattils?.status}
             </Text>
@@ -123,7 +124,7 @@ const RequestDeatils = props => {
             style={{
               //marginLeft: 12,
               color: '#141414',
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
               textAlign: 'left',
             }}>
             {localizedString.descriptionText}
@@ -134,7 +135,7 @@ const RequestDeatils = props => {
             style={{
               //marginLeft: 12,
               color: '#989898',
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               fontSize: 12,
             }}>
             {deattils?.description}
@@ -161,7 +162,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -170,7 +171,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.noOfRooms}
@@ -180,7 +181,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -189,7 +190,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.noOfBathRooms}
@@ -210,7 +211,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -219,7 +220,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.size}
@@ -229,7 +230,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -238,7 +239,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {'AED ' +
@@ -263,7 +264,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 13,
                 textAlign: 'left',
               }}>
@@ -272,7 +273,7 @@ const RequestDeatils = props => {
             <Text
               style={{
                 color: '#989898',
-                fontFamily: 'Inter-Medium',
+                fontFamily: FontFamily.Medium,
                 fontSize: 12,
               }}>
               {deattils?.address}

@@ -5,7 +5,7 @@ export const colors = {
   background2: '#F9F9F9',
   placeholder: '#949494',
   textColor: '#191919',
-  blue: '#0989B8',
+  blue: '#226F65',
   black: '#191919',
   lightblack: '#19191960',
   white: '#FFFFFF',
@@ -75,3 +75,12 @@ export const shadow = {
     elevation: 0,
   },
 };
+const FontFamily = {
+  Bold: 'Ubuntu-B',
+  SemiBold: 'Montserrat-SemiBold',
+  Medium: 'Montserrat-Medium',
+  Light: 'Montserrat-Light',
+  Regular: 'Montserrat-Regular',
+};
+
+export { FontFamily };

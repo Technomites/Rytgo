@@ -225,7 +225,7 @@ const CityProperty = ({navigation, route}) => {
                 style={{
                   textAlign: 'center',
                   color: '#191919',
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.SemiBold,
                   fontSize: 18,
                 }}>
                 {name === 'Property'
@@ -341,7 +341,7 @@ const CityProperty = ({navigation, route}) => {
           borderRadius: 6,
           bottom: 0,
           right: 4,
-          backgroundColor: '#0989B8',
+          backgroundColor: colors.blue,
           alignItems: 'center',
           justifyContent: 'center',
         }}>

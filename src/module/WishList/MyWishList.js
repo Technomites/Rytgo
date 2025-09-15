@@ -12,7 +12,7 @@ import {
   ImageBackground,
 } from 'react-native';
 
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
 import PropertyCard from '../../shared/components/PropertyCard';
 import FeaturedMotorWishList from '../../shared/components/FeaturedMotorWishList';
@@ -88,7 +88,7 @@ const MyWishList = ({navigation, route}) => {
                   style={{
                     color: 'black',
                     fontSize: 16,
-                    fontFamily: 'Inter-Bold',
+                    fontFamily: FontFamily.Bold,
                   }}>
                   {localizedString.wishlistpropertyText}
                 </Text>
@@ -144,7 +144,7 @@ const MyWishList = ({navigation, route}) => {
                   style={{
                     color: 'black',
                     fontSize: 16,
-                    fontFamily: 'Inter-Bold',
+                    fontFamily: FontFamily.SemiBold,
                   }}>
                   {localizedString.wishlistmotorText}
                 </Text>

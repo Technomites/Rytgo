@@ -73,7 +73,7 @@ const FilterPropertyCategoryCard = props => {
             style={{
               color: '#191919',
               fontSize: 17,
-              fontFamily: 'Inter-SemiBold',
+              fontFamily: FontFamily.SemiBold,
               marginTop: 0,
               textAlign: isRtl ? 'right' : 'left',
             }}>
@@ -98,9 +98,9 @@ const FilterPropertyCategoryCard = props => {
               }}>
               <Text
                 style={{
-                  color: '#0989B8',
+                  color: colors.blue,
                   fontSize: 14,
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.SemiBold,
                   padding: 10,
                 }}>
              

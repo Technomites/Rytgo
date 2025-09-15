@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import {colors} from '../themes/theme';
+import {colors, FontFamily} from '../themes/theme';
 import IoIcon from './Icon/IoIcon';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
@@ -88,7 +88,7 @@ const SuccessFailModel = props => {
                   // fontWeight: '600',
                   fontSize: 12,
                   color: '#191919',
-                  fontFamily: 'Inter-Medium',
+                  fontFamily: FontFamily.Medium,
                   marginTop: 8,
                   textTransform: 'uppercase',
                   // fontWeight: 'bold',

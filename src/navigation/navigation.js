@@ -1328,8 +1328,8 @@ const DrawerNavigator = () => {
                 EN
               </Text>
               <Switch
-                trackColor={{false: '#767577', true: '#0989B8'}}
-                thumbColor={isEnabled ? '#0989B8' : '#f4f3f4'}
+                trackColor={{false: '#767577', true: colors.blue}}
+                thumbColor={isEnabled ? colors.blue : '#f4f3f4'}
                 ios_backgroundColor="#3e3e3e"
                 style={{marginHorizontal: 3}}
                 //style={{width: '50%', height: '50%'}}

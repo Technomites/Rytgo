@@ -201,7 +201,7 @@ const LocationpickerModal = props => {
               label={localizedString.locationConfirm}
               buttonStyle={{
                 width: '88%',
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 position: 'absolute',
                 bottom: 15,
                 right: 0,

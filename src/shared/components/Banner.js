@@ -4,6 +4,7 @@ import {View, Text, StyleSheet, Image, ImageBackground} from 'react-native';
 import FlatButton from '../components/FlatButton';
 import {localizedString} from '../../shared/localization/localization';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { colors, FontFamily } from '../themes/theme';
 
 // create a component
 const Banner = props => {
@@ -52,7 +53,7 @@ const Banner = props => {
             <Text
               style={{
                 color: '#FFFFFF60',
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 12,
                 textAlign: isRtl ? 'right' : 'left',
               }}>
@@ -62,7 +63,7 @@ const Banner = props => {
             <Text
               style={{
                 color: '#FFFFFF',
-                fontFamily: 'Inter-SemiBold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 14,
                 textAlign: isRtl ? 'right' : 'left',
               }}>
@@ -81,7 +82,7 @@ const Banner = props => {
                 paddingVertical: 9,
                 //paddingHorizontal: 4,
                 marginRight: 17,
-                backgroundColor: '#0989B8',
+                backgroundColor: colors.blue,
                 borderRadius: 6,
                 marginBottom: 3,
                 marginLeft: 43,

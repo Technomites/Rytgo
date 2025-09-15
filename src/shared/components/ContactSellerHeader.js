@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import {localizedString} from '../localization/localization';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const ContactSellerHeader = props => {
@@ -11,7 +12,7 @@ const ContactSellerHeader = props => {
       <Text
         style={{
           fontSize: 16,
-          fontFamily: 'Inter-Bold',
+          fontFamily: FontFamily.Bold,
           color: '#111111',
           //opacity: 0.8,
           // ...props.textstyle,

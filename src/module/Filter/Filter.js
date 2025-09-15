@@ -47,6 +47,7 @@ import {max, set} from 'react-native-reanimated';
 import HorizontalLine from '../../shared/components/HorizontalLine';
 import {LocalizationString} from 'react-native-easy-localization-and-rtl';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 const data = [
   {label: 'New In', value: '1'},
@@ -1044,7 +1045,7 @@ const Filter = ({navigation, route}) => {
                 // itemData.item.name === formFirlds.fueltype
                 //   ? Colors.blue
                 //   : '#0989b814',
-                roomselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                roomselected?.label === element.label ? colors.blue : '#E5E5E5',
 
               marginHorizontal: 5,
               borderRadius: 50 / 2,
@@ -1092,7 +1093,7 @@ const Filter = ({navigation, route}) => {
               padding: 10,
               width: 50,
               backgroundColor:
-                bathselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                bathselected?.label === element.label ? colors.blue : '#E5E5E5',
               marginHorizontal: 5,
               borderRadius: 50 / 2,
 
@@ -1139,7 +1140,7 @@ const Filter = ({navigation, route}) => {
               padding: 10,
               width: 50,
               backgroundColor:
-                diningselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                diningselected?.label === element.label ? colors.blue : '#E5E5E5',
               marginHorizontal: 5,
               borderRadius: 50 / 2,
 
@@ -1187,7 +1188,7 @@ const Filter = ({navigation, route}) => {
               width: 50,
               backgroundColor:
                 laundryselected?.label === element.label
-                  ? '#0989B8'
+                  ? colors.blue
                   : '#E5E5E5',
               marginHorizontal: 5,
               borderRadius: 50 / 2,
@@ -1236,7 +1237,7 @@ const Filter = ({navigation, route}) => {
               width: 50,
               backgroundColor:
                 garagesselected?.label === element.label
-                  ? '#0989B8'
+                  ? colors.blue
                   : '#E5E5E5',
               marginHorizontal: 5,
               borderRadius: 50 / 2,
@@ -1285,7 +1286,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   transimssionselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 10,
@@ -1331,7 +1332,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   transimssionselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 10,
@@ -1390,7 +1391,7 @@ const Filter = ({navigation, route}) => {
                   // itemData.item.name === formFirlds.fueltype
                   //   ? Colors.blue
                   //   : '#0989b814',
-                  fuelselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                  fuelselected?.label === element.label ? colors.blue : '#E5E5E5',
 
                 marginHorizontal: 10,
                 borderRadius: 39 / 2,
@@ -1438,7 +1439,7 @@ const Filter = ({navigation, route}) => {
                   // itemData.item.name === formFirlds.fueltype
                   //   ? Colors.blue
                   //   : '#0989b814',
-                  fuelselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                  fuelselected?.label === element.label ? colors.blue : '#E5E5E5',
 
                 marginHorizontal: 10,
                 borderRadius: 39 / 2,
@@ -1489,7 +1490,7 @@ const Filter = ({navigation, route}) => {
               padding: 10,
               width: 50,
               backgroundColor:
-                doorselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                doorselected?.label === element.label ? colors.blue : '#E5E5E5',
               marginHorizontal: 5,
               borderRadius: 50 / 2,
 
@@ -1536,7 +1537,7 @@ const Filter = ({navigation, route}) => {
               padding: 10,
               width: 50,
               backgroundColor:
-                wheelselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                wheelselected?.label === element.label ? colors.blue : '#E5E5E5',
               marginHorizontal: 5,
               borderRadius: 50 / 2,
 
@@ -1592,7 +1593,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   capacityselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 5,
@@ -1643,7 +1644,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   capacityselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 5,
@@ -1703,7 +1704,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   steeringselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 5,
@@ -1753,7 +1754,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   steeringselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 5,
@@ -1810,7 +1811,7 @@ const Filter = ({navigation, route}) => {
                 // itemData.item.name === formFirlds.fueltype
                 //   ? Colors.blue
                 //   : '#0989b814',
-                bodyselected?.label === element.label ? '#0989B8' : '#E5E5E5',
+                bodyselected?.label === element.label ? colors.blue : '#E5E5E5',
               marginHorizontal: 5,
               borderRadius: 41 / 2,
 
@@ -1867,7 +1868,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   mechanicalselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 6,
@@ -1920,7 +1921,7 @@ const Filter = ({navigation, route}) => {
                   //   ? Colors.blue
                   //   : '#0989b814',
                   mechanicalselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
 
                 marginHorizontal: 6,
@@ -1974,7 +1975,7 @@ const Filter = ({navigation, route}) => {
                 // width: 50,
                 backgroundColor:
                   cylinderselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
                 marginHorizontal: 5,
 
@@ -2020,7 +2021,7 @@ const Filter = ({navigation, route}) => {
                 // width: 50,
                 backgroundColor:
                   cylinderselected?.label === element.label
-                    ? '#0989B8'
+                    ? colors.blue
                     : '#E5E5E5',
                 marginHorizontal: 5,
 
@@ -2258,7 +2259,7 @@ const Filter = ({navigation, route}) => {
             style={{
               color: '#191919',
               fontSize: 20,
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
               textAlign: 'center',
             }}>
             {localizedString.filterText}
@@ -2268,9 +2269,9 @@ const Filter = ({navigation, route}) => {
           onPress={name === 'Property' ? clearPropertyFilter : clearCarFilter}>
           <Text
             style={{
-              color: '#0989B8',
+              color: colors.blue,
               fontSize: 12,
-              fontFamily: 'Inter-Bold',
+              fontFamily: FontFamily.SemiBold,
             }}>
             {localizedString.clearAllText}
           </Text>
@@ -2317,7 +2318,7 @@ const Filter = ({navigation, route}) => {
                   style={{
                     color: '#191919',
                     fontSize: 17,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 10,
                     marginLeft: 3,
                     textAlign: isRtl ? 'right' : 'left',
@@ -2375,7 +2376,7 @@ const Filter = ({navigation, route}) => {
                   style={{
                     color: '#191919',
                     fontSize: 17,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 10,
                     marginLeft: 3,
                     textAlign: isRtl ? 'right' : 'left',
@@ -2428,7 +2429,7 @@ const Filter = ({navigation, route}) => {
                   style={{
                     color: '#191919',
                     fontSize: 17,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 10,
                     marginLeft: 3,
                     textAlign: isRtl ? 'right' : 'left',
@@ -2473,7 +2474,7 @@ const Filter = ({navigation, route}) => {
                         paddingBottom: 5,
                         color: '#191919',
                         fontSize: 13,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                       }}>
                       {localizedString.furnishedtext}
                     </Text>
@@ -2485,7 +2486,7 @@ const Filter = ({navigation, route}) => {
                       alignItems: 'flex-end',
                     }}>
                     <Switch
-                      trackColor={{false: '#767577', true: '#0989B8'}}
+                      trackColor={{false: '#767577', true: colors.blue}}
                       thumbColor={isEnabled ? '#f4f3f4' : '#f4f3f4'}
                       ios_backgroundColor="#3e3e3e"
                       onValueChange={toggleSwitch}
@@ -2504,7 +2505,7 @@ const Filter = ({navigation, route}) => {
                         paddingBottom: 5,
                         color: '#191919',
                         fontSize: 12,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                       }}>
                       {localizedString.serviceHistory}
                     </Text>
@@ -2516,7 +2517,7 @@ const Filter = ({navigation, route}) => {
                       alignItems: 'flex-end',
                     }}>
                     <Switch
-                      trackColor={{false: '#767577', true: '#0989B8'}}
+                      trackColor={{false: '#767577', true: colors.blue}}
                       thumbColor={isEnabled ? '#f4f3f4' : '#f4f3f4'}
                       ios_backgroundColor="#3e3e3e"
                       onValueChange={toggleSwitch}
@@ -2537,7 +2538,7 @@ const Filter = ({navigation, route}) => {
                         paddingLeft: 30,
                         color: '#191919',
                         fontSize: 12,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                       }}>
                       Furnished
                     </Text>
@@ -2550,7 +2551,7 @@ const Filter = ({navigation, route}) => {
                     }}>
                     <Switch
                       trackColor={{false: '#E5E5E5', true: '##0989B8'}}
-                      thumbColor={isEnabled ? '#0989B8' : '#f4f3f4'}
+                      thumbColor={isEnabled ? colors.blue : '#f4f3f4'}
                       ios_backgroundColor="#3e3e3e"
                       onValueChange={toggleSwitch}
                       value={isEnabled}
@@ -2691,7 +2692,7 @@ const Filter = ({navigation, route}) => {
                       style={{
                         color: '#191919',
                         fontSize: 14,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         textAlign: isRtl ? 'right' : 'left',
                       }}>
                       {localizedString.fyear}
@@ -2705,7 +2706,7 @@ const Filter = ({navigation, route}) => {
                       placeholder={localizedString.Syear}
                       placeholderStyle={{
                         color: 'black',
-                        fontFamily: 'Inter-Medium',
+                        fontFamily: FontFamily.Medium,
                         fontSize: 13,
                         marginLeft: 10,
                         textAlign: isRtl ? 'right' : 'left',
@@ -2750,7 +2751,7 @@ const Filter = ({navigation, route}) => {
                     style={{
                       color: '#191919',
                       fontSize: 14,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       textAlign: isRtl ? 'right' : 'left',
                     }}>
                     {localizedString.carMakeText}
@@ -2764,7 +2765,7 @@ const Filter = ({navigation, route}) => {
                     placeholder={localizedString.selectMake}
                     placeholderStyle={{
                       color: 'black',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
@@ -2803,7 +2804,7 @@ const Filter = ({navigation, route}) => {
                     style={{
                       color: '#191919',
                       fontSize: 14,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       textAlign: isRtl ? 'right' : 'left',
                     }}>
                     {localizedString.carbodyText}
@@ -2817,7 +2818,7 @@ const Filter = ({navigation, route}) => {
                     placeholder={localizedString.selectBody}
                     placeholderStyle={{
                       color: 'black',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
@@ -2855,7 +2856,7 @@ const Filter = ({navigation, route}) => {
                     style={{
                       color: '#191919',
                       fontSize: 14,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       textAlign: isRtl ? 'right' : 'left',
                     }}>
                     {localizedString.carmodelText}
@@ -2869,7 +2870,7 @@ const Filter = ({navigation, route}) => {
                     placeholder={localizedString.selectmodel}
                     placeholderStyle={{
                       color: 'black',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
@@ -2915,7 +2916,7 @@ const Filter = ({navigation, route}) => {
                     style={{
                       color: '#191919',
                       fontSize: 14,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       textAlign: isRtl ? 'right' : 'left',
                     }}>
                     {localizedString.fyear}
@@ -2929,7 +2930,7 @@ const Filter = ({navigation, route}) => {
                     placeholder={localizedString.Syear}
                     placeholderStyle={{
                       color: 'black',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
@@ -3047,7 +3048,7 @@ const Filter = ({navigation, route}) => {
                     style={{
                       color: '#191919',
                       fontSize: 14,
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       textAlign: isRtl ? 'right' : 'left',
                     }}>
                     {localizedString.regionalSpecificationText}
@@ -3061,7 +3062,7 @@ const Filter = ({navigation, route}) => {
                     placeholder={localizedString.selectMake}
                     placeholderStyle={{
                       color: 'black',
-                      fontFamily: 'Inter-Medium',
+                      fontFamily: FontFamily.Medium,
                       fontSize: 13,
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
@@ -3100,7 +3101,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.nbRooms}
@@ -3138,7 +3139,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                         // marginHorizontal: 9,
                       }}>
@@ -3177,7 +3178,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.nbDining}
@@ -3214,7 +3215,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.nbLaudry}
@@ -3251,7 +3252,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.nbGarages}
@@ -3290,7 +3291,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.transmissionText}
@@ -3326,7 +3327,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.fuelTypeText}
@@ -3363,7 +3364,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.noDoor}
@@ -3398,7 +3399,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.noWheels}
@@ -3434,7 +3435,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.capacityText}
@@ -3471,7 +3472,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.steeringsideText}
@@ -3507,7 +3508,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.bodyCondition}
@@ -3543,7 +3544,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.mechanicalConditionText}
@@ -3579,7 +3580,7 @@ const Filter = ({navigation, route}) => {
                         color: 'black',
                         fontWeight: '600',
                         marginLeft: 5,
-                        fontFamily: 'Inter-SemiBold',
+                        fontFamily: FontFamily.SemiBold,
                         fontSize: 13,
                       }}>
                       {localizedString.cylinderText}
@@ -3635,7 +3636,7 @@ const Filter = ({navigation, route}) => {
             style={{
               color: '#191919',
               fontSize: 14,
-              fontFamily: 'Inter-SemiBold',
+              fontFamily: FontFamily.SemiBold,
               textAlign: isRtl ? 'right' : 'left',
             }}>
             {localizedString.sortByText}
@@ -3649,7 +3650,7 @@ const Filter = ({navigation, route}) => {
             placeholder={localizedString.sortPlaceholder}
             placeholderStyle={{
               color: 'black',
-              fontFamily: 'Inter-Medium',
+              fontFamily: FontFamily.Medium,
               fontSize: 13,
               textAlign: isRtl ? 'right' : 'left',
             }}
@@ -3675,7 +3676,7 @@ const Filter = ({navigation, route}) => {
           buttonStyle={{
             width: '81%',
             paddingVertical: 14,
-            backgroundColor: '#0989B8',
+            backgroundColor: colors.blue,
             position: 'absolute',
             bottom: 11,
             right: 37,

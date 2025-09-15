@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {localizedString} from '../../shared/localization/localization';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { FontFamily } from '../themes/theme';
 
 // create a component
 const PropertyType = props => {
@@ -47,7 +48,7 @@ const PropertyType = props => {
             style={{
               color: 'black',
               fontSize: 13,
-              fontFamily: 'Inter-Bold',
+              fontFamily:FontFamily.Bold,
               textAlign: isRtl ? 'right' : 'left',
               marginHorizontal: 8,
             }}>

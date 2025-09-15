@@ -13,7 +13,7 @@ import {
   Linking,
   Platform,
 } from 'react-native';
-import {colors} from '../../shared/themes/theme';
+import {colors, FontFamily} from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
 import SettingCard from '../../shared/components/SettingCard';
 import HorizontalLine from '../../shared/components/HorizontalLine';
@@ -156,7 +156,7 @@ const Setting = ({navigation, route}) => {
             <Text
               style={{
                 color: '#191919',
-                fontFamily: 'Inter-Bold',
+                fontFamily: FontFamily.SemiBold,
                 fontSize: 16,
                 textAlign: 'left',
               }}>
@@ -193,7 +193,7 @@ const Setting = ({navigation, route}) => {
                   <Text
                     style={{
                       color: '#191919',
-                      fontFamily: 'Inter-SemiBold',
+                      fontFamily: FontFamily.SemiBold,
                       fontSize: 11,
                       textAlign: 'left',
                     }}>
@@ -239,7 +239,7 @@ const Setting = ({navigation, route}) => {
                   <Text
                     style={{
                       color: '#191919',
-                      // fontFamily: 'Inter-SemiBold',
+                      // fontFamily: FontFamily.SemiBold,
                       fontSize: 11,
                       textAlign: 'left',
                     }}>
@@ -273,7 +273,7 @@ const Setting = ({navigation, route}) => {
             paddingLeft: 20,
             paddingRight: 14,
           }}>
-          <Text style={{fontFamily: 'Inter-Bold', fontSize: 15}}>
+          <Text style={{fontFamily: FontFamily.SemiBold, fontSize: 15}}>
             {localizedString.changeLanguage}
           </Text>
 
@@ -300,7 +300,7 @@ const Setting = ({navigation, route}) => {
               EN
             </Text>
             <Switch
-              trackColor={{false: '#767577', true: '#0989B8'}}
+              trackColor={{false: '#767577', true: colors.blue}}
               thumbColor={isEnabled ? '#f4f3f4' : '#f4f3f4'}
               ios_backgroundColor="#3e3e3e"
               style={{marginHorizontal: 3}}

@@ -574,7 +574,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#191919',
                     fontSize: 14,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 2,
                   }}>
                   Year
@@ -588,7 +588,7 @@ const PostAnAddStep3 = props => {
                   placeholder="Select Year"
                   placeholderStyle={{
                     color: 'black',
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     fontSize: 13,
                     marginLeft: 11,
                   }}
@@ -615,7 +615,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#191919',
                     fontSize: 14,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 2,
                   }}>
                   Country
@@ -633,7 +633,7 @@ const PostAnAddStep3 = props => {
                   placeholder="Select Country"
                   placeholderStyle={{
                     color: 'black',
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     fontSize: 13,
                     marginLeft: 11,
                   }}
@@ -667,7 +667,7 @@ const PostAnAddStep3 = props => {
                   style={{
                     color: '#191919',
                     fontSize: 14,
-                    fontFamily: 'Inter-SemiBold',
+                    fontFamily: FontFamily.SemiBold,
                     marginTop: 3,
                   }}>
                   City
@@ -684,7 +684,7 @@ const PostAnAddStep3 = props => {
                   placeholder="Select City"
                   placeholderStyle={{
                     color: 'black',
-                    fontFamily: 'Inter-Medium',
+                    fontFamily: FontFamily.Medium,
                     fontSize: 13,
                     marginLeft: 11,
                   }}

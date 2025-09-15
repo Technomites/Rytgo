@@ -17,6 +17,7 @@ import FeaturedProperty from '../../shared/components/FeaturedProperty';
 import FlatButton from '../../shared/components/FlatButton';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {localizedString} from '../../shared/localization/localization';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
 const CityProperty = ({navigation, route}) => {
@@ -78,7 +79,7 @@ const CityProperty = ({navigation, route}) => {
                 style={{
                   textAlign: 'center',
                   color: '#191919',
-                  fontFamily: 'Inter-Bold',
+                  fontFamily: FontFamily.Bold,
                   fontSize: 18,
                 }}>
                 Vechile List
@@ -139,7 +140,7 @@ const CityProperty = ({navigation, route}) => {
           borderRadius: 6,
           bottom: 4,
           right: 4,
-          backgroundColor: '#0989B8',
+          backgroundColor: colors.blue,
           alignItems: 'center',
           justifyContent: 'center',
         }}>
