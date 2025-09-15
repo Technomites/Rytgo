@@ -304,10 +304,10 @@ const PropertyFilter = ({navigation, route}) => {
               <IoIcon name="arrow-back" size={26} color="black" />
             </TouchableOpacity>
             <Image
-              resizeMode="cover"
-              style={{marginRight: 30}}
-              source={require('../../shared/assests/home/logo.png')}
-            />
+                          resizeMode="contain"
+                style={{ height: '100%', width: '100%', alignSelf: 'flex-end', marginLeft: '30%' }}
+                          source={require('../../shared/assests/signIn/NowBuySell.png')}
+                        />
           </View>
         </View>
 

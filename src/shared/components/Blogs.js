@@ -117,7 +117,7 @@ const Blogs = props => {
             <AIcon
               name="calendar"
               size={12}
-              color="#0989B8"
+              color={colors.blue}
               style={{width: 15, marginTop: 2, marginLeft: 10}}
             />
             <Text

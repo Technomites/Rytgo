@@ -1,4 +1,4 @@
-package com.nowbuysell
+package com.rytgo
 
 import android.app.Application
 import com.facebook.react.PackageList

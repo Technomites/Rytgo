@@ -1,5 +1,5 @@
 //import liraries
-import React, {Component, useEffect, useState, useRef} from 'react';
+import React, { Component, useEffect, useState, useRef } from 'react';
 import {
   View,
   Text,
@@ -15,22 +15,22 @@ import SearchBar from 'react-native-dynamic-search-bar';
 import FeaturedMotor from '../../shared/components/FeaturedMotor';
 import AntDesign from 'react-native-vector-icons/FontAwesome5';
 import * as Filteraction from '../../redux/action/Filteraction';
-import {useSelector, useDispatch} from 'react-redux';
-import {FilterAllfaeturedMotors} from '../../shared/ApiMiddleware/api';
+import { useSelector, useDispatch } from 'react-redux';
+import { FilterAllfaeturedMotors } from '../../shared/ApiMiddleware/api';
 import Loader from '../../shared/components/Loader';
-import {localizedString} from '../../shared/localization/localization';
+import { localizedString } from '../../shared/localization/localization';
 import BackHeader from '../../shared/components/BackHeader';
-import {motorMasterData} from '../../shared/Constant/Constant';
-import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { motorMasterData } from '../../shared/Constant/Constant';
+import { useRtlContext } from 'react-native-easy-localization-and-rtl';
 import IoIcon from '../../shared/components//Icon/IoIcon';
 import { colors, FontFamily } from '../../shared/themes/theme';
 var searchArray = [];
 var CategoryArray = [];
 var FeatureArray = [];
 let carFilterr = {};
-const CarFilter = ({navigation, route}) => {
+const CarFilter = ({ navigation, route }) => {
   const dispatch = useDispatch();
-  const {RtlStyles, isRtl} = useRtlContext();
+  const { RtlStyles, isRtl } = useRtlContext();
   carFilterr = useSelector(state => state.propertyFilter.carFilter);
   const paginationcount = useSelector(
     state => state.propertyFilter.paginationValue,
@@ -271,7 +271,7 @@ const CarFilter = ({navigation, route}) => {
   }, [paginationcount]);
 
   return (
-    <SafeAreaView style={{width: '100%', height: '100%'}}>
+    <SafeAreaView style={{ width: '100%', height: '100%' }}>
       <Loader show={loading} />
 
       <View style={styles.topContainer}>
@@ -284,7 +284,7 @@ const CarFilter = ({navigation, route}) => {
         <View style={styles.backtopContainer}>
           <View style={styles.backtopHeader}>
             <TouchableOpacity
-              hitSlop={{top: 40, bottom: 40, left: 50, right: 50}}
+              hitSlop={{ top: 40, bottom: 40, left: 50, right: 50 }}
               style={{}}
               onPress={() => navigation.goBack()}>
               {/* <Image
@@ -294,11 +294,12 @@ const CarFilter = ({navigation, route}) => {
               /> */}
               <IoIcon name="arrow-back" size={26} color="black" />
             </TouchableOpacity>
-            <Image
-              resizeMode="cover"
-              style={{marginRight: 30}}
-              source={require('../../shared/assests/home/logo.png')}
-            />
+          
+              <Image
+                resizeMode="contain"
+                style={{ height: '100%', width: '100%', alignSelf: 'flex-end', marginLeft: '30%' }}
+                source={require('../../shared/assests/signIn/NowBuySell.png')}
+              />
           </View>
         </View>
 
@@ -345,7 +346,7 @@ const CarFilter = ({navigation, route}) => {
             </View>
           </TouchableOpacity>
 
-          <View style={{width: '88%'}}>
+          <View style={{ width: '88%' }}>
             <SearchBar
               placeholder={localizedString.carsearchPlaceholder}
               //onPress={() => alert('onPress')}
@@ -394,16 +395,16 @@ const CarFilter = ({navigation, route}) => {
             showsVerticalScrollIndicator={false}
             data={CarDataa}
             //extraData={CarDataa}
-            style={{marginTop: 1}}
+            style={{ marginTop: 1 }}
             numColumns={1}
             bounces={false}
-            renderItem={({item, i}) => (
+            renderItem={({ item, i }) => (
               <FeaturedMotor
                 key={i}
                 onClick={() =>
                   NavigateToPropertyDeatilsScreen(item.id, 'Motor')
                 }
-                conatinerStyle={{width: '93%', marginTop: 9}}
+                conatinerStyle={{ width: '93%', marginTop: 9 }}
                 item={item}></FeaturedMotor>
             )}
             keyExtractor={(item, index) => index.toString()}
@@ -412,7 +413,7 @@ const CarFilter = ({navigation, route}) => {
             removeClippedSubviews={true}
             maxToRenderPerBatch={50}
             windowSize={70}
-            onEndReached={({distanceFromEnd}) => {
+            onEndReached={({ distanceFromEnd }) => {
               // if (distanceFromEnd < 0) return;
               // LoadMoreData();
               if (IsFaetching === false) {
@@ -425,8 +426,8 @@ const CarFilter = ({navigation, route}) => {
           <Text></Text>
         </>
       ) : (
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={{color: 'black', fontSize: 12, fontWeight: 'bold'}}>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ color: 'black', fontSize: 12, fontWeight: 'bold' }}>
             {filtertext}
           </Text>
         </View>
@@ -492,7 +493,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     padding: 12,
-    //height: '100%',
+    // height: '75%',
     //backgroundColor: 'red',
     // marginTop: 20,
   },

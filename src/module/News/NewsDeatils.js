@@ -154,7 +154,7 @@ const NewsDeatils = props => {
                 style={{marginTop: 2}}
                 source={require('../../shared/assests/NewsFeed/date.png')}
               /> */}
-              <AIcon name="calendar" size={12} color="#0989B8" />
+              <AIcon name="calendar" size={12}  color={colors.blue} />
               <Text
                 style={{
                   color: '#989898',

@@ -1,5 +1,5 @@
 //import liraries
-import React, {Component, useState, useEffect} from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import {
   View,
   StyleSheet,
@@ -24,7 +24,7 @@ import {
 import DeviceInfo from 'react-native-device-info';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import PasswordInput from '../../shared/components/PasswordInput';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import * as Filteraction from '../../redux/action/Filteraction';
 import {
   _setLanguage,
@@ -32,14 +32,14 @@ import {
   _setUsereProfileData,
 } from '../../shared/Constant/Constant';
 import Loader from '../../shared/components/Loader';
-import {localizedString} from '../../shared/localization/localization';
+import { localizedString } from '../../shared/localization/localization';
 import PopUpModel from '../../shared/components/PopUp';
-import {resolvePlugin} from '@babel/core';
-import {flingGestureHandlerProps} from 'react-native-gesture-handler/lib/typescript/handlers/FlingGestureHandler';
+import { resolvePlugin } from '@babel/core';
+import { flingGestureHandlerProps } from 'react-native-gesture-handler/lib/typescript/handlers/FlingGestureHandler';
 import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
-const SignIn2 = ({navigation, route}) => {
+const SignIn2 = ({ navigation, route }) => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -49,7 +49,7 @@ const SignIn2 = ({navigation, route}) => {
   const [popupvisble, setIspopupvisble] = useState(false);
   const [IsNetvisble, setIsNetvisble] = useState(false);
 
-  const NavigateToNextScreen = () => {
+  const NavigateToNextScreen = async () => {
     //navigation.replace('SignInOptpVerfication');
     dispatch(Filteraction.propertyFilter(null));
     dispatch(Filteraction.carFilter(null));
@@ -60,15 +60,18 @@ const SignIn2 = ({navigation, route}) => {
       getMasterDatamotor();
       _setUsereProfileData(null);
       setloading(true);
+      let Device = await DeviceInfo.getUniqueId()
       const userData = {
         grant_type: 'password',
         username: email, //email  customer@nowbuysell.com
         password: password, //password  1234@Find
-        deviceId: DeviceInfo.getUniqueId(),
+        deviceId: Device,
         type: 'Customer',
       };
       //console.log(password);
-      //console.log(email);
+      //console.log(email);ret
+      console.log(userData);
+    
       signIn(userData)
         .then(res => {
           console.log(' res  osama' + JSON.stringify(res));
@@ -264,7 +267,7 @@ const SignIn2 = ({navigation, route}) => {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : ''}>
       <Loader show={loading} />
-      <SafeAreaView style={{width: '100%', height: '100%'}}>
+      <SafeAreaView style={{ width: '100%', height: '100%' }}>
         <View style={styles.container}>
           <View style={styles.topContainer}>
             <Image
@@ -286,7 +289,7 @@ const SignIn2 = ({navigation, route}) => {
           <View style={styles.bottomContainer}>
             <ImageBackground
               resizeMode="stretch"
-              style={{width: '100%', height: 720}}
+              style={{ width: '100%', height: 720 }}
               source={require('../../shared/assests/signIn/building.png')}>
               <View style={styles.backgroundImg}>
                 <Text style={styles.buttonText}>
@@ -377,7 +380,7 @@ const SignIn2 = ({navigation, route}) => {
                       paddingVertical: 14,
                       //marginVertical: 15,
                     }}
-                    labelStyle={{fontSize: 14, textTransform: 'uppercase'}}
+                    labelStyle={{ fontSize: 14, textTransform: 'uppercase' }}
                     onPress={NavigateToNextScreen}></FlatButton>
 
                   <TouchableOpacity
@@ -385,7 +388,7 @@ const SignIn2 = ({navigation, route}) => {
                       navigation.navigate('SignUp');
                     }}>
                     <Text
-                      style={{color: '#19191960', fontFamily: FontFamily.Medium}}>
+                      style={{ color: '#19191960', fontFamily: FontFamily.Medium }}>
                       {/* {localizedString.signIndonthaveAccount} */}
                       Don't Have An Account?
                     </Text>
@@ -416,7 +419,7 @@ const SignIn2 = ({navigation, route}) => {
                       }}
                     />
                     <TouchableOpacity
-                      style={{marginTop: 8}}
+                      style={{ marginTop: 8 }}
                       onPress={() => {
                         storeGuestLogin();
                       }}>

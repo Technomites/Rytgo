@@ -59,7 +59,7 @@ const Help = props => {
               <Icon
                 name="file-o"
                 size={23}
-                color="#0989B8"
+                color={colors.blue}
                 //onPress={() => setzoomInImage('')}
               />
             </View>
@@ -101,7 +101,7 @@ const Help = props => {
               <Icon
                 name="info"
                 size={26}
-                color="#0989B8"
+                color={colors.blue}
                 //onPress={() => setzoomInImage('')}
               />
             </View>
@@ -137,7 +137,7 @@ const Help = props => {
               <MIcon
                 name="policy"
                 size={26}
-                color="#0989B8"
+                color={colors.blue}
                 //onPress={() => setzoomInImage('')}
               />
             </View>
@@ -173,7 +173,7 @@ const Help = props => {
               <Icon
                 name="question"
                 size={26}
-                color="#0989B8"
+                color={colors.blue}
                 //onPress={() => setzoomInImage('')}
               />
             </View>
@@ -209,7 +209,7 @@ const Help = props => {
               <AIcon
                 name="customerservice"
                 size={26}
-                color="#0989B8"
+               color={colors.blue}
                 //onPress={() => setzoomInImage('')}
               />
             </View>
@@ -245,7 +245,7 @@ const Help = props => {
               <Icon
                 name="phone"
                 size={26}
-                color="#0989B8"
+                color={colors.blue}
                 //onPress={() => setzoomInImage('')}
               />
             </View>
@@ -288,7 +288,7 @@ const Help = props => {
               <MIcon
                 name="feedback"
                 size={26}
-                color="#0989B8"
+                color={colors.blue}
                 //onPress={() => setzoomInImage('')}
               />
             </View>

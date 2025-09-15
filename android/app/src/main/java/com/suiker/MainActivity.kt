@@ -1,4 +1,4 @@
-package com.nowbuysell
+package com.rytgo
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

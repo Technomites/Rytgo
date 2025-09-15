@@ -9,6 +9,7 @@ import {
   View,
   Text,
   Switch,
+  Platform,
 } from 'react-native';
 import {UsereProfileData, _setLanguage} from '../shared/Constant/Constant';
 import {useSelector, useDispatch} from 'react-redux';
@@ -27,7 +28,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createDrawerNavigator, DrawerItemList} from '@react-navigation/drawer';
 
-import {colors} from '../shared/themes/theme';
+import {colors, FontFamily} from '../shared/themes/theme';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {localizedString} from '../shared/localization/localization';
@@ -656,9 +657,10 @@ function MyTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Homestack"
-      screenOptions={{headerShown: false}}
+     
       //tabBarOptions={{activeTintColor: 'black'}}
       screenOptions={{
+        headerShown: false,
         tabBarActiveTintColor: 'black',
         headerShown: false,
         tabBarLabelStyle: {
@@ -670,12 +672,23 @@ function MyTabs() {
         name="Homestack"
         component={funHomeStack}
         options={{
-          tabBarLabel: localizedString.homeText,
+          tabBarLabel: ({ focused }) => (
+      <Text
+        style={{
+          fontSize: 12,
+         fontFamily: FontFamily.Medium,
+          color: focused ? colors.blue : 'gray',   // 👈 your custom color
+        }}
+      >
+        {localizedString.homeText}
+      </Text>
+    ),
+          // tabBarLabel: localizedString.homeText,
           tabBarIcon: ({color, size, focused, tintColor}) =>
             // <Image
             //   source={
             focused ? (
-              <AIcon name="home" size={23} color="#0989B8" />
+              <AIcon name="home" size={23} color={colors.blue} />
             ) : (
               <AIcon name="home" size={23} color="black" />
             ),
@@ -701,11 +714,22 @@ function MyTabs() {
         name="Alertstack"
         component={MyAlert}
         options={{
-          tabBarLabel: localizedString.alertsText,
+            tabBarLabel: ({ focused }) => (
+      <Text
+        style={{
+          fontSize: 12,
+        fontFamily: FontFamily.Medium,
+          color: focused ? colors.blue : 'gray',   // 👈 your custom color
+        }}
+      >
+        {localizedString.alertsText}
+      </Text>
+    ),
+         
           tabBarIcon: ({color, size, focused, tintColor}) => (
             <>
               {focused ? (
-                <MaIcon name="bell-ring" size={23} color="#0989B8" sty />
+                <MaIcon name="bell-ring" size={23}  color={colors.blue}  />
               ) : (
                 <MaIcon name="bell-ring" size={23} color="black" />
               )}
@@ -724,7 +748,18 @@ function MyTabs() {
         name="posttack"
         component={NewsFeed}
         options={{
-          tabBarLabel: localizedString.newsfeedText,
+          tabBarLabel: ({ focused }) => (
+      <Text
+        style={{
+          fontSize: 12,
+          fontFamily: FontFamily.Medium,
+          color: focused ? colors.blue : 'gray',  // 👈 your custom color
+        }}
+      >
+        {localizedString.newsfeedText}
+      </Text>
+    ),
+     
           tabBarIcon: ({color, size, focused}) =>
             // <Image
             //   resizeMode="contain"
@@ -745,7 +780,7 @@ function MyTabs() {
             //   }}
             // />
             focused ? (
-              <AIcon name="profile" size={22} color="#0989B8" />
+              <AIcon name="profile" size={22} color={colors.blue}  />
             ) : (
               <AIcon name="profile" size={22} color="black" />
             ),
@@ -790,8 +825,20 @@ function MyTabs() {
       <Tab.Screen
         name="Setting"
         component={Setting}
+        
         options={{
-          tabBarLabel: localizedString.profileText,
+          tabBarLabel: ({ focused }) => (
+      <Text
+        style={{
+          fontSize: 12,
+      fontFamily: FontFamily.Medium,
+          color: focused ? colors.blue : 'gray',   // 👈 your custom color
+        }}
+      >
+        {localizedString.profileText}
+      </Text>
+    ),
+      
           tabBarIcon: ({color, size, focused}) =>
             // <Image
             //   source={
@@ -811,7 +858,7 @@ function MyTabs() {
             // />
 
             focused ? (
-              <AIcon name="user" size={22} color="#0989B8" />
+              <AIcon name="user" size={22} color={colors.blue} />
             ) : (
               <AIcon name="user" size={22} color="black" />
             ),
@@ -962,7 +1009,7 @@ const DrawerNavigator = () => {
     //     UsereProfileData.name,
     // );
     return (
-      <SafeAreaView style={{flex: 1}}>
+      <View style={{flex: 1}}>
         <ImageBackground
           resizeMode="cover"
           source={require('../shared/assests/drawer/DrawerBg.png')}
@@ -973,6 +1020,7 @@ const DrawerNavigator = () => {
               width: '100%',
               justifyContent: 'center',
               alignItems: 'center',
+              marginTop:Platform.OS =='ios'? 50:0
             }}>
             <Image
               style={{height: 40, width: 120, resizeMode: 'contain'}}
@@ -1361,7 +1409,7 @@ const DrawerNavigator = () => {
             </View>
           </ScrollView>
         </ImageBackground>
-      </SafeAreaView>
+      </View>
     );
   };
   return (

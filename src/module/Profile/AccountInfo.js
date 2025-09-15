@@ -39,7 +39,7 @@ import {
 
 import {_setUsereProfileData} from '../../shared/Constant/Constant';
 import {localizedString} from '../../shared/localization/localization';
-import { FontFamily } from '../../shared/themes/theme';
+import { colors, FontFamily } from '../../shared/themes/theme';
 
 const AccountInfo = props => {
   const [name, setname] = useState('');
@@ -397,7 +397,7 @@ const AccountInfo = props => {
                 resizeMode="contain"
                 source={require('../../shared/assests/Profile/ImageSelect.png')}
               /> */}
-              <AIcon name="camera" size={44} color="#0989B8" />
+              <AIcon name="camera" size={44} color={colors.blue} />
             </TouchableOpacity>
           </View>
         </View>

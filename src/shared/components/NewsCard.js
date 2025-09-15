@@ -130,7 +130,7 @@ const NewsCard = props => {
             <AIcon
               name="calendar"
               size={13}
-              color="#0989B8"
+             color={colors.blue}
               style={{marginTop: 1}}
             />
             <Text

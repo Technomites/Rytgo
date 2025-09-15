@@ -2,7 +2,7 @@
 /* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
 
-import React, {useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import listeners from '../../shared/utils/notificationService';
 import {
@@ -17,6 +17,7 @@ import {
   Button,
   SafeAreaView,
   Dimensions,
+  StatusBar,
 } from 'react-native';
 import SearchBar from 'react-native-dynamic-search-bar';
 import PropertyType from '../../shared/components/PropertyType';
@@ -24,10 +25,10 @@ import FeaturedMotor from '../../shared/components/FeaturedMotor';
 import FeaturedProperty1 from '../../shared/components/FeaturedProperty';
 import Banner from '../../shared/components/Banner';
 import Blogs from '../../shared/components/Blogs';
-import {localizedString} from '../../shared/localization/localization';
-import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { localizedString } from '../../shared/localization/localization';
+import { useRtlContext } from 'react-native-easy-localization-and-rtl';
 import FlatButton from '../../shared/components/FlatButton';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import * as HomeAction from '../../redux/action/setWishList';
 import * as NotificationAction from '../../redux/action/Notificationaction';
 import * as openGuestPopup from '../../redux/action/Guestpopupaction';
@@ -69,18 +70,18 @@ import MIcon from 'react-native-vector-icons/Entypo';
 import PopUpModel from '../../shared/components/PopUp';
 import SuccessFailModel from '../../shared/components/SuccessFailModel';
 import AccessDeniedModel from '../../shared/components/AccessDeniedModel';
-import {SliderBox} from 'react-native-image-slider-box';
-import { FontFamily } from '../../shared/themes/theme';
+import { SliderBox } from 'react-native-image-slider-box';
+import { colors, FontFamily } from '../../shared/themes/theme';
 // create a component
 
 export const TestFunction = () => {
-  const {RtlStyles, isRtl, language, setLanguage} = useRtlContext();
+  const { RtlStyles, isRtl, language, setLanguage } = useRtlContext();
   //console.log('yahooooooooo');
   setLanguage(language !== 'ar' ? 'ar' : 'en');
   alert('yahooooooooo');
 };
 
-const Home = ({navigation, route}) => {
+const Home = ({ navigation, route }) => {
   const wishlist = useSelector(state => state.withList.wishlist);
   let popstate = useSelector(state => state.GuestPopup.popup);
   //alert(popstate);
@@ -91,7 +92,7 @@ const Home = ({navigation, route}) => {
   const dispatch = useDispatch();
   const notInitialRendeproperty = useRef(false);
 
-  const {RtlStyles, isRtl, language, setLanguage} = useRtlContext();
+  const { RtlStyles, isRtl, language, setLanguage } = useRtlContext();
   const [featuredMotors, setfeaturedMotors] = useState([]);
   const [offset, setOffset] = useState(0);
   const [offsetproperty, setOffsetproperty] = useState(0);
@@ -175,7 +176,7 @@ const Home = ({navigation, route}) => {
       return (
         <FeaturedMotor
           key={i}
-          conatinerStyle={{width: '90%', marginTop: 14}}
+          conatinerStyle={{ width: '90%', marginTop: 14 }}
           item={element}
           // onClick={NavigateToPropertyDeatilsScreen}>
           onClick={() => {
@@ -209,9 +210,9 @@ const Home = ({navigation, route}) => {
 
   const NavigateToMotorPropertyFiler = index => {
     if (index === 0) {
-      navigation.navigate('PropertyFilter', {type: 'Rent'});
+      navigation.navigate('PropertyFilter', { type: 'Rent' });
     } else if (index === 1) {
-      navigation.navigate('PropertyFilter', {type: 'Sale'});
+      navigation.navigate('PropertyFilter', { type: 'Sale' });
     } else {
       navigation.navigate('CarFilter');
     }
@@ -568,7 +569,8 @@ const Home = ({navigation, route}) => {
   }
 
   return (
-    <SafeAreaView style={{width: '100%', height: '100%'}}>
+    <SafeAreaView style={{ width: '100%', height: '100%' }}>
+      
       <Loader show={loading} />
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -579,7 +581,7 @@ const Home = ({navigation, route}) => {
         <View style={styles.topContainer}>
           <View style={styles.topHeader}>
             <TouchableOpacity
-              hitSlop={{top: 40, bottom: 40, left: 50, right: 50}}
+              hitSlop={{ top: 40, bottom: 40, left: 50, right: 50 }}
               style={{}}
               onPress={() => navigation.openDrawer()}>
               {/* <Image
@@ -591,13 +593,13 @@ const Home = ({navigation, route}) => {
                 name="menu"
                 size={28}
                 color="#0989B8"
-                style={{marginLeft: 13}}
+                style={{ marginLeft: 13 }}
               />
             </TouchableOpacity>
             <Image
-              resizeMode="cover"
-              style={{marginRight: 30}}
-              source={require('../../shared/assests/home/logo.png')}
+              resizeMode="contain"
+              style={{ height: '100%', width: '100%', alignSelf:'flex-end',marginLeft:'20%'}}
+              source={require('../../shared/assests/signIn/NowBuySell.png')}
             />
           </View>
         </View>
@@ -781,7 +783,7 @@ const Home = ({navigation, route}) => {
                 alignItems: 'flex-end',
                 justifyContent: 'flex-end',
               }}
-              ImageComponentStyle={{borderRadius: 16}}
+              ImageComponentStyle={{ borderRadius: 16 }}
               //dotStyle={{width: 10, height: 10}}
               // dotStyle={{height: '0%', width: '0%'}}
               //dotColor=""
@@ -817,13 +819,13 @@ const Home = ({navigation, route}) => {
             </Text>
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate('posttack', {name: 'newstab'})
+                navigation.navigate('posttack', { name: 'newstab' })
               }>
               <Text
                 style={{
                   color: 'gray',
                   fontSize: 15,
-                  fontFamily:FontFamily.SemiBold,
+                  fontFamily: FontFamily.SemiBold,
                   marginTop: 14,
                 }}>
                 {localizedString.viewlAll}
@@ -835,8 +837,8 @@ const Home = ({navigation, route}) => {
             showsHorizontalScrollIndicator={false}
             data={blogs}
             showsVerticalScrollIndicator={false}
-            style={{marginTop: 8}}
-            renderItem={({item, i}) => (
+            style={{ marginTop: 8 }}
+            renderItem={({ item, i }) => (
               <Blogs
                 key={i}
                 item={item}
@@ -847,7 +849,7 @@ const Home = ({navigation, route}) => {
               />
             )}
             keyExtractor={(item, index) => index.toString()}
-            ListFooterComponent={<View style={{width: 14}}></View>}
+            ListFooterComponent={<View style={{ width: 14 }}></View>}
           />
           {trendProperty && trendProperty.length ? (
             <>
@@ -876,8 +878,8 @@ const Home = ({navigation, route}) => {
                 showsHorizontalScrollIndicator={false}
                 data={trendProperty}
                 showsVerticalScrollIndicator={false}
-                style={{marginTop: 4}}
-                renderItem={({item, i}) => (
+                style={{ marginTop: 4 }}
+                renderItem={({ item, i }) => (
                   <FeaturedProperty1
                     key={i}
                     item={item}
@@ -894,7 +896,7 @@ const Home = ({navigation, route}) => {
                 keyExtractor={(item, index) => index.toString()}
                 onEndReached={() => LoadMoreTrendingProperty()}
                 onEndReachedThreshold={0.1}
-                ListFooterComponent={<View style={{width: 14}}></View>}
+                ListFooterComponent={<View style={{ width: 14 }}></View>}
               />
             </>
           ) : null}
@@ -925,8 +927,8 @@ const Home = ({navigation, route}) => {
                 showsHorizontalScrollIndicator={false}
                 data={trendCar}
                 showsVerticalScrollIndicator={false}
-                style={{marginTop: 4}}
-                renderItem={({item, i}) => (
+                style={{ marginTop: 4 }}
+                renderItem={({ item, i }) => (
                   <FeaturedMotor
                     key={i}
                     item={item}
@@ -943,7 +945,7 @@ const Home = ({navigation, route}) => {
                 keyExtractor={(item, index) => index.toString()}
                 onEndReached={() => LoadMoreTrendingCars()}
                 onEndReachedThreshold={0.1}
-                ListFooterComponent={<View style={{width: 14}}></View>}
+                ListFooterComponent={<View style={{ width: 14 }}></View>}
               />
             </>
           ) : null}
@@ -962,7 +964,7 @@ const Home = ({navigation, route}) => {
                 _setLanguage('en');
                 navigation.reset({
                   index: 0,
-                  routes: [{name: 'SignIn2'}],
+                  routes: [{ name: 'SignIn2' }],
                 });
               }, 2000);
             }}
@@ -978,7 +980,7 @@ const Home = ({navigation, route}) => {
                   _setLanguage('en');
                   navigation.reset({
                     index: 0,
-                    routes: [{name: 'SignIn2'}],
+                    routes: [{ name: 'SignIn2' }],
                   });
                 }, 2000);
               } else {
@@ -1001,7 +1003,7 @@ const Home = ({navigation, route}) => {
                 _setLanguage('en');
                 navigation.reset({
                   index: 0,
-                  routes: [{name: 'SignIn2'}],
+                  routes: [{ name: 'SignIn2' }],
                 });
               }, 2000);
             }}
@@ -1016,7 +1018,7 @@ const Home = ({navigation, route}) => {
                   _setLanguage('en');
                   navigation.reset({
                     index: 0,
-                    routes: [{name: 'SignIn2'}],
+                    routes: [{ name: 'SignIn2' }],
                   });
                 }, 2000);
               } else {

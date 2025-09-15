@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "594805765315",
-    "project_id": "nbs-customer",
-    "storage_bucket": "nbs-customer.appspot.com"
+    "project_number": "128397164394",
+    "project_id": "rytgo-e4cd6",
+    "storage_bucket": "rytgo-e4cd6.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:594805765315:android:11ed30dc32e7308daa9e76",
+        "mobilesdk_app_id": "1:128397164394:android:415f770b9499adf6eb2f13",
         "android_client_info": {
-          "package_name": "com.nowbuysell"
+          "package_name": "com.rytgo"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "594805765315-pre7hq0cuiq8nd19ljv6fv34blfb91b5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyABZdOpeXCSV4LBovtTaaj1FhQRxFUugM8"
+          "current_key": "AIzaSyDe33NKu2TvsVhquV5KD3xx0Bqg5Ug_3ys"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "594805765315-pre7hq0cuiq8nd19ljv6fv34blfb91b5.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

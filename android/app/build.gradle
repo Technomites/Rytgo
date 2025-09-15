@@ -78,9 +78,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.nowbuysell"
+    namespace "com.rytgo"
     defaultConfig {
-        applicationId "com.nowbuysell"
+        applicationId "com.rytgo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
        versionCode 11

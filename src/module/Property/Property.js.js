@@ -299,11 +299,11 @@ const Property = ({navigation, route}) => {
                 style={{marginLeft: 20}}
               />
             </TouchableOpacity>
-            <Image
-              resizeMode="cover"
-              style={{marginRight: 20}}
-              source={require('../../shared/assests/home/logo.png')}
-            />
+           <Image
+                         resizeMode="contain"
+                style={{ height: '100%', width: '100%', alignSelf: 'flex-end', marginLeft: '30%' }}
+                         source={require('../../shared/assests/signIn/NowBuySell.png')}
+                       />
           </View>
           <View
             style={{
