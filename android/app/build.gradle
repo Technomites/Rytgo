@@ -88,10 +88,10 @@ android {
     }
   signingConfigs {
           release {
-      storeFile file('NBS.keystore')
-      storePassword '123456'
-      keyAlias 'NBS'
-      keyPassword '123456'
+        storeFile file('rytgo-key.keystore')
+            storePassword '123456'
+            keyAlias 'my-key-alias'
+            keyPassword '123456'
     }
         
         debug {
@@ -107,7 +107,7 @@ android {
         }
         release {
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
