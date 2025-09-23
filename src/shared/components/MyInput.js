@@ -92,6 +92,7 @@ const Styles = StyleSheet.create({
     // height: '80%',
     marginHorizontal: 5,
     width: '100%',
+    color:colors?.black
 
     // backgroundColor: 'red',
     // justifyContent: 'center',

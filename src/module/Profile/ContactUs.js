@@ -156,8 +156,8 @@ const ContactUs = props => {
                 resizeMode="cover"
                 style={
                   {
-                    //  width: '100%',
-                    //height: 200,
+                       width: '9%',
+                    height: 30,
                   }
                 }
                 source={require('../../shared/assests/Profile/phone.png')}
@@ -177,8 +177,8 @@ const ContactUs = props => {
                 resizeMode="cover"
                 style={
                   {
-                    //  width: '100%',
-                    //height: 200,
+                     width: '10%',
+                    height: 25,
                   }
                 }
                 source={require('../../shared/assests/Profile/envelope.png')}
@@ -189,6 +189,7 @@ const ContactUs = props => {
                   fontFamily: FontFamily.SemiBold,
                   fontSize: 14,
                   marginLeft: 8,
+                
                 }}>
                 {contactdeatils.email}
               </Text>

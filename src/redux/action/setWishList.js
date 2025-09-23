@@ -25,7 +25,7 @@ export const setWishlist = (token, pagniationData, language) => {
     };
 
     fetch(
-      'https://portal.nowbuysell.com/api/v1/car/filter/' + language + '/get',
+      'https://portal.rytgo.com/api/v1/car/filter/' + language + '/get',
       requestOptions,
     )
       .then(response => response.json())

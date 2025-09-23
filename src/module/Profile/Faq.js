@@ -22,7 +22,7 @@ const Faq = props => {
         source={{
           // https://nowbuysell.com/faqs_mb?View=Mobile&Lang=en
           uri:
-            'https://nowbuysell.com/faqs_mb?View=Mobile' + '&Lang=' + languagee,
+            'https://portal.rytgo.com/faqs_mb?View=Mobile' + '&Lang=' + languagee,
         }}
         //injectedJavaScript={`document.querySelector('.nofixed').style.display = 'none'`}
         onLoadStart={() => setloading(true)}

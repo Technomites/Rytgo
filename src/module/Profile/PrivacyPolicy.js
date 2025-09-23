@@ -21,7 +21,7 @@ const PrivacyPolicy = props => {
       <WebView
         source={{
           uri:
-            'https://nowbuysell.com/privacy_mb?View=Mobile' +
+            'https://portal.rytgo.com/privacy_mb?View=Mobile' +
             '&Lang=' +
             languagee,
         }}

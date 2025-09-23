@@ -44,7 +44,7 @@ const Help = props => {
             onPress={() =>
               props.navigation.navigate('TermCondidtion', {
                 heading: localizedString.aboutUs,
-                url: 'https://nowbuysell.com/aboutus_mb?View=Mobile',
+                url: 'https://portal.rytgo.com/aboutus_mb?View=Mobile',
               })
             }
             style={{...styles.tileContainer, ...RtlStyles.containerRow}}>
@@ -86,7 +86,7 @@ const Help = props => {
             onPress={() =>
               props.navigation.navigate('TermCondidtion', {
                 heading: localizedString.termcondidtionText,
-                url: 'https://nowbuysell.com/terms_mb?View=Mobile',
+                url: 'https://portal.rytgo.com/terms_mb?View=Mobile',
               })
             }
             style={{...styles.tileContainer, ...RtlStyles.containerRow}}>

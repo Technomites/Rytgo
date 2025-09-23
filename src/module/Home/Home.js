@@ -592,7 +592,7 @@ const Home = ({ navigation, route }) => {
               <MIcon
                 name="menu"
                 size={28}
-                color="#0989B8"
+                color={colors.blue}
                 style={{ marginLeft: 13 }}
               />
             </TouchableOpacity>

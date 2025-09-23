@@ -970,8 +970,8 @@ const PropertyDeatils = props => {
       const result = await Share.share({
         message:
           name === 'Property'
-            ? 'https://nowbuysell.com/property/' + deatils.slug
-            : 'https://nowbuysell.com/vehicle/' + deatils.slug,
+            ? 'https://portal.rytgo.com/property/' + deatils.slug
+            : 'https://portal.rytgo.com/vehicle/' + deatils.slug,
       });
       if (result.action === Share.sharedAction) {
         if (result.activityType) {

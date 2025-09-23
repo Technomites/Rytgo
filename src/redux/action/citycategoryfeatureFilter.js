@@ -24,7 +24,7 @@ export const getCities = (language, accessToken) => {
     };
 
     fetch(
-      `https://portal.nowbuysell.com/api/v1/${language}/cities`,
+      `https://portal.rytgo.com/api/v1/${language}/cities`,
       requestConfig,
     )
       .then(response => response.json())
@@ -63,7 +63,7 @@ export const getcategoryProperty = (language, accessToken) => {
     };
 
     fetch(
-      `https://portal.nowbuysell.com/api/v1/property/filter/${language}/categories`,
+      `https://portal.rytgo.com/api/v1/property/filter/${language}/categories`,
       requestConfig,
     )
       .then(response => response.json())
@@ -109,7 +109,7 @@ export const getfeatureProperty = (language, accessToken) => {
     };
     // v1/property/filter/${languagee}/features`
     fetch(
-      `https://portal.nowbuysell.com/api/v1/property/filter/${language}/features`,
+      `https://portal.rytgo.com/api/v1/property/filter/${language}/features`,
       requestConfig,
     )
       .then(response => response.json())
@@ -153,7 +153,7 @@ export const getcategoryCar = (language, accessToken) => {
     };
 
     fetch(
-      `https://portal.nowbuysell.com/api/v1/car/filter/${language}/categories`,
+      `https://portal.rytgo.com/api/v1/car/filter/${language}/categories`,
       requestConfig,
     )
       .then(response => response.json())
@@ -198,7 +198,7 @@ export const getfeatureCar = (language, accessToken) => {
     };
     // v1/property/filter/${languagee}/features`
     fetch(
-      `https://portal.nowbuysell.com/api/v1/car/filter/${language}/features`,
+      `https://portal.rytgo.com/api/v1/car/filter/${language}/features`,
       requestConfig,
     )
       .then(response => response.json())

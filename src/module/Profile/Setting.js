@@ -466,12 +466,13 @@ const Setting = ({navigation, route}) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}
-            onPress={() =>
-              openUrl(
-                'https://play.google.com/store/apps/details?id=com.nbsvendor',
-                'https://apps.apple.com/pk/app/nbs-vendor/id1614254527',
-              )
-            }>
+            // onPress={() =>
+            //   openUrl(
+            //     'https://play.google.com/store/apps/details?id=com.nbsvendor',
+            //     'https://apps.apple.com/pk/app/nbs-vendor/id1614254527',
+            //   )
+            // }
+            >
             <SettingCard
               heading={localizedString.becomevendor}
               imgPath={require('../../shared/assests/Profile/becomevendor.png')}

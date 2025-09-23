@@ -21,7 +21,8 @@ const CustomerSupport = props => {
       <WebView
         source={{
           uri:
-            'https://nowbuysell.com/CustomerSupport_mb?View=Mobile' +
+            'https://portal.rytgo.com/CustomerSupport_mb?View=Mobile' +
+            
             '&Lang=' +
             languagee,
         }}

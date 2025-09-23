@@ -64,6 +64,7 @@ const Styles = StyleSheet.create({
     marginHorizontal: 9,
     height: 50,
     width: '70%',
+    color:colors?.black
     //backgroundColor: 'yellow',
   },
   clickStyle: {
