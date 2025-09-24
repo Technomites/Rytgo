@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/self-closing-comp */
 //import liraries
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Iconsort from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Dropdown, MultiSelect} from 'react-native-element-dropdown';
+import { Dropdown, MultiSelect } from 'react-native-element-dropdown';
 
 import FilterCard from '../../shared/components/FilterCard';
 import SliderBar from '../../shared/components/SliderBar';
@@ -32,9 +32,9 @@ import {
 import FilterPropertyCategoryCard from '../../shared/components/FilterPropertyCard';
 import * as Filteraction from '../../redux/action/Filteraction';
 import * as citycategoryfeatureFilter from '../../redux/action/citycategoryfeatureFilter';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Loader from '../../shared/components/Loader';
-import {localizedString} from '../../shared/localization/localization';
+import { localizedString } from '../../shared/localization/localization';
 import MyInput from '../../shared/components/MyInput';
 import {
   propertyMasterData,
@@ -43,41 +43,41 @@ import {
   languagee,
 } from '../../shared/Constant/Constant';
 
-import {max, set} from 'react-native-reanimated';
+import { max, set } from 'react-native-reanimated';
 import HorizontalLine from '../../shared/components/HorizontalLine';
-import {LocalizationString} from 'react-native-easy-localization-and-rtl';
-import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { LocalizationString } from 'react-native-easy-localization-and-rtl';
+import { useRtlContext } from 'react-native-easy-localization-and-rtl';
 import { colors, FontFamily } from '../../shared/themes/theme';
 
 const data = [
-  {label: 'New In', value: '1'},
-  {label: 'High to Low', value: '2'},
-  {label: 'Low to High', value: '3'},
+  { label: 'New In', value: '1' },
+  { label: 'High to Low', value: '2' },
+  { label: 'Low to High', value: '3' },
 ];
 const arabicdata = [
-  {label: 'الجديد في', value: '1'},
-  {label: 'من الأعلى إلى الأقل', value: '2'},
-  {label: 'من أسفل إلى أعلى', value: '3'},
+  { label: 'الجديد في', value: '1' },
+  { label: 'من الأعلى إلى الأقل', value: '2' },
+  { label: 'من أسفل إلى أعلى', value: '3' },
 ];
 let regionSpec = [
-  {name: 'GCC Specs', value: 'GCC Specs'},
-  {name: 'European Specs', value: 'European Specs'},
-  {name: 'Japanese Specs', value: 'Japanese Specs'},
-  {name: 'American Specs', value: 'American Specs'},
-  {name: 'Canadian', value: 'Canadian'},
-  {name: 'Australian Specs', value: 'Australian Specs'},
-  {name: 'Not Sure', value: 'Not Sure'},
-  {name: 'Other Specs', value: 'Other Specs'},
+  { name: 'GCC Specs', value: 'GCC Specs' },
+  { name: 'European Specs', value: 'European Specs' },
+  { name: 'Japanese Specs', value: 'Japanese Specs' },
+  { name: 'American Specs', value: 'American Specs' },
+  { name: 'Canadian', value: 'Canadian' },
+  { name: 'Australian Specs', value: 'Australian Specs' },
+  { name: 'Not Sure', value: 'Not Sure' },
+  { name: 'Other Specs', value: 'Other Specs' },
 ];
 let arabicregionSpec = [
-  {name: 'المواصفات الخليجية', value: 'GCC Specs'},
-  {name: 'المواصفات الأوروبية', value: 'European Specs'},
-  {name: 'المواصفات اليابانية', value: 'Japanese Specs'},
-  {name: 'المواصفات الأمريكية', value: 'American Specs'},
-  {name: 'كندي', value: 'Canadian'},
-  {name: 'المواصفات الاسترالية', value: 'Australian Specs'},
-  {name: 'غير متأكد', value: 'Not Sure'},
-  {name: 'المواصفات الأخرى', value: 'Other Specs'},
+  { name: 'المواصفات الخليجية', value: 'GCC Specs' },
+  { name: 'المواصفات الأوروبية', value: 'European Specs' },
+  { name: 'المواصفات اليابانية', value: 'Japanese Specs' },
+  { name: 'المواصفات الأمريكية', value: 'American Specs' },
+  { name: 'كندي', value: 'Canadian' },
+  { name: 'المواصفات الاسترالية', value: 'Australian Specs' },
+  { name: 'غير متأكد', value: 'Not Sure' },
+  { name: 'المواصفات الأخرى', value: 'Other Specs' },
 ];
 // const Roomsdata = [
 //   {label: '1', value: '1'},
@@ -93,11 +93,11 @@ let arabicregionSpec = [
 //   {label: '11', value: '12'},
 // ];
 const Bathdata = [
-  {label: '1', value: '1'},
-  {label: '2', value: '2'},
-  {label: '3', value: '3'},
-  {label: '4', value: '4'},
-  {label: '5', value: '5'},
+  { label: '1', value: '1' },
+  { label: '2', value: '2' },
+  { label: '3', value: '3' },
+  { label: '4', value: '4' },
+  { label: '5', value: '5' },
 ];
 let propertyFilterObj = {};
 let carFilterObj = {};
@@ -111,9 +111,9 @@ let propertycategory = [];
 let propertyfeatures = [];
 let loader = true;
 
-const Filter = ({navigation, route}) => {
-  const {RtlStyles, isRtl} = useRtlContext();
-  const {name, type} = route.params;
+const Filter = ({ navigation, route }) => {
+  const { RtlStyles, isRtl } = useRtlContext();
+  const { name, type } = route.params;
   //console.log('filter' + type);
 
   propertyFilter = useSelector(state => state.propertyFilter.propertyFilter);
@@ -204,124 +204,124 @@ const Filter = ({navigation, route}) => {
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const [roomselected, setroomSelected] = useState(null);
   const [roomsdata, setRoomsdata] = useState([
-    {label: '1', value: '1', isSelected: false},
-    {label: '2', value: '2', isSelected: false},
-    {label: '3', value: '3', isSelected: false},
-    {label: '4', value: '4', isSelected: false},
-    {label: '5', value: '5', isSelected: false},
-    {label: '6', value: '6', isSelected: false},
-    {label: '7', value: '7', isSelected: false},
-    {label: '8', value: '8', isSelected: false},
-    {label: '9', value: '9', isSelected: false},
-    {label: '10', value: '10', isSelected: false},
-    {label: '11', value: '11', isSelected: false},
-    {label: '12', value: '12', isSelected: false},
+    { label: '1', value: '1', isSelected: false },
+    { label: '2', value: '2', isSelected: false },
+    { label: '3', value: '3', isSelected: false },
+    { label: '4', value: '4', isSelected: false },
+    { label: '5', value: '5', isSelected: false },
+    { label: '6', value: '6', isSelected: false },
+    { label: '7', value: '7', isSelected: false },
+    { label: '8', value: '8', isSelected: false },
+    { label: '9', value: '9', isSelected: false },
+    { label: '10', value: '10', isSelected: false },
+    { label: '11', value: '11', isSelected: false },
+    { label: '12', value: '12', isSelected: false },
   ]);
 
   const [bathselected, setbathSelected] = useState(null);
   const [bathdata, setbathdata] = useState([
-    {label: '1', value: '1', isSelected: false},
-    {label: '2', value: '2', isSelected: false},
-    {label: '3', value: '3', isSelected: false},
-    {label: '4', value: '4', isSelected: false},
-    {label: '5', value: '5', isSelected: false},
+    { label: '1', value: '1', isSelected: false },
+    { label: '2', value: '2', isSelected: false },
+    { label: '3', value: '3', isSelected: false },
+    { label: '4', value: '4', isSelected: false },
+    { label: '5', value: '5', isSelected: false },
   ]);
 
   const [diningselected, setdiningselected] = useState(null);
   const [diningdata, setdiningdata] = useState([
-    {label: '1', value: '1', isSelected: false},
-    {label: '2', value: '2', isSelected: false},
-    {label: '3', value: '3', isSelected: false},
+    { label: '1', value: '1', isSelected: false },
+    { label: '2', value: '2', isSelected: false },
+    { label: '3', value: '3', isSelected: false },
   ]);
 
   const [laundryselected, setlaundryselected] = useState(null);
   const [laundrydata, setlaundrydata] = useState([
-    {label: '1', value: '1', isSelected: false},
-    {label: '2', value: '2', isSelected: false},
-    {label: '3', value: '3', isSelected: false},
+    { label: '1', value: '1', isSelected: false },
+    { label: '2', value: '2', isSelected: false },
+    { label: '3', value: '3', isSelected: false },
   ]);
 
   const [garagesselected, setgaragesselected] = useState(null);
   const [garagesdata, setgaragesdata] = useState([
-    {label: '1', value: '1', isSelected: false},
-    {label: '2', value: '2', isSelected: false},
-    {label: '3', value: '3', isSelected: false},
+    { label: '1', value: '1', isSelected: false },
+    { label: '2', value: '2', isSelected: false },
+    { label: '3', value: '3', isSelected: false },
   ]);
   const [transimssionselected, settransimssionselected] = useState(null);
   const [transimssiondata, seTransimssiondata] = useState([
-    {label: 'Automatic', value: 'Automatic', isSelected: false},
-    {label: 'Manual', value: 'Manual', isSelected: false},
-    {label: 'CVT', value: 'CVT', isSelected: false},
-    {label: 'DCT', value: 'DCT', isSelected: false},
+    { label: 'Automatic', value: 'Automatic', isSelected: false },
+    { label: 'Manual', value: 'Manual', isSelected: false },
+    { label: 'CVT', value: 'CVT', isSelected: false },
+    { label: 'DCT', value: 'DCT', isSelected: false },
   ]);
   const [arabictransimssiondata, searabicTransimssiondata] = useState([
-    {label: 'تلقائي', value: 'Automatic', isSelected: false},
-    {label: 'يدوي', value: 'Manual', isSelected: false},
-    {label: 'CVT', value: 'CVT', isSelected: false},
-    {label: 'DCT', value: 'DCT', isSelected: false},
+    { label: 'تلقائي', value: 'Automatic', isSelected: false },
+    { label: 'يدوي', value: 'Manual', isSelected: false },
+    { label: 'CVT', value: 'CVT', isSelected: false },
+    { label: 'DCT', value: 'DCT', isSelected: false },
   ]);
   const [fuelselected, setfuelselected] = useState(null);
   const [fueldata, sefueldata] = useState([
-    {label: 'Petrol', value: 'Petrol', isSelected: false},
-    {label: 'Diesel', value: 'Diesel', isSelected: false},
-    {label: 'Hybrid', value: 'Hybrid', isSelected: false},
-    {label: 'Electric', value: 'Electric', isSelected: false},
+    { label: 'Petrol', value: 'Petrol', isSelected: false },
+    { label: 'Diesel', value: 'Diesel', isSelected: false },
+    { label: 'Hybrid', value: 'Hybrid', isSelected: false },
+    { label: 'Electric', value: 'Electric', isSelected: false },
   ]);
   const [arabicfueldata, searabicfueldata] = useState([
-    {label: 'بنزين', value: 'Petrol', isSelected: false},
-    {label: 'ديزل', value: 'Diesel', isSelected: false},
-    {label: 'هجين', value: 'Hybrid', isSelected: false},
-    {label: 'كهربائي', value: 'Electric', isSelected: false},
+    { label: 'بنزين', value: 'Petrol', isSelected: false },
+    { label: 'ديزل', value: 'Diesel', isSelected: false },
+    { label: 'هجين', value: 'Hybrid', isSelected: false },
+    { label: 'كهربائي', value: 'Electric', isSelected: false },
   ]);
   const [doorselected, setdoorselected] = useState(null);
   const [doordata, setdoordata] = useState([
-    {label: '1', value: '1', isSelected: false},
-    {label: '2', value: '2', isSelected: false},
-    {label: '3', value: '3', isSelected: false},
-    {label: '4', value: '4', isSelected: false},
-    {label: '5', value: '5', isSelected: false},
+    { label: '1', value: '1', isSelected: false },
+    { label: '2', value: '2', isSelected: false },
+    { label: '3', value: '3', isSelected: false },
+    { label: '4', value: '4', isSelected: false },
+    { label: '5', value: '5', isSelected: false },
   ]);
   const [wheelselected, setwheelselected] = useState(null);
   const [wheeldata, setwheeldata] = useState([
-    {label: '1', value: '1', isSelected: false},
-    {label: '2', value: '2', isSelected: false},
-    {label: '3', value: '3', isSelected: false},
-    {label: '4', value: '4', isSelected: false},
-    {label: '5', value: '5', isSelected: false},
+    { label: '1', value: '1', isSelected: false },
+    { label: '2', value: '2', isSelected: false },
+    { label: '3', value: '3', isSelected: false },
+    { label: '4', value: '4', isSelected: false },
+    { label: '5', value: '5', isSelected: false },
   ]);
   const [capacityselected, setcapacityselected] = useState(null);
   const [capacitydata, setcapacitydata] = useState([
-    {label: '1-2 Person', value: '1-2 Person', isSelected: false},
-    {label: '2-4 Person', value: '2-4 Person', isSelected: false},
-    {label: '4-6 Person', value: '4-6 Person', isSelected: false},
-    {label: '6-10 Person', value: '6-10 Person', isSelected: false},
+    { label: '1-2 Person', value: '1-2 Person', isSelected: false },
+    { label: '2-4 Person', value: '2-4 Person', isSelected: false },
+    { label: '4-6 Person', value: '4-6 Person', isSelected: false },
+    { label: '6-10 Person', value: '6-10 Person', isSelected: false },
   ]);
   const [arabiccapacitydata, setarabiccapacitydata] = useState([
-    {label: '1-2 شخص', value: '1-2 Person', isSelected: false},
-    {label: '2-4 شخص', value: '2-4 Person', isSelected: false},
-    {label: '4-6 شخص', value: '4-6 Person', isSelected: false},
-    {label: '6-10 شخص', value: '6-10 Person', isSelected: false},
+    { label: '1-2 شخص', value: '1-2 Person', isSelected: false },
+    { label: '2-4 شخص', value: '2-4 Person', isSelected: false },
+    { label: '4-6 شخص', value: '4-6 Person', isSelected: false },
+    { label: '6-10 شخص', value: '6-10 Person', isSelected: false },
   ]);
   const [steeringselected, setsteeringselected] = useState(null);
   const [steeringdata, setsteeringdata] = useState([
-    {label: 'Left Hand Side', value: 'Left Hand Side', isSelected: false},
-    {label: 'Right Hand Side', value: 'Right Hand Side', isSelected: false},
+    { label: 'Left Hand Side', value: 'Left Hand Side', isSelected: false },
+    { label: 'Right Hand Side', value: 'Right Hand Side', isSelected: false },
   ]);
   const [arabicsteeringdata, setarabicsteeringdata] = useState([
-    {label: 'الجانب الأيسر', value: 'Left Hand Side', isSelected: false},
-    {label: 'الجانب الأيمن', value: 'Right Hand Side', isSelected: false},
+    { label: 'الجانب الأيسر', value: 'Left Hand Side', isSelected: false },
+    { label: 'الجانب الأيمن', value: 'Right Hand Side', isSelected: false },
   ]);
   const [bodyselected, setbodyselected] = useState(null);
   const [bodydata, setbodydata] = useState([
-    {label: '1-3', value: '1-3', isSelected: false},
-    {label: '4-6', value: '4-6', isSelected: false},
-    {label: '7-9', value: '7-9', isSelected: false},
-    {label: '10-10', value: '10-10', isSelected: false},
+    { label: '1-3', value: '1-3', isSelected: false },
+    { label: '4-6', value: '4-6', isSelected: false },
+    { label: '7-9', value: '7-9', isSelected: false },
+    { label: '10-10', value: '10-10', isSelected: false },
   ]);
   const [mechanicalselected, setmechanicalselected] = useState(null);
   const [mechanicaldata, setmechanicaldata] = useState([
-    {label: 'Perfect Inside', value: 'Perfect Inside', isSelected: false},
-    {label: 'Perfect Outside', value: 'Perfect Outside', isSelected: false},
+    { label: 'Perfect Inside', value: 'Perfect Inside', isSelected: false },
+    { label: 'Perfect Outside', value: 'Perfect Outside', isSelected: false },
     {
       label: 'Perfect Inside & Outside',
       value: 'Perfect Inside & Outside',
@@ -329,8 +329,8 @@ const Filter = ({navigation, route}) => {
     },
   ]);
   const [arabicmechanicaldata, setarabicmechanicaldata] = useState([
-    {label: 'الكمال من الداخل', value: 'Perfect Inside', isSelected: false},
-    {label: 'الكمال من الخارج', value: 'Perfect Outside', isSelected: false},
+    { label: 'الكمال من الداخل', value: 'Perfect Inside', isSelected: false },
+    { label: 'الكمال من الخارج', value: 'Perfect Outside', isSelected: false },
     {
       label: 'مثالي من الداخل والخارج',
       value: 'مثالي من الداخل والخارج',
@@ -339,28 +339,28 @@ const Filter = ({navigation, route}) => {
   ]);
   const [cylinderselected, setcylinderselected] = useState(null);
   const [cylinderdata, setcylinderdata] = useState([
-    {label: '3', value: '3', isSelected: false},
-    {label: '4', value: '4', isSelected: false},
-    {label: '5', value: '5', isSelected: false},
-    {label: '6', value: '6', isSelected: false},
-    {label: '8', value: '8', isSelected: false},
-    {label: '10', value: '10', isSelected: false},
-    {label: '12', value: '12', isSelected: false},
-    {label: '16', value: '16', isSelected: false},
-    {label: 'Electric', value: 'Electric', isSelected: false},
-    {label: 'All', value: 'All', isSelected: false},
+    { label: '3', value: '3', isSelected: false },
+    { label: '4', value: '4', isSelected: false },
+    { label: '5', value: '5', isSelected: false },
+    { label: '6', value: '6', isSelected: false },
+    { label: '8', value: '8', isSelected: false },
+    { label: '10', value: '10', isSelected: false },
+    { label: '12', value: '12', isSelected: false },
+    { label: '16', value: '16', isSelected: false },
+    { label: 'Electric', value: 'Electric', isSelected: false },
+    { label: 'All', value: 'All', isSelected: false },
   ]);
   const [arabiccylinderdata, setarabiccylinderdata] = useState([
-    {label: '3', value: '3', isSelected: false},
-    {label: '4', value: '4', isSelected: false},
-    {label: '5', value: '5', isSelected: false},
-    {label: '6', value: '6', isSelected: false},
-    {label: '8', value: '8', isSelected: false},
-    {label: '10', value: '10', isSelected: false},
-    {label: '12', value: '12', isSelected: false},
-    {label: '16', value: '16', isSelected: false},
-    {label: 'كهربائي', value: 'Electric', isSelected: false},
-    {label: 'الجميع', value: 'All', isSelected: false},
+    { label: '3', value: '3', isSelected: false },
+    { label: '4', value: '4', isSelected: false },
+    { label: '5', value: '5', isSelected: false },
+    { label: '6', value: '6', isSelected: false },
+    { label: '8', value: '8', isSelected: false },
+    { label: '10', value: '10', isSelected: false },
+    { label: '12', value: '12', isSelected: false },
+    { label: '16', value: '16', isSelected: false },
+    { label: 'كهربائي', value: 'Electric', isSelected: false },
+    { label: 'الجميع', value: 'All', isSelected: false },
   ]);
 
   const [yeardropdown, setyeardropdown] = useState('');
@@ -743,7 +743,7 @@ const Filter = ({navigation, route}) => {
       // setselectedpropertyCategoryId(oldArray => [...oldArray, newArr[id].id]);
       setselectedpropertyCategoryId(oldArray => [
         ...oldArray,
-        {index: id, Categoryid: newArr[id].id},
+        { index: id, Categoryid: newArr[id].id },
       ]);
     }
 
@@ -762,7 +762,7 @@ const Filter = ({navigation, route}) => {
       newArr[id].isSelected = 'true';
       setselectedcarCategoryId(oldArray => [
         ...oldArray,
-        {index: id, Categoryid: newArr[id].id},
+        { index: id, Categoryid: newArr[id].id },
       ]);
     }
     setcarCategories(newArr);
@@ -781,7 +781,7 @@ const Filter = ({navigation, route}) => {
       newArr[id].isSelected = 'true';
       setselectedpropertyfeatureId(oldArray => [
         ...oldArray,
-        {index: id, Featureid: newArr[id].id},
+        { index: id, Featureid: newArr[id].id },
       ]);
     }
     setpropertyfeature(newArr);
@@ -800,7 +800,7 @@ const Filter = ({navigation, route}) => {
       newArr[id].isSelected = 'true';
       setselectedcarfeatureId(oldArray => [
         ...oldArray,
-        {index: id, Featureid: newArr[id].id},
+        { index: id, Featureid: newArr[id].id },
       ]);
     }
     setcarFeature(newArr);
@@ -890,7 +890,7 @@ const Filter = ({navigation, route}) => {
       // console.log(index);
       if (index < 10) {
         if (lasttwo >= 20) {
-          years.push({name: '200' + index, value: '200' + index});
+          years.push({ name: '200' + index, value: '200' + index });
         }
         if (index === 0 && lasttwo >= 19) {
           lasttwo = 18;
@@ -898,7 +898,7 @@ const Filter = ({navigation, route}) => {
         }
       } else if (index >= 10) {
         if (lasttwo >= 20) {
-          years.push({name: '20' + index, value: '20' + index});
+          years.push({ name: '20' + index, value: '20' + index });
         }
       }
     }
@@ -908,9 +908,9 @@ const Filter = ({navigation, route}) => {
     for (let index = 99; index >= 0; index--) {
       // console.log(index);
       if (index < 10) {
-        years.push({name: '1999' + index, value: '1999' + index});
+        years.push({ name: '1999' + index, value: '1999' + index });
       } else if (index >= 10) {
-        years.push({name: '19' + index, value: '19' + index});
+        years.push({ name: '19' + index, value: '19' + index });
       }
     }
   }
@@ -1027,7 +1027,7 @@ const Filter = ({navigation, route}) => {
     //console.log('rrom list' + JSON.stringify(roomsdata));
     return roomsdata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() => {
               // setFormFields({
@@ -1079,7 +1079,7 @@ const Filter = ({navigation, route}) => {
   const BathList = () => {
     return bathdata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() =>
               // setFormFields({
@@ -1126,7 +1126,7 @@ const Filter = ({navigation, route}) => {
   const DiningList = () => {
     return diningdata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() =>
               // setFormFields({
@@ -1173,7 +1173,7 @@ const Filter = ({navigation, route}) => {
   const LaundryList = () => {
     return laundrydata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() =>
               // setFormFields({
@@ -1222,7 +1222,7 @@ const Filter = ({navigation, route}) => {
   const GargaesList = () => {
     return garagesdata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() =>
               // setFormFields({
@@ -1272,7 +1272,7 @@ const Filter = ({navigation, route}) => {
     if (languagee === 'en') {
       return transimssiondata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 SelectedTransmission(element);
@@ -1318,7 +1318,7 @@ const Filter = ({navigation, route}) => {
     } else {
       return arabictransimssiondata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 SelectedTransmission(element);
@@ -1373,7 +1373,7 @@ const Filter = ({navigation, route}) => {
     if (languagee === 'en') {
       return fueldata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1421,7 +1421,7 @@ const Filter = ({navigation, route}) => {
     } else {
       return arabicfueldata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1476,7 +1476,7 @@ const Filter = ({navigation, route}) => {
   const DoorList = () => {
     return doordata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() =>
               // setFormFields({
@@ -1523,7 +1523,7 @@ const Filter = ({navigation, route}) => {
   const WheelList = () => {
     return wheeldata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() =>
               // setFormFields({
@@ -1574,7 +1574,7 @@ const Filter = ({navigation, route}) => {
     if (languagee === 'en') {
       return capacitydata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1625,7 +1625,7 @@ const Filter = ({navigation, route}) => {
     } else {
       return arabiccapacitydata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1685,7 +1685,7 @@ const Filter = ({navigation, route}) => {
     if (languagee === 'en') {
       return steeringdata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1735,7 +1735,7 @@ const Filter = ({navigation, route}) => {
     } else {
       return arabicsteeringdata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1793,7 +1793,7 @@ const Filter = ({navigation, route}) => {
     //console.log('rrom list' + JSON.stringify(roomsdata));
     return bodydata.map((element, i) => {
       return (
-        <View style={{marginTop: 1}}>
+        <View style={{ marginTop: 1 }}>
           <TouchableOpacity
             onPress={() => {
               // setFormFields({
@@ -1846,7 +1846,7 @@ const Filter = ({navigation, route}) => {
     if (languagee === 'en') {
       return mechanicaldata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1899,7 +1899,7 @@ const Filter = ({navigation, route}) => {
     } else {
       return arabicmechanicaldata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() => {
                 // setFormFields({
@@ -1960,7 +1960,7 @@ const Filter = ({navigation, route}) => {
     if (languagee === 'en') {
       return cylinderdata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() =>
                 // setFormFields({
@@ -2006,7 +2006,7 @@ const Filter = ({navigation, route}) => {
     } else {
       return arabiccylinderdata.map((element, i) => {
         return (
-          <View style={{marginTop: 1}}>
+          <View style={{ marginTop: 1 }}>
             <TouchableOpacity
               onPress={() =>
                 // setFormFields({
@@ -2075,8 +2075,8 @@ const Filter = ({navigation, route}) => {
               ? 1
               : propertyMasterData?.price.toFixed()
             : Math.trunc(motorMasterData?.value) === 0
-            ? 1
-            : motorMasterData?.value.toFixed()
+              ? 1
+              : motorMasterData?.value.toFixed()
         }
         range={pricerange}
         name="AED"
@@ -2218,14 +2218,14 @@ const Filter = ({navigation, route}) => {
   const SetPropertyFilter = () => {
     dispatch(Filteraction.propertyFilter(propertyFilterObj));
     setTimeout(() => {
-      navigation.navigate('PropertyFilter', {type: type});
+      navigation.navigate('PropertyFilter', { type: type });
     }, 1000);
   };
 
   const SetCarFilter = () => {
     dispatch(Filteraction.carFilter(carFilterObj));
     setTimeout(() => {
-      navigation.navigate('CarFilter', {type: 'Motor'});
+      navigation.navigate('CarFilter', { type: 'Motor' });
     }, 1000);
   };
 
@@ -2242,7 +2242,7 @@ const Filter = ({navigation, route}) => {
           alignItems: 'center',
           //backgroundColor: 'red',
         }}>
-        <View style={{marginLeft: 14}}>
+        <View style={{ marginLeft: 14 }}>
           <Icon
             name="arrow-back"
             size={20}
@@ -2254,7 +2254,7 @@ const Filter = ({navigation, route}) => {
             }
           />
         </View>
-        <View style={{width: '72%'}}>
+        <View style={{ width: '72%' }}>
           <Text
             style={{
               color: '#191919',
@@ -2334,7 +2334,7 @@ const Filter = ({navigation, route}) => {
                   !categoryShown ? 'chevron-down-sharp' : 'chevron-up-sharp'
                 }
                 size={20}
-                style={{marginTop: 10}}
+                style={{ marginTop: 10 }}
               />
             </View>
             {categoryShown && (
@@ -2390,7 +2390,7 @@ const Filter = ({navigation, route}) => {
                 }}
                 name={!citiesShown ? 'chevron-down-sharp' : 'chevron-up-sharp'}
                 size={20}
-                style={{marginTop: 10}}
+                style={{ marginTop: 10 }}
               />
             </View>
             {citiesShown && (
@@ -2443,7 +2443,7 @@ const Filter = ({navigation, route}) => {
                 }}
                 name={!faetureShown ? 'chevron-down-sharp' : 'chevron-up-sharp'}
                 size={20}
-                style={{marginTop: 10}}
+                style={{ marginTop: 10 }}
               />
             </View>
             {faetureShown && (
@@ -2462,11 +2462,11 @@ const Filter = ({navigation, route}) => {
                 }
               />
             )}
-            <HorizontalLine container={{marginTop: 30}} />
+            <HorizontalLine container={{ marginTop: 30 }} />
             {name === 'Property' ? (
-              <View style={{width: '100%', marginTop: 12}}>
-                <View style={{width: '100%', flexDirection: 'row'}}>
-                  <View style={{width: '50%', justifyContent: 'flex-end'}}>
+              <View style={{ width: '100%', marginTop: 12 }}>
+                <View style={{ width: '100%', flexDirection: 'row' }}>
+                  <View style={{ width: '50%', justifyContent: 'flex-end' }}>
                     <Text
                       style={{
                         //paddingLeft: 27,
@@ -2486,7 +2486,7 @@ const Filter = ({navigation, route}) => {
                       alignItems: 'flex-end',
                     }}>
                     <Switch
-                      trackColor={{false: '#767577', true: colors.blue}}
+                      trackColor={{ false: '#767577', true: colors.blue }}
                       thumbColor={isEnabled ? '#f4f3f4' : '#f4f3f4'}
                       ios_backgroundColor="#3e3e3e"
                       onValueChange={toggleSwitch}
@@ -2496,9 +2496,9 @@ const Filter = ({navigation, route}) => {
                 </View>
               </View>
             ) : (
-              <View style={{width: '100%', marginTop: 10}}>
-                <View style={{width: '100%', flexDirection: 'row'}}>
-                  <View style={{width: '50%', justifyContent: 'flex-end'}}>
+              <View style={{ width: '100%', marginTop: 10 }}>
+                <View style={{ width: '100%', flexDirection: 'row' }}>
+                  <View style={{ width: '50%', justifyContent: 'flex-end' }}>
                     <Text
                       style={{
                         paddingLeft: 30,
@@ -2517,7 +2517,7 @@ const Filter = ({navigation, route}) => {
                       alignItems: 'flex-end',
                     }}>
                     <Switch
-                      trackColor={{false: '#767577', true: colors.blue}}
+                      trackColor={{ false: '#767577', true: colors.blue }}
                       thumbColor={isEnabled ? '#f4f3f4' : '#f4f3f4'}
                       ios_backgroundColor="#3e3e3e"
                       onValueChange={toggleSwitch}
@@ -2560,7 +2560,7 @@ const Filter = ({navigation, route}) => {
                 {/* </View> */}
               </View>
             )}
-            <View style={{paddingTop: 18}}>
+            <View style={{ paddingTop: 18 }}>
               <HorizontalLine />
             </View>
             <View
@@ -2598,7 +2598,7 @@ const Filter = ({navigation, route}) => {
                   height: '100%',
                   marginTop: 20,
                 }}>
-                <Text style={{borderRadius: 1}}>__</Text>
+                <Text style={{ borderRadius: 1 }}>__</Text>
               </View>
               <View
                 style={{
@@ -2653,7 +2653,7 @@ const Filter = ({navigation, route}) => {
                       height: '100%',
                       marginTop: 20,
                     }}>
-                    <Text style={{borderRadius: 1}}>__</Text>
+                    <Text style={{ borderRadius: 1 }}>__</Text>
                   </View>
                   <View
                     style={{
@@ -2718,6 +2718,7 @@ const Filter = ({navigation, route}) => {
                       selectedTextStyle={{
                         marginLeft: 10,
                         textAlign: isRtl ? 'right' : 'left',
+                        color: colors.black, 
                       }}
                     />
                   </View>
@@ -2777,6 +2778,7 @@ const Filter = ({navigation, route}) => {
                     selectedTextStyle={{
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
+                      color: colors.black, 
                     }}
                   />
                 </View>
@@ -2830,6 +2832,7 @@ const Filter = ({navigation, route}) => {
                     selectedTextStyle={{
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
+                      color: colors.black, 
                     }}
                   />
                 </View>
@@ -2882,15 +2885,16 @@ const Filter = ({navigation, route}) => {
                     selectedTextStyle={{
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
+                      color: colors.black, 
                     }}
-                    // renderLeftIcon={() => (
-                    //   <Iconsort
-                    //     name="sort"
-                    //     size={19}
-                    //     color="#0989B8"
-                    //     style={{padding: 4, marginLeft: 3}}
-                    //   />
-                    // )}
+                  // renderLeftIcon={() => (
+                  //   <Iconsort
+                  //     name="sort"
+                  //     size={19}
+                  //     color="#0989B8"
+                  //     style={{padding: 4, marginLeft: 3}}
+                  //   />
+                  // )}
                   />
                 </View>
               </View>
@@ -2942,6 +2946,7 @@ const Filter = ({navigation, route}) => {
                     selectedTextStyle={{
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
+                      color: colors.black, 
                     }}
                   />
                 </View>
@@ -2986,7 +2991,7 @@ const Filter = ({navigation, route}) => {
                     marginTop: 7,
                     //marginTop: 13,
                   }}>
-                  <Text style={{borderRadius: 1}}>__</Text>
+                  <Text style={{ borderRadius: 1 }}>__</Text>
                 </View>
                 <View
                   style={{
@@ -3074,18 +3079,19 @@ const Filter = ({navigation, route}) => {
                     selectedTextStyle={{
                       marginLeft: 10,
                       textAlign: isRtl ? 'right' : 'left',
+                      color: colors.black, 
                     }}
                   />
                 </View>
               </View>
             )}
-            <View style={{paddingTop: 14}}>
+            <View style={{ paddingTop: 14 }}>
               <HorizontalLine />
             </View>
             {/*properrty type*/}
             {name === 'Property' ? (
               <>
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3123,7 +3129,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3162,7 +3168,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3199,7 +3205,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3236,7 +3242,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3275,7 +3281,7 @@ const Filter = ({navigation, route}) => {
               </>
             ) : (
               <>
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3311,7 +3317,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3348,7 +3354,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3383,7 +3389,7 @@ const Filter = ({navigation, route}) => {
                     {DoorList()}
                   </View>
                 </View>
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3419,7 +3425,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3456,7 +3462,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3492,7 +3498,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3528,7 +3534,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3564,7 +3570,7 @@ const Filter = ({navigation, route}) => {
                   </View>
                 </View>
 
-                <View style={{width: '100%', flex: 1}}>
+                <View style={{ width: '100%', flex: 1 }}>
                   <View
                     style={{
                       flexDirection: 'row',
@@ -3654,7 +3660,10 @@ const Filter = ({navigation, route}) => {
               fontSize: 13,
               textAlign: isRtl ? 'right' : 'left',
             }}
-            selectedTextStyle={{textAlign: isRtl ? 'right' : 'left'}}
+            selectedTextStyle={{
+              textAlign: isRtl ? 'right' : 'left',
+              color: colors.black,   // selected item text color
+            }}
             value={dropdown}
             maxHeight={140}
             onChange={item => {
@@ -3666,7 +3675,7 @@ const Filter = ({navigation, route}) => {
                 name="sort"
                 size={19}
                 color="#0989B8"
-                style={{padding: 4, marginLeft: 3}}
+                style={{ padding: 4, marginLeft: 3 }}
               />
             )}
           />
@@ -3682,7 +3691,7 @@ const Filter = ({navigation, route}) => {
             right: 37,
             borderRadius: 7,
           }}
-          labelStyle={{textTransform: 'uppercase', fontSize: 16}}
+          labelStyle={{ textTransform: 'uppercase', fontSize: 16 }}
           onPress={() =>
             name === 'Property' ? SetPropertyFilter() : SetCarFilter()
           }></FlatButton>

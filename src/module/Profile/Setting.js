@@ -460,7 +460,7 @@ const Setting = ({navigation, route}) => {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{
               width: '100%',
               justifyContent: 'center',
@@ -479,7 +479,7 @@ const Setting = ({navigation, route}) => {
               languagestyle={{...RtlStyles.containerRow}}
               iconstyle={{...RtlStyles.flipHorizontal}}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
           {UsereProfileData !== null &&
           UsereProfileData !== '' &&

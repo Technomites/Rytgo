@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native';
 
 import FilterPropertytag from '../../shared/components/FilterPropertytag';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
-import { colors } from '../themes/theme';
+import { colors, FontFamily } from '../themes/theme';
 
 // create a component
 const FilterCard = props => {

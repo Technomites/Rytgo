@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 //import liraries
-import React, {useRef, useState, useEffect} from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -15,7 +15,7 @@ import {
   Linking,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 import Properytags from '../../shared/components/Properytags';
 import ProperyDeatilstags from '../../shared/components/ProperyDeatilstags';
 import Video from 'react-native-video';
@@ -27,11 +27,11 @@ import MyInput from '../../shared/components/MyInput';
 import ContactSellerHeader from '../../shared/components/ContactSellerHeader';
 import ContactSellerBody from '../../shared/components/ContactSellerBody';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {UsereProfileData, _setLanguage} from '../../shared/Constant/Constant';
+import { UsereProfileData, _setLanguage } from '../../shared/Constant/Constant';
 import HTMLView from 'react-native-htmlview';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import SuccessFailModel from '../../shared/components/SuccessFailModel';
-import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { useRtlContext } from 'react-native-easy-localization-and-rtl';
 
 import {
   propertyDeatils,
@@ -41,9 +41,9 @@ import {
   contactSeller,
   SheduleMeeting,
 } from '../../shared/ApiMiddleware/api';
-import {SliderBox} from 'react-native-image-slider-box';
+import { SliderBox } from 'react-native-image-slider-box';
 import Loader from '../../shared/components/Loader';
-import {localizedString} from '../../shared/localization/localization';
+import { localizedString } from '../../shared/localization/localization';
 import PopUpModel from '../../shared/components/PopUp';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import DatePicker from '../../shared/components/DatePicker';
@@ -57,12 +57,12 @@ import { colors, FontFamily } from '../../shared/themes/theme';
 
 // create a component
 const PropertyDeatils = props => {
-  const {RtlStyles, isRtl, setLanguage} = useRtlContext();
+  const { RtlStyles, isRtl, setLanguage } = useRtlContext();
   let popstate = useSelector(state => state.GuestPopup.popup);
   const dispatch = useDispatch();
-  const {width} = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
-  const {id, name} = props.route.params;
+  const { id, name } = props.route.params;
   //alert(id);
   const refRBSheet = useRef();
   const refVideo = useRef();
@@ -194,13 +194,13 @@ const PropertyDeatils = props => {
                     ? '-'
                     : deatils?.adPostedDate
                   : deatils?.adPostedDate === ''
-                  ? '-'
-                  : deatils?.adPostedDate
+                    ? '-'
+                    : deatils?.adPostedDate
               }
             />
           </View>
 
-          <View style={{width: '33.333%', alignItems: 'center'}}>
+          <View style={{ width: '33.333%', alignItems: 'center' }}>
             <ProperyDeatilstags
               heading={
                 name === 'Property'
@@ -213,14 +213,14 @@ const PropertyDeatils = props => {
                     ? '-'
                     : deatils?.adPostedDate
                   : deatils?.adPostedDate === ''
-                  ? '-'
-                  : deatils?.adPostedDate
+                    ? '-'
+                    : deatils?.adPostedDate
               }
             />
           </View>
         </View>
 
-        <View style={{marginTop: 11, width: '100%'}}>
+        <View style={{ marginTop: 11, width: '100%' }}>
           <HorizontalLine />
         </View>
 
@@ -235,7 +235,7 @@ const PropertyDeatils = props => {
             //backgroundColor: 'red',
             ...RtlStyles.containerRow,
           }}>
-          <View style={{width: '50%'}}>
+          <View style={{ width: '50%' }}>
             <ProperyDeatilstags
               heading={
                 name === 'Property'
@@ -245,7 +245,7 @@ const PropertyDeatils = props => {
               value={name === 'Property' ? deatils.dinning : deatils.make.name}
             />
           </View>
-          <View style={{width: '50%'}}>
+          <View style={{ width: '50%' }}>
             <ProperyDeatilstags
               heading={
                 name === 'Property'
@@ -265,7 +265,7 @@ const PropertyDeatils = props => {
             // backgroundColor: 'red',
             width: '90%',
           }}>
-          <View style={{width: '50%'}}>
+          <View style={{ width: '50%' }}>
             <ProperyDeatilstags
               heading={
                 name === 'Property'
@@ -282,7 +282,7 @@ const PropertyDeatils = props => {
             />
           </View>
 
-          <View style={{width: '50%'}}>
+          <View style={{ width: '50%' }}>
             <ProperyDeatilstags
               heading={
                 name === 'Property'
@@ -293,8 +293,8 @@ const PropertyDeatils = props => {
                 name === 'Property'
                   ? deatils.buildYear
                   : deatils?.regionalSpecification !== null
-                  ? deatils?.regionalSpecification
-                  : '-'
+                    ? deatils?.regionalSpecification
+                    : '-'
               }
             />
           </View>
@@ -318,13 +318,13 @@ const PropertyDeatils = props => {
                 name === 'Motor'
                   ? localizedString.yearText
                   : name === 'Property' && deatils?.status.includes('Rent')
-                  ? localizedString.rentproceText
-                  : localizedString.priceText
+                    ? localizedString.rentproceText
+                    : localizedString.priceText
               }
               value={name === 'Property' ? deatils?.price : deatils?.year}
             />
           </View>
-          <View style={{width: '50%'}}>
+          <View style={{ width: '50%' }}>
             <ProperyDeatilstags
               heading={name === 'Property' ? '' : localizedString.kmDriven}
               value={name === 'Property' ? '' : deatils?.mileage}
@@ -341,7 +341,7 @@ const PropertyDeatils = props => {
               marginTop: 20,
               width: '90%',
             }}>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -351,7 +351,7 @@ const PropertyDeatils = props => {
                 value={name === 'Property' ? deatils?.size : deatils?.price}
               />
             </View>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -371,7 +371,7 @@ const PropertyDeatils = props => {
               marginTop: 20,
               width: '90%',
             }}>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -384,7 +384,7 @@ const PropertyDeatils = props => {
               />
             </View>
 
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -403,7 +403,7 @@ const PropertyDeatils = props => {
               marginTop: 20,
               width: '90%',
             }}>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -416,7 +416,7 @@ const PropertyDeatils = props => {
               />
             </View>
 
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -436,7 +436,7 @@ const PropertyDeatils = props => {
               marginTop: 20,
               width: '90%',
             }}>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -451,7 +451,7 @@ const PropertyDeatils = props => {
               />
             </View>
 
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -470,7 +470,7 @@ const PropertyDeatils = props => {
               marginTop: 20,
               width: '90%',
             }}>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -481,13 +481,13 @@ const PropertyDeatils = props => {
                   name === 'Property'
                     ? deatils.price
                     : deatils?.warranty === true
-                    ? 'Yes'
-                    : 'No'
+                      ? 'Yes'
+                      : 'No'
                 }
               />
             </View>
 
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -498,8 +498,8 @@ const PropertyDeatils = props => {
                   name === 'Property'
                     ? deatils.size
                     : deatils?.serviceHistory === true
-                    ? 'Yes'
-                    : 'No'
+                      ? 'Yes'
+                      : 'No'
                 }
               />
             </View>
@@ -718,7 +718,7 @@ const PropertyDeatils = props => {
                 //backgroundColor: 'red',
                 width: '90%',
               }}>
-              <View style={{width: '50%'}}>
+              <View style={{ width: '50%' }}>
                 <ProperyDeatilstags
                   heading={
                     name === 'Property'
@@ -729,7 +729,7 @@ const PropertyDeatils = props => {
                 />
               </View>
 
-              <View style={{width: '50%'}}>
+              <View style={{ width: '50%' }}>
                 <ProperyDeatilstags
                   heading={
                     name === 'Property' ? '' : localizedString.horsePowerText
@@ -913,7 +913,7 @@ const PropertyDeatils = props => {
             name="close"
             size={33}
             color="white"
-            style={{paddingLeft: 26}}
+            style={{ paddingLeft: 26 }}
             onPress={() => setzoomInImage('')}
           />
         </View>
@@ -955,8 +955,8 @@ const PropertyDeatils = props => {
               }}>
               <Image
                 resizeMode="contain"
-                style={{width: '95%', height: '95%'}}
-                source={{uri: zoomInImage}}
+                style={{ width: '95%', height: '95%' }}
+                source={{ uri: zoomInImage }}
               />
             </View>
           </ReactNativeZoomableView>
@@ -1028,21 +1028,21 @@ const PropertyDeatils = props => {
       {
         name === 'Property'
           ? (userData = {
-              Name: vendorname,
-              PhoneNo: contactNumber,
-              Email: vendoremail,
-              Comments: contactMessage,
-              VendorID: deatils.vendor.id,
-              PropertyID: id,
-            })
+            Name: vendorname,
+            PhoneNo: contactNumber,
+            Email: vendoremail,
+            Comments: contactMessage,
+            VendorID: deatils.vendor.id,
+            PropertyID: id,
+          })
           : (userData = {
-              Name: vendorname,
-              PhoneNo: '971' + contactNumber,
-              Email: vendoremail,
-              Comments: contactMessage,
-              VendorID: deatils.vendor.id,
-              CarID: id,
-            });
+            Name: vendorname,
+            PhoneNo: '971' + contactNumber,
+            Email: vendoremail,
+            Comments: contactMessage,
+            VendorID: deatils.vendor.id,
+            CarID: id,
+          });
       }
       setvendorname('');
       setcontactNumber('');
@@ -1088,17 +1088,17 @@ const PropertyDeatils = props => {
         {
           name === 'Property'
             ? (userData = {
-                VendorID: deatils.vendor.id,
-                Message: contactMessage,
-                PropertyID: id,
-                MeetingDate: isDateE.toLocaleDateString(),
-              })
+              VendorID: deatils.vendor.id,
+              Message: contactMessage,
+              PropertyID: id,
+              MeetingDate: isDateE.toLocaleDateString(),
+            })
             : (userData = {
-                VendorID: deatils.vendor.id,
-                Message: contactMessage,
-                CarID: id,
-                MeetingDate: isDateE.toLocaleDateString(),
-              });
+              VendorID: deatils.vendor.id,
+              Message: contactMessage,
+              CarID: id,
+              MeetingDate: isDateE.toLocaleDateString(),
+            });
         }
         setisDate('');
         setcontactMessage('');
@@ -1233,7 +1233,7 @@ const PropertyDeatils = props => {
     }, 1000);
   }
   return (
-    <SafeAreaView style={{width: '100%', height: '100%'}}>
+    <SafeAreaView style={{ width: '100%', height: '100%' }}>
       {/* <DateTimePickerModal
         // iOSDatePickerComponent={props => (
         //   <RNDatePicker
@@ -1254,8 +1254,8 @@ const PropertyDeatils = props => {
           mode="date"
           onConfirm={onChange}
           onCancel={hidedate1}
-          // onConfirm={handleConfirm}
-          // onCancel={hideDatePicker}
+        // onConfirm={handleConfirm}
+        // onCancel={hideDatePicker}
         />
       )}
       {zoomInImage !== '' && ZoomInView()}
@@ -1431,7 +1431,7 @@ const PropertyDeatils = props => {
                   alignItems: 'center',
                 }}>
                 {contactSellerr === true ? (
-                  <View style={{width: '80%', marginTop: 10, marginBottom: 20}}>
+                  <View style={{ width: '80%', marginTop: 10, marginBottom: 20 }}>
                     <MyInput
                       formTitle={localizedString.nameInput}
                       placeHolder={localizedString.nameplaceholder}
@@ -1472,7 +1472,7 @@ const PropertyDeatils = props => {
                         borderRadius: 8,
                         paddingVertical: 15,
                       }}
-                      labelStyle={{textTransform: 'uppercase', fontSize: 16}}
+                      labelStyle={{ textTransform: 'uppercase', fontSize: 16 }}
                       onPress={() => {
                         OnMessageSend();
                       }}></FlatButton>
@@ -1509,7 +1509,7 @@ const PropertyDeatils = props => {
                         borderRadius: 8,
                         paddingVertical: 15,
                       }}
-                      labelStyle={{textTransform: 'uppercase', fontSize: 16}}
+                      labelStyle={{ textTransform: 'uppercase', fontSize: 16 }}
                       onPress={() => OnMessageShedule()}></FlatButton>
                   </View>
                 )}
@@ -1569,7 +1569,7 @@ const PropertyDeatils = props => {
                 <Ionicons
                   name="arrow-back"
                   size={25}
-                  // color="red"
+                // color="red"
                 />
               </View>
             </TouchableOpacity>
@@ -1582,7 +1582,7 @@ const PropertyDeatils = props => {
               }
               autoplay={true}
               circleLoop={true}
-              // parentWidth={'100%'}
+            // parentWidth={'100%'}
             />
           </View>
 
@@ -1593,7 +1593,7 @@ const PropertyDeatils = props => {
                 marginHorizontal: 6,
                 ...RtlStyles.containerRow,
               }}>
-              <View style={{marginTop: 20, paddingLeft: 14}}>
+              <View style={{ marginTop: 20, paddingLeft: 14 }}>
                 <View style={styles.btnContainer1}>
                   <Text
                     style={{
@@ -1607,7 +1607,7 @@ const PropertyDeatils = props => {
                   </Text>
                 </View>
               </View>
-              <View style={{marginTop: 20, marginLeft: 8}}>
+              <View style={{ marginTop: 20, marginLeft: 8 }}>
                 <View style={styles.btnContainer2}>
                   <Text
                     style={{
@@ -1625,7 +1625,7 @@ const PropertyDeatils = props => {
 
             <View
               style={(styles.sharehearttextContainer, RtlStyles.containerRow)}>
-              <View style={{width: '60%', marginTop: 7}}>
+              <View style={{ width: '60%', marginTop: 7 }}>
                 <Text
                   numberOfLines={2}
                   style={{
@@ -1646,7 +1646,7 @@ const PropertyDeatils = props => {
                   }}>
                   <Image
                     resizeMode="contain"
-                    style={{width: 26, height: 26}}
+                    style={{ width: 26, height: 26 }}
                     source={require('../../shared/assests/propertydeatils/share-altnew.png')}
                   />
                 </TouchableOpacity>
@@ -1660,7 +1660,7 @@ const PropertyDeatils = props => {
                   }}>
                   <Image
                     resizeMode="contain"
-                    style={{width: 26, height: 26, marginLeft: 12}}
+                    style={{ width: 26, height: 26, marginLeft: 12 }}
                     // source={require('../../shared/assests/propertydeatils/heart.png')}
                     source={
                       wishStatus === true
@@ -1701,7 +1701,7 @@ const PropertyDeatils = props => {
                 marginTop: 14,
               }}
             />
-            <View style={{flex: 1, backgroundColor: '#F6F8F9'}}>
+            <View style={{ flex: 1, backgroundColor: '#F6F8F9' }}>
               <View
                 style={{
                   width: '100%',
@@ -1721,7 +1721,7 @@ const PropertyDeatils = props => {
                   }}>
                   <Image
                     resizeMode="contain"
-                    style={{width: 22, height: 22}}
+                    style={{ width: 22, height: 22 }}
                     source={
                       name === 'Motor'
                         ? require('../../shared/assests/home/autonew.png')
@@ -1749,7 +1749,7 @@ const PropertyDeatils = props => {
                   }}>
                   <Image
                     resizeMode="contain"
-                    style={{width: 22, height: 22}}
+                    style={{ width: 22, height: 22 }}
                     source={
                       name === 'Motor'
                         ? require('../../shared/assests/home/Doornew.png')
@@ -1776,7 +1776,7 @@ const PropertyDeatils = props => {
                   }}>
                   <Image
                     resizeMode="contain"
-                    style={{width: 22, height: 22}}
+                    style={{ width: 22, height: 22 }}
                     source={
                       name === 'Motor'
                         ? require('../../shared/assests/home/wheel.png')
@@ -1803,7 +1803,7 @@ const PropertyDeatils = props => {
                   }}>
                   <Image
                     resizeMode="contain"
-                    style={{width: 22, height: 22}}
+                    style={{ width: 22, height: 22 }}
                     source={
                       name === 'Motor'
                         ? require('../../shared/assests/home/carbattery.png')
@@ -1839,7 +1839,7 @@ const PropertyDeatils = props => {
                     padding: 18,
                     overflow: 'hidden',
                   }}>
-                  <View style={{marginBottom: 3, ...RtlStyles.containerRow}}>
+                  <View style={{ marginBottom: 3, ...RtlStyles.containerRow }}>
                     <Text
                       style={{
                         color: '#191919',
@@ -1869,19 +1869,22 @@ const PropertyDeatils = props => {
                   </SeeMore> */}
                   <HTMLView
                     value={descripation}
+
                     stylesheet={{
-                      width: '96%',
-                      fontSize: 12,
-                      fontFamily: FontFamily.SemiBold,
-                      //color: 'red',
-                      textAlign: 'center',
-                      zIndex: 2,
+                      p: {
+                        width: '96%',
+                        fontSize: 12,
+                        fontFamily: FontFamily.SemiBold,
+                        color: colors.black,
+                        // textAlign: 'center',
+                        zIndex: 2,
+                      },
                     }}
                   />
                 </View>
                 {descripation?.length >= 500 ? (
                   <View
-                    style={{padding: 18, bottom: seeMore === false ? 14 : 30}}>
+                    style={{ padding: 18, bottom: seeMore === false ? 14 : 30 }}>
                     <TouchableOpacity onPress={() => setseeMore(v => !v)}>
                       <Text
                         style={{
@@ -1913,7 +1916,7 @@ const PropertyDeatils = props => {
                       padding: 20,
                       //...RtlStyles.containerRow,
                     }}>
-                    <View style={{...RtlStyles.containerRow}}>
+                    <View style={{ ...RtlStyles.containerRow }}>
                       <Text
                         style={{
                           color: '#191919',
@@ -1946,7 +1949,7 @@ const PropertyDeatils = props => {
                     //backgroundColor: 'red',
                     padding: 20,
                   }}>
-                  <View style={{...RtlStyles.containerRow}}>
+                  <View style={{ ...RtlStyles.containerRow }}>
                     <Text
                       style={{
                         color: '#191919',
@@ -2016,8 +2019,8 @@ const PropertyDeatils = props => {
                           refVideo.current.seek(2);
                         }}
                         onEnd={() => ResetVideo()}
-                        //style={{flex: 1}}
-                        // controls={true}
+                      //style={{flex: 1}}
+                      // controls={true}
                       />
                       {playVideo === true ? (
                         <View
@@ -2036,7 +2039,7 @@ const PropertyDeatils = props => {
                           }}>
                           <TouchableOpacity onPress={() => PlayVideo()}>
                             <Image
-                              style={{width: 50, height: 50}}
+                              style={{ width: 50, height: 50 }}
                               resizeMode="cover"
                               source={require('../../shared/assests/propertydeatils/play.png')}
                             />
@@ -2124,7 +2127,7 @@ const PropertyDeatils = props => {
                         marginHorizontal: 20,
                         marginTop: 15,
                       }}>
-                      <View style={{...RtlStyles.containerRow}}>
+                      <View style={{ ...RtlStyles.containerRow }}>
                         <Text
                           style={{
                             color: '#191919',
@@ -2156,16 +2159,16 @@ const PropertyDeatils = props => {
                         }}>
                         {localizedString.floorText}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
+                      <Text style={{ fontSize: 9, fontFamily: FontFamily.Medium }}>
                         {`${localizedString.sizeText}: ${deatils.size}`}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
+                      <Text style={{ fontSize: 9, fontFamily: FontFamily.Medium }}>
                         {`${localizedString.roomText}:${deatils.rooms}`}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
+                      <Text style={{ fontSize: 9, fontFamily: FontFamily.Medium }}>
                         {`${localizedString.bathtext}: ${deatils.baths}`}
                       </Text>
-                      <Text style={{fontSize: 9, fontFamily: FontFamily.Medium}}>
+                      <Text style={{ fontSize: 9, fontFamily: FontFamily.Medium }}>
                         {`${localizedString.priceText}:${deatils.price}`}
                       </Text>
                     </View>
@@ -2186,7 +2189,7 @@ const PropertyDeatils = props => {
                               height: 150,
                               marginLeft: '5%',
                             }}
-                            source={{uri: deatils?.floorPlans[i].image}}>
+                            source={{ uri: deatils?.floorPlans[i].image }}>
                             <View style={styles.backImageContainer}></View>
                           </ImageBackground>
                         </View>
@@ -2196,7 +2199,7 @@ const PropertyDeatils = props => {
                 ) : null}
               </View>
             </View>
-            <View style={{backgroundColor: '#F1F3F5', width: '100%'}}>
+            <View style={{ backgroundColor: '#F1F3F5', width: '100%' }}>
               <Text></Text>
             </View>
           </View>
@@ -2213,7 +2216,7 @@ const PropertyDeatils = props => {
                 _setLanguage('en');
                 props.navigation.reset({
                   index: 0,
-                  routes: [{name: 'SignIn2'}],
+                  routes: [{ name: 'SignIn2' }],
                 });
               } else {
                 //setFeedback('');
@@ -2252,7 +2255,7 @@ const PropertyDeatils = props => {
                 _setLanguage('en');
                 props.navigation.reset({
                   index: 0,
-                  routes: [{name: 'SignIn2'}],
+                  routes: [{ name: 'SignIn2' }],
                 });
               }, 2000);
             }}
@@ -2267,7 +2270,7 @@ const PropertyDeatils = props => {
                   _setLanguage('en');
                   props.navigation.reset({
                     index: 0,
-                    routes: [{name: 'SignIn2'}],
+                    routes: [{ name: 'SignIn2' }],
                   });
                 }, 2000);
               } else {
@@ -2287,7 +2290,7 @@ const PropertyDeatils = props => {
                 _setLanguage('en');
                 props.navigation.reset({
                   index: 0,
-                  routes: [{name: 'SignIn2'}],
+                  routes: [{ name: 'SignIn2' }],
                 });
               }, 2000);
               // AsyncStorage.clear();
@@ -2307,7 +2310,7 @@ const PropertyDeatils = props => {
                   _setLanguage('en');
                   props.navigation.reset({
                     index: 0,
-                    routes: [{name: 'SignIn2'}],
+                    routes: [{ name: 'SignIn2' }],
                   });
                 }, 2000);
               } else {
@@ -2384,7 +2387,7 @@ const PropertyDeatils = props => {
               //right: 20,
               paddingVertical: 15,
             }}
-            labelStyle={{textTransform: 'uppercase', fontSize: 11}}
+            labelStyle={{ textTransform: 'uppercase', fontSize: 11 }}
             onPress={() => {
               //dispatch(VendorIdaction.VendorId(deatils?.vendor?.id));
               //refRBSheet.current.open();
@@ -2476,7 +2479,7 @@ const Featureddeatilslist = () => {
           //backgroundColor: 'red',
           width: '90%',
         }}>
-        <View style={{width: '33.333%'}}>
+        <View style={{ width: '33.333%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2490,7 +2493,7 @@ const Featureddeatilslist = () => {
             }
           />
         </View>
-        <View style={{width: '33.333%'}}>
+        <View style={{ width: '33.333%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2503,13 +2506,13 @@ const Featureddeatilslist = () => {
                   ? '-'
                   : deatils?.adPostedDate
                 : deatils?.adPostedDate === ''
-                ? '-'
-                : deatils?.adPostedDate
+                  ? '-'
+                  : deatils?.adPostedDate
             }
           />
         </View>
 
-        <View style={{width: '33.333%'}}>
+        <View style={{ width: '33.333%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2522,8 +2525,8 @@ const Featureddeatilslist = () => {
                   ? '-'
                   : deatils?.adPostedDate
                 : deatils?.adPostedDate === ''
-                ? '-'
-                : deatils?.adPostedDate
+                  ? '-'
+                  : deatils?.adPostedDate
             }
           />
         </View>
@@ -2537,7 +2540,7 @@ const Featureddeatilslist = () => {
           width: '90%',
           //backgroundColor: 'red',
         }}>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2547,7 +2550,7 @@ const Featureddeatilslist = () => {
             value={name === 'Property' ? deatils.rooms : deatils.make.name}
           />
         </View>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2567,7 +2570,7 @@ const Featureddeatilslist = () => {
           // backgroundColor: 'red',
           width: '90%',
         }}>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2577,7 +2580,7 @@ const Featureddeatilslist = () => {
             value={name === 'Property' ? deatils.baths : deatils.model.name}
           />
         </View>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2588,8 +2591,8 @@ const Featureddeatilslist = () => {
               name === 'Property'
                 ? deatils.status
                 : deatils?.engineDisplacement !== null
-                ? deatils?.engineDisplacement
-                : '-'
+                  ? deatils?.engineDisplacement
+                  : '-'
             }
           />
         </View>
@@ -2603,7 +2606,7 @@ const Featureddeatilslist = () => {
           // backgroundColor: 'red',
           width: '90%',
         }}>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2613,7 +2616,7 @@ const Featureddeatilslist = () => {
             value={name === 'Property' ? deatils.price : deatils.condition}
           />
         </View>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2633,7 +2636,7 @@ const Featureddeatilslist = () => {
           // backgroundColor: 'red',
           width: '90%',
         }}>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2646,12 +2649,12 @@ const Featureddeatilslist = () => {
                   ? '-'
                   : deatils?.buildYear
                 : deatils?.warranty === true
-                ? 'Yes'
-                : 'No'
+                  ? 'Yes'
+                  : 'No'
             }
           />
         </View>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2675,7 +2678,7 @@ const Featureddeatilslist = () => {
           //backgroundColor: 'red',
           width: '90%',
         }}>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2686,12 +2689,12 @@ const Featureddeatilslist = () => {
               name === 'Property'
                 ? '-'
                 : deatils?.address?.area === ''
-                ? '-'
-                : deatils?.address?.area
+                  ? '-'
+                  : deatils?.address?.area
             }
           />
         </View>
-        <View style={{width: '50%'}}>
+        <View style={{ width: '50%' }}>
           <ProperyDeatilstags
             heading={
               name === 'Property'
@@ -2704,8 +2707,8 @@ const Featureddeatilslist = () => {
                   ? 'Yes'
                   : 'No'
                 : deatils?.steeringSide !== null
-                ? deatils?.steeringSide
-                : '-'
+                  ? deatils?.steeringSide
+                  : '-'
             }
           />
         </View>
@@ -2721,20 +2724,20 @@ const Featureddeatilslist = () => {
               //backgroundColor: 'red',
               width: '90%',
             }}>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={name === 'Property' ? '' : localizedString.addressText}
                 value={
                   name === 'Property'
                     ? ''
                     : deatils?.address.address === ''
-                    ? '-'
-                    : deatils?.address.address.toString().substring(0, 12)
+                      ? '-'
+                      : deatils?.address.address.toString().substring(0, 12)
                 }
               />
             </View>
 
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property' ? '' : localizedString.cylinderText
@@ -2743,8 +2746,8 @@ const Featureddeatilslist = () => {
                   name === 'Property'
                     ? ''
                     : deatils?.cylinder === ''
-                    ? '-'
-                    : deatils?.cylinder
+                      ? '-'
+                      : deatils?.cylinder
                 }
               />
             </View>
@@ -2777,7 +2780,7 @@ const Featureddeatilslist = () => {
                 }
               />
             </View> */}
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property' ? '' : localizedString.serviceHistoryText
@@ -2786,12 +2789,12 @@ const Featureddeatilslist = () => {
                   name === 'Property'
                     ? ''
                     : deatils?.serviceHistory === true
-                    ? 'Yes'
-                    : 'No'
+                      ? 'Yes'
+                      : 'No'
                 }
               />
             </View>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -2802,8 +2805,8 @@ const Featureddeatilslist = () => {
                   name === 'Property'
                     ? ''
                     : deatils?.mechanicalCondition !== null
-                    ? deatils?.mechanicalCondition
-                    : '-'
+                      ? deatils?.mechanicalCondition
+                      : '-'
                 }
               />
             </View>
@@ -2820,7 +2823,7 @@ const Featureddeatilslist = () => {
               //backgroundColor: 'red',
               width: '90%',
             }}>
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property' ? '' : localizedString.capacityText
@@ -2829,8 +2832,8 @@ const Featureddeatilslist = () => {
                   name === 'Property'
                     ? ''
                     : deatils.capacity !== null
-                    ? deatils.capacity
-                    : '-'
+                      ? deatils.capacity
+                      : '-'
                 }
               />
             </View>
@@ -2850,7 +2853,7 @@ const Featureddeatilslist = () => {
                 }
               />
             </View> */}
-            <View style={{width: '50%'}}>
+            <View style={{ width: '50%' }}>
               <ProperyDeatilstags
                 heading={
                   name === 'Property'
@@ -2861,8 +2864,8 @@ const Featureddeatilslist = () => {
                   name === 'Property'
                     ? ''
                     : deatils?.regionalSpecification !== null
-                    ? deatils?.regionalSpecification
-                    : '-'
+                      ? deatils?.regionalSpecification
+                      : '-'
                 }
               />
             </View>
