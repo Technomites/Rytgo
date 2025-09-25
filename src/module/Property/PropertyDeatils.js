@@ -1569,7 +1569,7 @@ const PropertyDeatils = props => {
                 <Ionicons
                   name="arrow-back"
                   size={25}
-                // color="red"
+                color="black"
                 />
               </View>
             </TouchableOpacity>

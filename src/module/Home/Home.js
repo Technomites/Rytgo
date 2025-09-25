@@ -112,10 +112,10 @@ const Home = ({ navigation, route }) => {
   const [errorValidation, seterrorValidation] = useState('');
 
   const [bannerImages, setbannerImages] = useState([
-    // 'https://source.unsplash.com/1024x768/?nature',
-    // 'https://source.unsplash.com/1024x768/?water',
-    // 'https://source.unsplash.com/1024x768/?girl',
-    // 'https://source.unsplash.com/1024x768/?tree',
+    'https://source.unsplash.com/1024x768/?nature',
+    'https://source.unsplash.com/1024x768/?water',
+    'https://source.unsplash.com/1024x768/?girl',
+    'https://source.unsplash.com/1024x768/?tree',
   ]);
 
   const [bannerdescripation, setbannerdescripation] = useState('');
@@ -385,7 +385,7 @@ const Home = ({ navigation, route }) => {
       .then(res => {
         //console.log(' res ' + JSON.stringify(res));
         if (res.status === 'success') {
-          //console.log(' res blogs ' + JSON.stringify(res));
+          console.log(' res blogs ' + JSON.stringify(res));
           //console.log(res);
           setbanners(res);
           //setbannerdescripation(res.);

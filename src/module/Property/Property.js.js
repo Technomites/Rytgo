@@ -295,7 +295,7 @@ const Property = ({navigation, route}) => {
               <Icon
                 name="arrow-back"
                 size={20}
-                color="#191919"
+                color="red"
                 style={{marginLeft: 20}}
               />
             </TouchableOpacity>

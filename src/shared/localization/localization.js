@@ -266,10 +266,10 @@ const localizedString = new LocalizedStrings({
     passworderror:
       'Invalid Password format, Min. 8 characters, at least one uppercase letter, one lowercase letter, and one number',
     emailerror: 'Email is Not Correct',
-    contectussucessmessage: 'ContactUs has been sumbited',
+    contectussucessmessage: 'Contact Us has been submitted',
     changepasswordsuccessmessage: 'Passowrd has chnaged successfully',
     profilesuccessmessage: 'Profile has been submitted',
-    feedbacksuccessmessage: 'Feedback has been sumbited',
+    feedbacksuccessmessage: 'Feedback has been submitted',
     recentlyPublishedmotors: 'Recently Published for Motors',
     recentlyPublishedproperties: 'Recently Published for Properties',
     motorheadingText: 'Motors',

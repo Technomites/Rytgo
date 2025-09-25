@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -12,14 +12,14 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import {colors, FontFamily} from '../../shared/themes/theme';
+import { colors, FontFamily } from '../../shared/themes/theme';
 import BackHeader from '../../shared/components/BackHeader';
-import {localizedString} from '../../shared/localization/localization';
-import {useRtlContext} from 'react-native-easy-localization-and-rtl';
+import { localizedString } from '../../shared/localization/localization';
+import { useRtlContext } from 'react-native-easy-localization-and-rtl';
 import AIcon from 'react-native-vector-icons/FontAwesome';
 import PopUpModel from '../../shared/components/PopUp';
 import AccessDeniedModel from '../../shared/components/AccessDeniedModel';
-import {UsereProfileData, _setLanguage} from '../../shared/Constant/Constant';
+import { UsereProfileData, _setLanguage } from '../../shared/Constant/Constant';
 
 import {
   alertNotifications,
@@ -28,12 +28,12 @@ import {
 
 var screenname = '';
 const MyAlert = props => {
-  const {RtlStyles, isRtl, setLanguage} = useRtlContext();
+  const { RtlStyles, isRtl, setLanguage } = useRtlContext();
 
   //alert(screenname);
   if (props.route.params === undefined) {
   } else {
-    const {name} = props.route.params;
+    const { name } = props.route.params;
     screenname = name;
     // console.log(props.route.params.name);
   }
@@ -76,7 +76,7 @@ const MyAlert = props => {
       .then(res => {
         if (res.status === 'success') {
           //alert('success');
-          //console.log('Notifications' + JSON.stringify(res));
+          console.log('Notifications' + JSON.stringify(res));
           setmyNotoficationData([...myNotoficationData, ...res.notifications]);
         } else {
           seterrorValidation(res.message + 'Session expired!');
@@ -107,7 +107,7 @@ const MyAlert = props => {
       });
   };
 
-  const renderList = ({item, index}) => {
+  const renderList = ({ item, index }) => {
     return (
       <TouchableOpacity
         style={{
@@ -149,7 +149,7 @@ const MyAlert = props => {
             size={25}
             color="#0989B8"
 
-            // style={{width: 15, marginTop: 2, marginLeft: 10}}
+          // style={{width: 15, marginTop: 2, marginLeft: 10}}
           />
         </View>
         <View
@@ -231,7 +231,7 @@ const MyAlert = props => {
   };
   return (
     <SafeAreaView
-      style={{width: '100%', height: '100%', backgroundColor: colors.bgGray}}>
+      style={{ width: '100%', height: '100%', backgroundColor: colors.bgGray }}>
       <BackHeader
         title={localizedString.alertsText}
         onPress={() => {
@@ -249,6 +249,11 @@ const MyAlert = props => {
         renderItem={renderList}
         onEndReached={() => LoadMoreNotfifcations()}
         onEndReachedThreshold={0.1}
+        ListEmptyComponent={
+          <View style={{ flex: 1, justifyContent: 'center', alignSelf: 'center',marginTop:'70%' }}>
+            <Text style={{ fontSize: 16, color: 'gray' }}>No data found</Text>
+          </View>
+        }
       />
       <View
         style={{
@@ -288,7 +293,7 @@ const MyAlert = props => {
             _setLanguage('en');
             props.navigation.reset({
               index: 0,
-              routes: [{name: 'SignIn2'}],
+              routes: [{ name: 'SignIn2' }],
             });
           }, 2000);
         }}
@@ -303,7 +308,7 @@ const MyAlert = props => {
               _setLanguage('en');
               props.navigation.reset({
                 index: 0,
-                routes: [{name: 'SignIn2'}],
+                routes: [{ name: 'SignIn2' }],
               });
             }, 2000);
           } else {
