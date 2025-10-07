@@ -1,0 +1,6 @@
+framework module Pods_Rytgo_RytgoTests {
+  umbrella header "Pods-Rytgo-RytgoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

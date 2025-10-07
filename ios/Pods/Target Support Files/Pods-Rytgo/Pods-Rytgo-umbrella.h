@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_NowBuySellVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_NowBuySellVersionString[];
+FOUNDATION_EXPORT double Pods_RytgoVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_RytgoVersionString[];
 

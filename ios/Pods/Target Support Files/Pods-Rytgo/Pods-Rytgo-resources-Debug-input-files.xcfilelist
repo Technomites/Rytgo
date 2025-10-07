@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-NowBuySell/Pods-NowBuySell-resources.sh
+${PODS_ROOT}/Target Support Files/Pods-Rytgo/Pods-Rytgo-resources.sh
 ${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore_Privacy.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreExtension/FirebaseCoreExtension_Privacy.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal/FirebaseCoreInternal_Privacy.bundle

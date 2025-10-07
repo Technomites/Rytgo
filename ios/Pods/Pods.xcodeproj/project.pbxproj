@@ -4870,11 +4870,11 @@
 		46EB2E000281D0 /* rn-fetch-blob-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000281C0 /* rn-fetch-blob-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E00028210 /* rn-fetch-blob-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00028200 /* rn-fetch-blob-dummy.m */; };
 		46EB2E000282B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000F730 /* Foundation.framework */; };
-		46EB2E00028320 /* Pods-NowBuySell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00028310 /* Pods-NowBuySell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00028380 /* Pods-NowBuySell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00028370 /* Pods-NowBuySell-dummy.m */; };
+		46EB2E00028320 /* Pods-Rytgo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00028310 /* Pods-Rytgo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00028380 /* Pods-Rytgo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00028370 /* Pods-Rytgo-dummy.m */; };
 		46EB2E00028420 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000F730 /* Foundation.framework */; };
-		46EB2E00028490 /* Pods-NowBuySell-NowBuySellTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00028480 /* Pods-NowBuySell-NowBuySellTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E000284F0 /* Pods-NowBuySell-NowBuySellTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000284E0 /* Pods-NowBuySell-NowBuySellTests-dummy.m */; };
+		46EB2E00028490 /* Pods-Rytgo-RytgoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00028480 /* Pods-Rytgo-RytgoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E000284F0 /* Pods-Rytgo-RytgoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000284E0 /* Pods-Rytgo-RytgoTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -10632,8 +10632,10 @@
 		148D0F9E8C7373FEAF40D800FC5F1BAA /* FirebaseCoreInternal */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCoreInternal; path = FirebaseCoreInternal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D0B1E13C69654196028DD6EDCC3452 /* RNFBApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RNFBApp; path = RNFBApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1936453FF2A7E3A13063C4917C4D5598 /* RCT-Folly */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "RCT-Folly"; path = folly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B48055BEC56B0A28389505145E0D5A9 /* Pods-Rytgo-RytgoTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Rytgo-RytgoTests"; path = Pods_Rytgo_RytgoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E04881EDF02715BD6AC2C6ED3FBB37E /* React-rendererdebug */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-rendererdebug"; path = React_rendererdebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E649614D7644BF68C2F5D4CB3FBF8DC /* React-NativeModulesApple */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-NativeModulesApple"; path = React_NativeModulesApple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2399C1850CBCDEE7D65E907BFBBC4B6B /* Pods-Rytgo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Rytgo"; path = Pods_Rytgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2577F299FCB0A19824FE989BE77B8E8F /* React-jsinspector */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-jsinspector"; path = jsinspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269BE773C9482484B70949A40F4EA525 /* React-RCTSettings */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-RCTSettings"; path = RCTSettings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F955107B98F1B5213C3C9F4CAB1EDB5 /* react-native-maps */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "react-native-maps"; path = react_native_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -14806,26 +14808,26 @@
 		46EB2E000281E0 /* rn-fetch-blob-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "rn-fetch-blob-Info.plist"; sourceTree = "<group>"; };
 		46EB2E000281F0 /* rn-fetch-blob-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "rn-fetch-blob-prefix.pch"; sourceTree = "<group>"; };
 		46EB2E00028200 /* rn-fetch-blob-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "rn-fetch-blob-dummy.m"; sourceTree = "<group>"; };
-		46EB2E000282D0 /* Pods-NowBuySell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NowBuySell.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E000282E0 /* Pods-NowBuySell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NowBuySell.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E000282F0 /* Pods-NowBuySell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NowBuySell-Info.plist"; sourceTree = "<group>"; };
-		46EB2E00028300 /* Pods-NowBuySell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NowBuySell.modulemap"; sourceTree = "<group>"; };
-		46EB2E00028310 /* Pods-NowBuySell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NowBuySell-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E00028330 /* Pods-NowBuySell-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NowBuySell-frameworks.sh"; sourceTree = "<group>"; };
-		46EB2E00028340 /* Pods-NowBuySell-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NowBuySell-resources.sh"; sourceTree = "<group>"; };
-		46EB2E00028350 /* Pods-NowBuySell-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NowBuySell-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E00028360 /* Pods-NowBuySell-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NowBuySell-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E00028370 /* Pods-NowBuySell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NowBuySell-dummy.m"; sourceTree = "<group>"; };
-		46EB2E00028440 /* Pods-NowBuySell-NowBuySellTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NowBuySell-NowBuySellTests.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00028450 /* Pods-NowBuySell-NowBuySellTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NowBuySell-NowBuySellTests.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00028460 /* Pods-NowBuySell-NowBuySellTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NowBuySell-NowBuySellTests-Info.plist"; sourceTree = "<group>"; };
-		46EB2E00028470 /* Pods-NowBuySell-NowBuySellTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NowBuySell-NowBuySellTests.modulemap"; sourceTree = "<group>"; };
-		46EB2E00028480 /* Pods-NowBuySell-NowBuySellTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NowBuySell-NowBuySellTests-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E000284A0 /* Pods-NowBuySell-NowBuySellTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NowBuySell-NowBuySellTests-frameworks.sh"; sourceTree = "<group>"; };
-		46EB2E000284B0 /* Pods-NowBuySell-NowBuySellTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NowBuySell-NowBuySellTests-resources.sh"; sourceTree = "<group>"; };
-		46EB2E000284C0 /* Pods-NowBuySell-NowBuySellTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NowBuySell-NowBuySellTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E000284D0 /* Pods-NowBuySell-NowBuySellTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NowBuySell-NowBuySellTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E000284E0 /* Pods-NowBuySell-NowBuySellTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NowBuySell-NowBuySellTests-dummy.m"; sourceTree = "<group>"; };
+		46EB2E000282D0 /* Pods-Rytgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rytgo.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E000282E0 /* Pods-Rytgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rytgo.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E000282F0 /* Pods-Rytgo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rytgo-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00028300 /* Pods-Rytgo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Rytgo.modulemap"; sourceTree = "<group>"; };
+		46EB2E00028310 /* Pods-Rytgo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rytgo-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00028330 /* Pods-Rytgo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rytgo-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E00028340 /* Pods-Rytgo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rytgo-resources.sh"; sourceTree = "<group>"; };
+		46EB2E00028350 /* Pods-Rytgo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rytgo-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E00028360 /* Pods-Rytgo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rytgo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E00028370 /* Pods-Rytgo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rytgo-dummy.m"; sourceTree = "<group>"; };
+		46EB2E00028440 /* Pods-Rytgo-RytgoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rytgo-RytgoTests.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00028450 /* Pods-Rytgo-RytgoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rytgo-RytgoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00028460 /* Pods-Rytgo-RytgoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rytgo-RytgoTests-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00028470 /* Pods-Rytgo-RytgoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Rytgo-RytgoTests.modulemap"; sourceTree = "<group>"; };
+		46EB2E00028480 /* Pods-Rytgo-RytgoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rytgo-RytgoTests-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E000284A0 /* Pods-Rytgo-RytgoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rytgo-RytgoTests-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E000284B0 /* Pods-Rytgo-RytgoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rytgo-RytgoTests-resources.sh"; sourceTree = "<group>"; };
+		46EB2E000284C0 /* Pods-Rytgo-RytgoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rytgo-RytgoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E000284D0 /* Pods-Rytgo-RytgoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rytgo-RytgoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E000284E0 /* Pods-Rytgo-RytgoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rytgo-RytgoTests-dummy.m"; sourceTree = "<group>"; };
 		47C581450CDB4A6111CB97EEE0711A8C /* FirebaseInstallations-FirebaseInstallations_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "FirebaseInstallations-FirebaseInstallations_Privacy"; path = FirebaseInstallations_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB03FD262B678178A44272143846563 /* FirebaseCoreInternal-FirebaseCoreInternal_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "FirebaseCoreInternal-FirebaseCoreInternal_Privacy"; path = FirebaseCoreInternal_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDA96879D96070EB1983E98E655CBDC /* rn-fetch-blob */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "rn-fetch-blob"; path = rn_fetch_blob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -14854,7 +14856,6 @@
 		8C1EA40EBD30D734BFD7F4BC6E754BB9 /* RNFBMessaging */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RNFBMessaging; path = RNFBMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF63376066E2275FF26820B3A512A9B /* react-native-webview */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "react-native-webview"; path = react_native_webview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F65F9361F2069CF9E9D751272968DE4 /* RNGestureHandler */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RNGestureHandler; path = RNGestureHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A28D0987830092FD2B36E8B21AE09310 /* Pods-NowBuySell-NowBuySellTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NowBuySell-NowBuySellTests"; path = Pods_NowBuySell_NowBuySellTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B49761F8D1EB12585DD45CAA2E489F /* React-logger */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-logger"; path = logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67E85E5F06FDA406D3A1B378BDF0C5C /* React-runtimescheduler */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-runtimescheduler"; path = React_runtimescheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68E5A9B69A3BA0FD52CAF7A354EC93B /* React-RCTNetwork */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-RCTNetwork"; path = RCTNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -14887,7 +14888,6 @@
 		EEDBF403E8E0B3885E65C2741B536BC5 /* React-RCTImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-RCTImage"; path = RCTImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E7C88DFCD460A4B46B913ADEB8A641 /* React-jsiexecutor */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-jsiexecutor"; path = jsireact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BDA69E3BCB0166D49FB679ABADCA00 /* fmt */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = fmt; path = fmt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F56DB87F158456021B17F53C9DA6CBCF /* Pods-NowBuySell */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NowBuySell"; path = Pods_NowBuySell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71EBF73F354B475D465FF6DE9A66707 /* React-RCTBlob */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "React-RCTBlob"; path = RCTBlob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73AA961F4AEFF2B46B00AE435DF6BE3 /* GoogleDataTransport-GoogleDataTransport_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "GoogleDataTransport-GoogleDataTransport_Privacy"; path = GoogleDataTransport_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F958876A082BF810B342435CE3FB5AF6 /* RCTTypeSafety */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RCTTypeSafety; path = RCTTypeSafety.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -15659,8 +15659,8 @@
 				5E4674603A5D5B9215FFA0F8E69F8B71 /* libwebp */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
 				3227F3FC45681D7CEE5D1355A532398A /* nanopb-nanopb_Privacy */,
-				F56DB87F158456021B17F53C9DA6CBCF /* Pods-NowBuySell */,
-				A28D0987830092FD2B36E8B21AE09310 /* Pods-NowBuySell-NowBuySellTests */,
+				2399C1850CBCDEE7D65E907BFBBC4B6B /* Pods-Rytgo */,
+				1B48055BEC56B0A28389505145E0D5A9 /* Pods-Rytgo-RytgoTests */,
 				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
 				3F238BB22C5201CE689CAF2F766AED95 /* PromisesObjC-FBLPromises_Privacy */,
 				1936453FF2A7E3A13063C4917C4D5598 /* RCT-Folly */,
@@ -15744,8 +15744,8 @@
 		46EB2E00000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000282C0 /* Pods-NowBuySell */,
-				46EB2E00028430 /* Pods-NowBuySell-NowBuySellTests */,
+				46EB2E000282C0 /* Pods-Rytgo */,
+				46EB2E00028430 /* Pods-Rytgo-RytgoTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -23714,40 +23714,40 @@
 			path = "../../ios/Pods/Target Support Files/rn-fetch-blob";
 			sourceTree = "<group>";
 		};
-		46EB2E000282C0 /* Pods-NowBuySell */ = {
+		46EB2E000282C0 /* Pods-Rytgo */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00028300 /* Pods-NowBuySell.modulemap */,
-				46EB2E00028360 /* Pods-NowBuySell-acknowledgements.markdown */,
-				46EB2E00028350 /* Pods-NowBuySell-acknowledgements.plist */,
-				46EB2E00028370 /* Pods-NowBuySell-dummy.m */,
-				46EB2E00028330 /* Pods-NowBuySell-frameworks.sh */,
-				46EB2E000282F0 /* Pods-NowBuySell-Info.plist */,
-				46EB2E00028340 /* Pods-NowBuySell-resources.sh */,
-				46EB2E00028310 /* Pods-NowBuySell-umbrella.h */,
-				46EB2E000282E0 /* Pods-NowBuySell.debug.xcconfig */,
-				46EB2E000282D0 /* Pods-NowBuySell.release.xcconfig */,
+				46EB2E00028300 /* Pods-Rytgo.modulemap */,
+				46EB2E00028360 /* Pods-Rytgo-acknowledgements.markdown */,
+				46EB2E00028350 /* Pods-Rytgo-acknowledgements.plist */,
+				46EB2E00028370 /* Pods-Rytgo-dummy.m */,
+				46EB2E00028330 /* Pods-Rytgo-frameworks.sh */,
+				46EB2E000282F0 /* Pods-Rytgo-Info.plist */,
+				46EB2E00028340 /* Pods-Rytgo-resources.sh */,
+				46EB2E00028310 /* Pods-Rytgo-umbrella.h */,
+				46EB2E000282E0 /* Pods-Rytgo.debug.xcconfig */,
+				46EB2E000282D0 /* Pods-Rytgo.release.xcconfig */,
 			);
-			name = "Pods-NowBuySell";
-			path = "Target Support Files/Pods-NowBuySell";
+			name = "Pods-Rytgo";
+			path = "Target Support Files/Pods-Rytgo";
 			sourceTree = "<group>";
 		};
-		46EB2E00028430 /* Pods-NowBuySell-NowBuySellTests */ = {
+		46EB2E00028430 /* Pods-Rytgo-RytgoTests */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00028470 /* Pods-NowBuySell-NowBuySellTests.modulemap */,
-				46EB2E000284D0 /* Pods-NowBuySell-NowBuySellTests-acknowledgements.markdown */,
-				46EB2E000284C0 /* Pods-NowBuySell-NowBuySellTests-acknowledgements.plist */,
-				46EB2E000284E0 /* Pods-NowBuySell-NowBuySellTests-dummy.m */,
-				46EB2E000284A0 /* Pods-NowBuySell-NowBuySellTests-frameworks.sh */,
-				46EB2E00028460 /* Pods-NowBuySell-NowBuySellTests-Info.plist */,
-				46EB2E000284B0 /* Pods-NowBuySell-NowBuySellTests-resources.sh */,
-				46EB2E00028480 /* Pods-NowBuySell-NowBuySellTests-umbrella.h */,
-				46EB2E00028450 /* Pods-NowBuySell-NowBuySellTests.debug.xcconfig */,
-				46EB2E00028440 /* Pods-NowBuySell-NowBuySellTests.release.xcconfig */,
+				46EB2E00028470 /* Pods-Rytgo-RytgoTests.modulemap */,
+				46EB2E000284D0 /* Pods-Rytgo-RytgoTests-acknowledgements.markdown */,
+				46EB2E000284C0 /* Pods-Rytgo-RytgoTests-acknowledgements.plist */,
+				46EB2E000284E0 /* Pods-Rytgo-RytgoTests-dummy.m */,
+				46EB2E000284A0 /* Pods-Rytgo-RytgoTests-frameworks.sh */,
+				46EB2E00028460 /* Pods-Rytgo-RytgoTests-Info.plist */,
+				46EB2E000284B0 /* Pods-Rytgo-RytgoTests-resources.sh */,
+				46EB2E00028480 /* Pods-Rytgo-RytgoTests-umbrella.h */,
+				46EB2E00028450 /* Pods-Rytgo-RytgoTests.debug.xcconfig */,
+				46EB2E00028440 /* Pods-Rytgo-RytgoTests.release.xcconfig */,
 			);
-			name = "Pods-NowBuySell-NowBuySellTests";
-			path = "Target Support Files/Pods-NowBuySell-NowBuySellTests";
+			name = "Pods-Rytgo-RytgoTests";
+			path = "Target Support Files/Pods-Rytgo-RytgoTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -26481,7 +26481,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00028320 /* Pods-NowBuySell-umbrella.h in Headers */,
+				46EB2E00028320 /* Pods-Rytgo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26489,7 +26489,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00028490 /* Pods-NowBuySell-NowBuySellTests-umbrella.h in Headers */,
+				46EB2E00028490 /* Pods-Rytgo-RytgoTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27654,6 +27654,114 @@
 			productReference = E0FE6533198104C97DB047DD5CD8AC67 /* RNDeviceInfo */;
 			productType = "com.apple.product-type.framework";
 		};
+		85B4BC0B1A193105362C14ACD6F19D3C /* Pods-Rytgo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E00028230 /* Build configuration list for PBXNativeTarget "Pods-Rytgo" */;
+			buildPhases = (
+				46EB2E00028270 /* Headers */,
+				46EB2E00028280 /* Sources */,
+				46EB2E00028290 /* Frameworks */,
+				46EB2E000282A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46EB2E00028570 /* PBXTargetDependency */,
+				46EB2E00028590 /* PBXTargetDependency */,
+				46EB2E000285B0 /* PBXTargetDependency */,
+				46EB2E000285D0 /* PBXTargetDependency */,
+				46EB2E000285F0 /* PBXTargetDependency */,
+				46EB2E00028610 /* PBXTargetDependency */,
+				46EB2E00028630 /* PBXTargetDependency */,
+				46EB2E00028650 /* PBXTargetDependency */,
+				46EB2E00028670 /* PBXTargetDependency */,
+				46EB2E00028690 /* PBXTargetDependency */,
+				46EB2E000286B0 /* PBXTargetDependency */,
+				46EB2E000286D0 /* PBXTargetDependency */,
+				46EB2E000286F0 /* PBXTargetDependency */,
+				46EB2E00028710 /* PBXTargetDependency */,
+				46EB2E00028730 /* PBXTargetDependency */,
+				46EB2E00028750 /* PBXTargetDependency */,
+				46EB2E00028770 /* PBXTargetDependency */,
+				46EB2E00028790 /* PBXTargetDependency */,
+				46EB2E000287B0 /* PBXTargetDependency */,
+				46EB2E000287D0 /* PBXTargetDependency */,
+				46EB2E000287F0 /* PBXTargetDependency */,
+				46EB2E00028810 /* PBXTargetDependency */,
+				46EB2E00028830 /* PBXTargetDependency */,
+				46EB2E00028850 /* PBXTargetDependency */,
+				46EB2E00028870 /* PBXTargetDependency */,
+				46EB2E00028890 /* PBXTargetDependency */,
+				46EB2E000288B0 /* PBXTargetDependency */,
+				46EB2E000288D0 /* PBXTargetDependency */,
+				46EB2E000288F0 /* PBXTargetDependency */,
+				46EB2E00028910 /* PBXTargetDependency */,
+				46EB2E00028930 /* PBXTargetDependency */,
+				46EB2E00028950 /* PBXTargetDependency */,
+				46EB2E00028970 /* PBXTargetDependency */,
+				46EB2E00028990 /* PBXTargetDependency */,
+				46EB2E000289B0 /* PBXTargetDependency */,
+				46EB2E000289D0 /* PBXTargetDependency */,
+				46EB2E000289F0 /* PBXTargetDependency */,
+				46EB2E00028A10 /* PBXTargetDependency */,
+				46EB2E00028A30 /* PBXTargetDependency */,
+				46EB2E00028A50 /* PBXTargetDependency */,
+				46EB2E00028A70 /* PBXTargetDependency */,
+				46EB2E00028A90 /* PBXTargetDependency */,
+				46EB2E00028AB0 /* PBXTargetDependency */,
+				46EB2E00028AD0 /* PBXTargetDependency */,
+				46EB2E00028AF0 /* PBXTargetDependency */,
+				46EB2E00028B10 /* PBXTargetDependency */,
+				46EB2E00028B30 /* PBXTargetDependency */,
+				46EB2E00028B50 /* PBXTargetDependency */,
+				46EB2E00028B70 /* PBXTargetDependency */,
+				46EB2E00028B90 /* PBXTargetDependency */,
+				46EB2E00028BB0 /* PBXTargetDependency */,
+				46EB2E00028BD0 /* PBXTargetDependency */,
+				46EB2E00028BF0 /* PBXTargetDependency */,
+				46EB2E00028C10 /* PBXTargetDependency */,
+				46EB2E00028C30 /* PBXTargetDependency */,
+				46EB2E00028C50 /* PBXTargetDependency */,
+				46EB2E00028C70 /* PBXTargetDependency */,
+				46EB2E00028C90 /* PBXTargetDependency */,
+				46EB2E00028CB0 /* PBXTargetDependency */,
+				46EB2E00028CD0 /* PBXTargetDependency */,
+				46EB2E00028CF0 /* PBXTargetDependency */,
+				46EB2E00028D10 /* PBXTargetDependency */,
+				46EB2E00028D30 /* PBXTargetDependency */,
+				46EB2E00028D50 /* PBXTargetDependency */,
+				46EB2E00028D70 /* PBXTargetDependency */,
+				46EB2E00028D90 /* PBXTargetDependency */,
+				46EB2E00028DB0 /* PBXTargetDependency */,
+				46EB2E00028DD0 /* PBXTargetDependency */,
+				46EB2E00028DF0 /* PBXTargetDependency */,
+				46EB2E00028E10 /* PBXTargetDependency */,
+				46EB2E00028E30 /* PBXTargetDependency */,
+				46EB2E00028E50 /* PBXTargetDependency */,
+				46EB2E00028E70 /* PBXTargetDependency */,
+				46EB2E00028E90 /* PBXTargetDependency */,
+				46EB2E00028EB0 /* PBXTargetDependency */,
+				46EB2E00028ED0 /* PBXTargetDependency */,
+				46EB2E00028EF0 /* PBXTargetDependency */,
+				46EB2E00028F10 /* PBXTargetDependency */,
+				46EB2E00028F30 /* PBXTargetDependency */,
+				46EB2E00028F50 /* PBXTargetDependency */,
+				46EB2E00028F70 /* PBXTargetDependency */,
+				46EB2E00028F90 /* PBXTargetDependency */,
+				46EB2E00028FB0 /* PBXTargetDependency */,
+				46EB2E00028FD0 /* PBXTargetDependency */,
+				46EB2E00028FF0 /* PBXTargetDependency */,
+				46EB2E00029010 /* PBXTargetDependency */,
+				46EB2E00029030 /* PBXTargetDependency */,
+				46EB2E00029050 /* PBXTargetDependency */,
+				46EB2E00029070 /* PBXTargetDependency */,
+				46EB2E00029090 /* PBXTargetDependency */,
+			);
+			name = "Pods-Rytgo";
+			productName = Pods_Rytgo;
+			productReference = 2399C1850CBCDEE7D65E907BFBBC4B6B /* Pods-Rytgo */;
+			productType = "com.apple.product-type.framework";
+		};
 		87803597EB3F20FC46472B85392EC4FD /* FirebaseInstallations */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46EB2E000105D0 /* Build configuration list for PBXNativeTarget "FirebaseInstallations" */;
@@ -28351,9 +28459,82 @@
 			productReference = 6771D231F4C8C5976470A369C474B32E /* React-CoreModules */;
 			productType = "com.apple.product-type.framework";
 		};
-		E7EE95879BA64ABE348DED2EA7D4319B /* Pods-NowBuySell-NowBuySellTests */ = {
+		EC55D52694092A9D0E6A78EB01207EB5 /* RCT-Folly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E000283A0 /* Build configuration list for PBXNativeTarget "Pods-NowBuySell-NowBuySellTests" */;
+			buildConfigurationList = 46EB2E00012440 /* Build configuration list for PBXNativeTarget "RCT-Folly" */;
+			buildPhases = (
+				46EB2E00012480 /* Headers */,
+				46EB2E00013550 /* Copy folly/container Public Headers */,
+				46EB2E000137A0 /* Copy folly/container/detail Public Headers */,
+				46EB2E00013C40 /* Copy folly/functional Public Headers */,
+				46EB2E00013CB0 /* Copy folly/hash Public Headers */,
+				46EB2E000142C0 /* Copy folly/memory/detail Public Headers */,
+				46EB2E000143C0 /* Copy folly/net/detail Public Headers */,
+				46EB2E000142F0 /* Copy folly/net Public Headers */,
+				46EB2E000152A0 /* Copy folly/futures Public Headers */,
+				46EB2E00015470 /* Copy folly/futures/detail Public Headers */,
+				46EB2E000154C0 /* Copy folly/executors Public Headers */,
+				46EB2E00015870 /* Copy folly/executors/thread_factory Public Headers */,
+				46EB2E000158C0 /* Copy folly/executors/task_queue Public Headers */,
+				46EB2E00014930 /* Copy folly/concurrency Public Headers */,
+				46EB2E00014960 /* Copy folly/synchronization Public Headers */,
+				46EB2E00015AB0 /* Copy folly/synchronization/detail Public Headers */,
+				46EB2E00015C70 /* Copy folly/io/async Public Headers */,
+				46EB2E00015EE0 /* Copy folly/io Public Headers */,
+				46EB2E00015F70 /* Copy folly/tracing Public Headers */,
+				46EB2E00012660 /* Copy folly Public Headers */,
+				46EB2E000138D0 /* Copy folly/detail Public Headers */,
+				46EB2E00013D60 /* Copy folly/lang Public Headers */,
+				46EB2E00014110 /* Copy folly/memory Public Headers */,
+				46EB2E00015FE0 /* Copy folly/chrono Public Headers */,
+				46EB2E000143F0 /* Copy folly/portability Public Headers */,
+				46EB2E00016040 /* Copy folly/fibers Public Headers */,
+				46EB2E000165B0 /* Copy folly/experimental/bser Public Headers */,
+				46EB2E000166F0 /* Copy folly/experimental/channels/detail Public Headers */,
+				46EB2E000169A0 /* Copy folly/experimental/channels/test Public Headers */,
+				46EB2E000165E0 /* Copy folly/experimental/channels Public Headers */,
+				46EB2E00016C50 /* Copy folly/experimental/coro/detail Public Headers */,
+				46EB2E00017150 /* Copy folly/experimental/crypto/detail Public Headers */,
+				46EB2E00016010 /* Copy folly/experimental/coro Public Headers */,
+				46EB2E00017120 /* Copy folly/experimental/crypto Public Headers */,
+				46EB2E00017260 /* Copy folly/experimental/exception_tracer Public Headers */,
+				46EB2E00017370 /* Copy folly/experimental/flat_combining Public Headers */,
+				46EB2E000173A0 /* Copy folly/experimental/flat_combining/test Public Headers */,
+				46EB2E00017450 /* Copy folly/experimental/io Public Headers */,
+				46EB2E00017540 /* Copy folly/experimental/io/test Public Headers */,
+				46EB2E00017630 /* Copy folly/experimental/observer/detail Public Headers */,
+				46EB2E000176A0 /* Copy folly/experimental/observer Public Headers */,
+				46EB2E00017890 /* Copy folly/experimental/settings/detail Public Headers */,
+				46EB2E000178C0 /* Copy folly/experimental/settings Public Headers */,
+				46EB2E00017910 /* Copy folly/experimental/settings/test Public Headers */,
+				46EB2E00017A60 /* Copy folly/experimental/symbolizer/detail Public Headers */,
+				46EB2E00017A90 /* Copy folly/experimental/symbolizer Public Headers */,
+				46EB2E00017CD0 /* Copy folly/experimental/test Public Headers */,
+				46EB2E00017C60 /* Copy folly/experimental/symbolizer/test Public Headers */,
+				46EB2E00015BE0 /* Copy folly/experimental Public Headers */,
+				46EB2E00012630 /* Copy folly/system Public Headers */,
+				46EB2E00012490 /* Sources */,
+				46EB2E000124A0 /* Frameworks */,
+				46EB2E000124B0 /* Resources */,
+				46EB2E00017E60 /* Create Symlinks to Header Folders */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46EB2E0002A110 /* PBXTargetDependency */,
+				46EB2E0002A0F0 /* PBXTargetDependency */,
+				46EB2E0002A150 /* PBXTargetDependency */,
+				46EB2E0002A130 /* PBXTargetDependency */,
+				46EB2E0002A170 /* PBXTargetDependency */,
+			);
+			name = "RCT-Folly";
+			productName = folly;
+			productReference = 1936453FF2A7E3A13063C4917C4D5598 /* RCT-Folly */;
+			productType = "com.apple.product-type.framework";
+		};
+		EE9F3C64FD59081B37821F648E5963DB /* Pods-Rytgo-RytgoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E000283A0 /* Build configuration list for PBXNativeTarget "Pods-Rytgo-RytgoTests" */;
 			buildPhases = (
 				46EB2E000283E0 /* Headers */,
 				46EB2E000283F0 /* Sources */,
@@ -28454,82 +28635,9 @@
 				46EB2E00029BB0 /* PBXTargetDependency */,
 				46EB2E00029BD0 /* PBXTargetDependency */,
 			);
-			name = "Pods-NowBuySell-NowBuySellTests";
-			productName = Pods_NowBuySell_NowBuySellTests;
-			productReference = A28D0987830092FD2B36E8B21AE09310 /* Pods-NowBuySell-NowBuySellTests */;
-			productType = "com.apple.product-type.framework";
-		};
-		EC55D52694092A9D0E6A78EB01207EB5 /* RCT-Folly */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E00012440 /* Build configuration list for PBXNativeTarget "RCT-Folly" */;
-			buildPhases = (
-				46EB2E00012480 /* Headers */,
-				46EB2E00013550 /* Copy folly/container Public Headers */,
-				46EB2E000137A0 /* Copy folly/container/detail Public Headers */,
-				46EB2E00013C40 /* Copy folly/functional Public Headers */,
-				46EB2E00013CB0 /* Copy folly/hash Public Headers */,
-				46EB2E000142C0 /* Copy folly/memory/detail Public Headers */,
-				46EB2E000143C0 /* Copy folly/net/detail Public Headers */,
-				46EB2E000142F0 /* Copy folly/net Public Headers */,
-				46EB2E000152A0 /* Copy folly/futures Public Headers */,
-				46EB2E00015470 /* Copy folly/futures/detail Public Headers */,
-				46EB2E000154C0 /* Copy folly/executors Public Headers */,
-				46EB2E00015870 /* Copy folly/executors/thread_factory Public Headers */,
-				46EB2E000158C0 /* Copy folly/executors/task_queue Public Headers */,
-				46EB2E00014930 /* Copy folly/concurrency Public Headers */,
-				46EB2E00014960 /* Copy folly/synchronization Public Headers */,
-				46EB2E00015AB0 /* Copy folly/synchronization/detail Public Headers */,
-				46EB2E00015C70 /* Copy folly/io/async Public Headers */,
-				46EB2E00015EE0 /* Copy folly/io Public Headers */,
-				46EB2E00015F70 /* Copy folly/tracing Public Headers */,
-				46EB2E00012660 /* Copy folly Public Headers */,
-				46EB2E000138D0 /* Copy folly/detail Public Headers */,
-				46EB2E00013D60 /* Copy folly/lang Public Headers */,
-				46EB2E00014110 /* Copy folly/memory Public Headers */,
-				46EB2E00015FE0 /* Copy folly/chrono Public Headers */,
-				46EB2E000143F0 /* Copy folly/portability Public Headers */,
-				46EB2E00016040 /* Copy folly/fibers Public Headers */,
-				46EB2E000165B0 /* Copy folly/experimental/bser Public Headers */,
-				46EB2E000166F0 /* Copy folly/experimental/channels/detail Public Headers */,
-				46EB2E000169A0 /* Copy folly/experimental/channels/test Public Headers */,
-				46EB2E000165E0 /* Copy folly/experimental/channels Public Headers */,
-				46EB2E00016C50 /* Copy folly/experimental/coro/detail Public Headers */,
-				46EB2E00017150 /* Copy folly/experimental/crypto/detail Public Headers */,
-				46EB2E00016010 /* Copy folly/experimental/coro Public Headers */,
-				46EB2E00017120 /* Copy folly/experimental/crypto Public Headers */,
-				46EB2E00017260 /* Copy folly/experimental/exception_tracer Public Headers */,
-				46EB2E00017370 /* Copy folly/experimental/flat_combining Public Headers */,
-				46EB2E000173A0 /* Copy folly/experimental/flat_combining/test Public Headers */,
-				46EB2E00017450 /* Copy folly/experimental/io Public Headers */,
-				46EB2E00017540 /* Copy folly/experimental/io/test Public Headers */,
-				46EB2E00017630 /* Copy folly/experimental/observer/detail Public Headers */,
-				46EB2E000176A0 /* Copy folly/experimental/observer Public Headers */,
-				46EB2E00017890 /* Copy folly/experimental/settings/detail Public Headers */,
-				46EB2E000178C0 /* Copy folly/experimental/settings Public Headers */,
-				46EB2E00017910 /* Copy folly/experimental/settings/test Public Headers */,
-				46EB2E00017A60 /* Copy folly/experimental/symbolizer/detail Public Headers */,
-				46EB2E00017A90 /* Copy folly/experimental/symbolizer Public Headers */,
-				46EB2E00017CD0 /* Copy folly/experimental/test Public Headers */,
-				46EB2E00017C60 /* Copy folly/experimental/symbolizer/test Public Headers */,
-				46EB2E00015BE0 /* Copy folly/experimental Public Headers */,
-				46EB2E00012630 /* Copy folly/system Public Headers */,
-				46EB2E00012490 /* Sources */,
-				46EB2E000124A0 /* Frameworks */,
-				46EB2E000124B0 /* Resources */,
-				46EB2E00017E60 /* Create Symlinks to Header Folders */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				46EB2E0002A110 /* PBXTargetDependency */,
-				46EB2E0002A0F0 /* PBXTargetDependency */,
-				46EB2E0002A150 /* PBXTargetDependency */,
-				46EB2E0002A130 /* PBXTargetDependency */,
-				46EB2E0002A170 /* PBXTargetDependency */,
-			);
-			name = "RCT-Folly";
-			productName = folly;
-			productReference = 1936453FF2A7E3A13063C4917C4D5598 /* RCT-Folly */;
+			name = "Pods-Rytgo-RytgoTests";
+			productName = Pods_Rytgo_RytgoTests;
+			productReference = 1B48055BEC56B0A28389505145E0D5A9 /* Pods-Rytgo-RytgoTests */;
 			productType = "com.apple.product-type.framework";
 		};
 		F1E2583679398CB5F4D2B3272E9B198F /* React-perflogger */ = {
@@ -28567,114 +28675,6 @@
 			name = TOCropViewController;
 			productName = TOCropViewController;
 			productReference = 7862C607B7BE0510C2D65193F9B4B4F9 /* TOCropViewController */;
-			productType = "com.apple.product-type.framework";
-		};
-		F4D860D74A1B212654C3BE7C7EA22465 /* Pods-NowBuySell */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E00028230 /* Build configuration list for PBXNativeTarget "Pods-NowBuySell" */;
-			buildPhases = (
-				46EB2E00028270 /* Headers */,
-				46EB2E00028280 /* Sources */,
-				46EB2E00028290 /* Frameworks */,
-				46EB2E000282A0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				46EB2E00028570 /* PBXTargetDependency */,
-				46EB2E00028590 /* PBXTargetDependency */,
-				46EB2E000285B0 /* PBXTargetDependency */,
-				46EB2E000285D0 /* PBXTargetDependency */,
-				46EB2E000285F0 /* PBXTargetDependency */,
-				46EB2E00028610 /* PBXTargetDependency */,
-				46EB2E00028630 /* PBXTargetDependency */,
-				46EB2E00028650 /* PBXTargetDependency */,
-				46EB2E00028670 /* PBXTargetDependency */,
-				46EB2E00028690 /* PBXTargetDependency */,
-				46EB2E000286B0 /* PBXTargetDependency */,
-				46EB2E000286D0 /* PBXTargetDependency */,
-				46EB2E000286F0 /* PBXTargetDependency */,
-				46EB2E00028710 /* PBXTargetDependency */,
-				46EB2E00028730 /* PBXTargetDependency */,
-				46EB2E00028750 /* PBXTargetDependency */,
-				46EB2E00028770 /* PBXTargetDependency */,
-				46EB2E00028790 /* PBXTargetDependency */,
-				46EB2E000287B0 /* PBXTargetDependency */,
-				46EB2E000287D0 /* PBXTargetDependency */,
-				46EB2E000287F0 /* PBXTargetDependency */,
-				46EB2E00028810 /* PBXTargetDependency */,
-				46EB2E00028830 /* PBXTargetDependency */,
-				46EB2E00028850 /* PBXTargetDependency */,
-				46EB2E00028870 /* PBXTargetDependency */,
-				46EB2E00028890 /* PBXTargetDependency */,
-				46EB2E000288B0 /* PBXTargetDependency */,
-				46EB2E000288D0 /* PBXTargetDependency */,
-				46EB2E000288F0 /* PBXTargetDependency */,
-				46EB2E00028910 /* PBXTargetDependency */,
-				46EB2E00028930 /* PBXTargetDependency */,
-				46EB2E00028950 /* PBXTargetDependency */,
-				46EB2E00028970 /* PBXTargetDependency */,
-				46EB2E00028990 /* PBXTargetDependency */,
-				46EB2E000289B0 /* PBXTargetDependency */,
-				46EB2E000289D0 /* PBXTargetDependency */,
-				46EB2E000289F0 /* PBXTargetDependency */,
-				46EB2E00028A10 /* PBXTargetDependency */,
-				46EB2E00028A30 /* PBXTargetDependency */,
-				46EB2E00028A50 /* PBXTargetDependency */,
-				46EB2E00028A70 /* PBXTargetDependency */,
-				46EB2E00028A90 /* PBXTargetDependency */,
-				46EB2E00028AB0 /* PBXTargetDependency */,
-				46EB2E00028AD0 /* PBXTargetDependency */,
-				46EB2E00028AF0 /* PBXTargetDependency */,
-				46EB2E00028B10 /* PBXTargetDependency */,
-				46EB2E00028B30 /* PBXTargetDependency */,
-				46EB2E00028B50 /* PBXTargetDependency */,
-				46EB2E00028B70 /* PBXTargetDependency */,
-				46EB2E00028B90 /* PBXTargetDependency */,
-				46EB2E00028BB0 /* PBXTargetDependency */,
-				46EB2E00028BD0 /* PBXTargetDependency */,
-				46EB2E00028BF0 /* PBXTargetDependency */,
-				46EB2E00028C10 /* PBXTargetDependency */,
-				46EB2E00028C30 /* PBXTargetDependency */,
-				46EB2E00028C50 /* PBXTargetDependency */,
-				46EB2E00028C70 /* PBXTargetDependency */,
-				46EB2E00028C90 /* PBXTargetDependency */,
-				46EB2E00028CB0 /* PBXTargetDependency */,
-				46EB2E00028CD0 /* PBXTargetDependency */,
-				46EB2E00028CF0 /* PBXTargetDependency */,
-				46EB2E00028D10 /* PBXTargetDependency */,
-				46EB2E00028D30 /* PBXTargetDependency */,
-				46EB2E00028D50 /* PBXTargetDependency */,
-				46EB2E00028D70 /* PBXTargetDependency */,
-				46EB2E00028D90 /* PBXTargetDependency */,
-				46EB2E00028DB0 /* PBXTargetDependency */,
-				46EB2E00028DD0 /* PBXTargetDependency */,
-				46EB2E00028DF0 /* PBXTargetDependency */,
-				46EB2E00028E10 /* PBXTargetDependency */,
-				46EB2E00028E30 /* PBXTargetDependency */,
-				46EB2E00028E50 /* PBXTargetDependency */,
-				46EB2E00028E70 /* PBXTargetDependency */,
-				46EB2E00028E90 /* PBXTargetDependency */,
-				46EB2E00028EB0 /* PBXTargetDependency */,
-				46EB2E00028ED0 /* PBXTargetDependency */,
-				46EB2E00028EF0 /* PBXTargetDependency */,
-				46EB2E00028F10 /* PBXTargetDependency */,
-				46EB2E00028F30 /* PBXTargetDependency */,
-				46EB2E00028F50 /* PBXTargetDependency */,
-				46EB2E00028F70 /* PBXTargetDependency */,
-				46EB2E00028F90 /* PBXTargetDependency */,
-				46EB2E00028FB0 /* PBXTargetDependency */,
-				46EB2E00028FD0 /* PBXTargetDependency */,
-				46EB2E00028FF0 /* PBXTargetDependency */,
-				46EB2E00029010 /* PBXTargetDependency */,
-				46EB2E00029030 /* PBXTargetDependency */,
-				46EB2E00029050 /* PBXTargetDependency */,
-				46EB2E00029070 /* PBXTargetDependency */,
-				46EB2E00029090 /* PBXTargetDependency */,
-			);
-			name = "Pods-NowBuySell";
-			productName = Pods_NowBuySell;
-			productReference = F56DB87F158456021B17F53C9DA6CBCF /* Pods-NowBuySell */;
 			productType = "com.apple.product-type.framework";
 		};
 		F7D033C4C128EECAA020990641FA985F /* React-jsinspector */ = {
@@ -28852,8 +28852,8 @@
 				47D2E85A78C25869BB13521D8561A638 /* libwebp */,
 				D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */,
 				55522A91938FF505CFEBEAD2DD85AE2D /* nanopb-nanopb_Privacy */,
-				F4D860D74A1B212654C3BE7C7EA22465 /* Pods-NowBuySell */,
-				E7EE95879BA64ABE348DED2EA7D4319B /* Pods-NowBuySell-NowBuySellTests */,
+				85B4BC0B1A193105362C14ACD6F19D3C /* Pods-Rytgo */,
+				EE9F3C64FD59081B37821F648E5963DB /* Pods-Rytgo-RytgoTests */,
 				2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */,
 				1BFBEDBF7E03729D43C96530EE190825 /* PromisesObjC-FBLPromises_Privacy */,
 				EC55D52694092A9D0E6A78EB01207EB5 /* RCT-Folly */,
@@ -32160,7 +32160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00028380 /* Pods-NowBuySell-dummy.m in Sources */,
+				46EB2E00028380 /* Pods-Rytgo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32168,7 +32168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000284F0 /* Pods-NowBuySell-NowBuySellTests-dummy.m in Sources */,
+				46EB2E000284F0 /* Pods-Rytgo-RytgoTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42306,7 +42306,7 @@
 		};
 		46EB2E00028240 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E000282D0 /* Pods-NowBuySell.release.xcconfig */;
+			baseConfigurationReference = 46EB2E000282D0 /* Pods-Rytgo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
@@ -42319,7 +42319,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NowBuySell/Pods-NowBuySell-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rytgo/Pods-Rytgo-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -42328,7 +42328,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NowBuySell/Pods-NowBuySell.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Rytgo/Pods-Rytgo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -42345,7 +42345,7 @@
 		};
 		46EB2E00028250 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E000282E0 /* Pods-NowBuySell.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E000282E0 /* Pods-Rytgo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
@@ -42358,7 +42358,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NowBuySell/Pods-NowBuySell-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rytgo/Pods-Rytgo-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -42367,7 +42367,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NowBuySell/Pods-NowBuySell.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Rytgo/Pods-Rytgo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -42383,7 +42383,7 @@
 		};
 		46EB2E000283B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00028440 /* Pods-NowBuySell-NowBuySellTests.release.xcconfig */;
+			baseConfigurationReference = 46EB2E00028440 /* Pods-Rytgo-RytgoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -42395,7 +42395,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NowBuySell-NowBuySellTests/Pods-NowBuySell-NowBuySellTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rytgo-RytgoTests/Pods-Rytgo-RytgoTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -42404,7 +42404,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NowBuySell-NowBuySellTests/Pods-NowBuySell-NowBuySellTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Rytgo-RytgoTests/Pods-Rytgo-RytgoTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -42421,7 +42421,7 @@
 		};
 		46EB2E000283C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00028450 /* Pods-NowBuySell-NowBuySellTests.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E00028450 /* Pods-Rytgo-RytgoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -42433,7 +42433,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NowBuySell-NowBuySellTests/Pods-NowBuySell-NowBuySellTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rytgo-RytgoTests/Pods-Rytgo-RytgoTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -42442,7 +42442,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NowBuySell-NowBuySellTests/Pods-NowBuySell-NowBuySellTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Rytgo-RytgoTests/Pods-Rytgo-RytgoTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -43404,7 +43404,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E00028230 /* Build configuration list for PBXNativeTarget "Pods-NowBuySell" */ = {
+		46EB2E00028230 /* Build configuration list for PBXNativeTarget "Pods-Rytgo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46EB2E00028250 /* Debug */,
@@ -43413,7 +43413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E000283A0 /* Build configuration list for PBXNativeTarget "Pods-NowBuySell-NowBuySellTests" */ = {
+		46EB2E000283A0 /* Build configuration list for PBXNativeTarget "Pods-Rytgo-RytgoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46EB2E000283C0 /* Debug */,

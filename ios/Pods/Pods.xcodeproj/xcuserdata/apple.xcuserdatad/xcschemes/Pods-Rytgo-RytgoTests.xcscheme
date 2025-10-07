@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4D860D74A1B212654C3BE7C7EA22465"
-               BuildableName = "Pods_NowBuySell.framework"
-               BlueprintName = "Pods-NowBuySell"
+               BlueprintIdentifier = "EE9F3C64FD59081B37821F648E5963DB"
+               BuildableName = "Pods_Rytgo_RytgoTests.framework"
+               BlueprintName = "Pods-Rytgo-RytgoTests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
