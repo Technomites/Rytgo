@@ -18,7 +18,7 @@ const TermCondidtion = props => {
       <BackHeader title={heading} onPress={() => props.navigation.goBack()} />
       <WebView
         source={{
-          uri: url + '&Lang=' + languagee,
+          uri: url,
         }}
         injectedJavaScript={`document.querySelector('.nofixed').style.display = 'none'`}
         onLoadStart={() => setloading(true)}

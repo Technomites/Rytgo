@@ -179,7 +179,9 @@ const PropertyFilter = ({navigation, route}) => {
     FilterAllfaeturedProperty(propertyData)
       .then(res => {
         if (res.status === 'success') {
-          console.log("osama data" + JSON.stringify(res.data))
+          console.log("osama dataa" + JSON.stringify(res))
+          console.log("propertyData" + JSON.stringify(propertyData))
+
           //setloading(false);
           //alert('api call');
           // console.log(

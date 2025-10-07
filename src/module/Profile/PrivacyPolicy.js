@@ -20,10 +20,7 @@ const PrivacyPolicy = props => {
       />
       <WebView
         source={{
-          uri:
-            'https://portal.rytgo.com/privacy_mb?View=Mobile' +
-            '&Lang=' +
-            languagee,
+          uri:"https://rytgo.com/en/privacy-policy"
         }}
         injectedJavaScript={`document.querySelector('.nofixed').style.display = 'none'`}
         onLoadStart={() => setloading(true)}

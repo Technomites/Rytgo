@@ -112,10 +112,7 @@ const Home = ({ navigation, route }) => {
   const [errorValidation, seterrorValidation] = useState('');
 
   const [bannerImages, setbannerImages] = useState([
-    'https://source.unsplash.com/1024x768/?nature',
-    'https://source.unsplash.com/1024x768/?water',
-    'https://source.unsplash.com/1024x768/?girl',
-    'https://source.unsplash.com/1024x768/?tree',
+  
   ]);
 
   const [bannerdescripation, setbannerdescripation] = useState('');

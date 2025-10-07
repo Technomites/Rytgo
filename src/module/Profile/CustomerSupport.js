@@ -20,11 +20,8 @@ const CustomerSupport = props => {
       />
       <WebView
         source={{
-          uri:
-            'https://portal.rytgo.com/CustomerSupport_mb?View=Mobile' +
+          uri:'https://rytgo.com/en/customer-support'
             
-            '&Lang=' +
-            languagee,
         }}
         injectedJavaScript={`document.querySelector('.nofixed').style.display = 'none'`}
         onLoadStart={() => setloading(true)}

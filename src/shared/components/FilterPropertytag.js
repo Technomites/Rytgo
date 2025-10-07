@@ -1,7 +1,7 @@
 //import liraries
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-// import RadioButton from 'react-native-radio-button';
+import RadioButton from 'react-native-radio-button';
 import {useRtlContext} from 'react-native-easy-localization-and-rtl';
 import { FontFamily } from '../themes/theme';
 
@@ -19,7 +19,7 @@ const FilterPropertytag = props => {
           ...RtlStyles.containerRow,
         }}>
         <View style={{flexDirection: 'row', ...RtlStyles.containerRow}}>
-          {/* <RadioButton
+          <RadioButton
             size={10}
             animation={'bounceIn'}
             isSelected={props.index === props.selectCityId ? true : false}
@@ -28,7 +28,7 @@ const FilterPropertytag = props => {
               //alert(props.index);
               props.onSeletCity(props.index);
             }}
-          /> */}
+          />
           <Text
             style={{
               color: '#989898',

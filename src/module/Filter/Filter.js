@@ -2216,7 +2216,6 @@ const Filter = ({ navigation, route }) => {
   }, [carFeature]);
 
   const SetPropertyFilter = () => {
-    alert('p')
     // return
     dispatch(Filteraction.propertyFilter(propertyFilterObj));
     setTimeout(() => {
