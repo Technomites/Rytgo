@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -22,7 +22,7 @@ import CreateClassHeader from '../../shared/components/CreateClassHeader';
 import MyInput from '../../shared/components/MyInput';
 import AuthButton from '../../shared/components/AuthButton';
 import ImagePicker from 'react-native-image-crop-picker';
-import {UsereProfileData} from '../../shared/Constant/Constant';
+import { UsereProfileData } from '../../shared/Constant/Constant';
 import BackHeader from '../../shared/components/BackHeader';
 import RNFetchBlob from 'rn-fetch-blob';
 import PopUpModel from '../../shared/components/PopUp';
@@ -37,8 +37,8 @@ import {
   getuserProfile,
 } from '../../shared/ApiMiddleware/api';
 
-import {_setUsereProfileData} from '../../shared/Constant/Constant';
-import {localizedString} from '../../shared/localization/localization';
+import { _setUsereProfileData } from '../../shared/Constant/Constant';
+import { localizedString } from '../../shared/localization/localization';
 import { colors, FontFamily } from '../../shared/themes/theme';
 
 const AccountInfo = props => {
@@ -52,6 +52,9 @@ const AccountInfo = props => {
     'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   );
   const [popupvisble, setIspopupvisble] = useState(false);
+  const [popupvisbleError, setIspopupvisbleError] = useState(false);
+  const [errorValidation, seterrorValidation] = useState('')
+
   const [loading, setloading] = useState(false);
   const [IsnumberChanged, setIsnumberChanged] = useState(false);
 
@@ -136,15 +139,7 @@ const AccountInfo = props => {
     await AsyncStorage.setItem('ProfileData', JSON.stringify(data));
     setloading(false);
     setIspopupvisble(true);
-    setTimeout(() => {
-      setIspopupvisble(false);
-      //console.log(IsnumberChanged);
-      // if (IsnumberChanged) {
-      //   console.log(IsnumberChanged);
-      //   setIsnumberChanged(false);
-      //   props.navigation.navigate('SignInOptpVerfication');
-      // }
-    }, 600);
+
   };
 
   // const userProfileImage = (token, pickImage) => {
@@ -324,7 +319,7 @@ const AccountInfo = props => {
 
   return (
     <SafeAreaView
-      style={{width: '100%', height: '100%', backgroundColor: '#F1F3F5'}}>
+      style={{ width: '100%', height: '100%', backgroundColor: '#F1F3F5' }}>
       {/* <ScrollView style={{flex: 1, width: '100%'}}> */}
       <Loader show={loading} />
       <BackHeader
@@ -339,6 +334,16 @@ const AccountInfo = props => {
         onPress={() => {
           //setFeedback('');
           setIspopupvisble(false);
+        }}
+      />
+      <PopUpModel
+        visible={popupvisbleError}
+        message={errorValidation}
+        Success={false}
+        btntext="Okay"
+        onPress={() => {
+          seterrorValidation('')
+          setIspopupvisbleError(false);
         }}
       />
       {/* <StatusBar hidden={true} /> */}
@@ -381,7 +386,7 @@ const AccountInfo = props => {
               //marginLeft: 40,
             }}>
             <Image
-              source={{uri: Imgeuri}}
+              source={{ uri: Imgeuri }}
               style={{
                 width: 126,
                 height: 126,
@@ -391,7 +396,7 @@ const AccountInfo = props => {
             />
             <TouchableOpacity
               onPress={imagePicker}
-              style={{left: -80, top: 60}}>
+              style={{ left: -80, top: 60 }}>
               {/* </View>style={Styles.imagePickTile}> */}
               {/* <Image
                 resizeMode="contain"
@@ -420,7 +425,7 @@ const AccountInfo = props => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <View style={{width: '100%', marginTop: 10, marginBottom: 20}}>
+            <View style={{ width: '100%', marginTop: 10, marginBottom: 20 }}>
               {/* Title */}
               <MyInput
                 formTitle={localizedString.nameInput}
@@ -452,7 +457,7 @@ const AccountInfo = props => {
                 maxlength={9}
                 value={number}
 
-                //value="+971"
+              //value="+971"
               />
             </View>
           </View>
@@ -510,8 +515,10 @@ const AccountInfo = props => {
                         console.log(err);
                       });
                   } else {
-                    alert('error ot save');
-                    //setIspopupvisble(true);
+                   seterrorValidation(res.message)
+                    setloading(false);
+
+                    setIspopupvisbleError(true);
                   }
                 })
                 .catch(err => {
@@ -590,7 +597,7 @@ const styleSheet = StyleSheet.create({
   },
   ClassNameText: {
     fontSize: 13,
-    fontFamily:FontFamily.Bold,
+    fontFamily: FontFamily.Bold,
     color: '#111111',
     opacity: 0.4,
   },

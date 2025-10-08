@@ -44,7 +44,7 @@ const Help = props => {
             onPress={() =>
               props.navigation.navigate('TermCondidtion', {
                 heading: localizedString.aboutUs,
-                url: 'https://rytgo.com/en/about-us',
+                url: 'https://rytgo.com/en/about-us?mobileview=true',
               })
             }
             style={{...styles.tileContainer, ...RtlStyles.containerRow}}>
@@ -86,7 +86,7 @@ const Help = props => {
             onPress={() =>
               props.navigation.navigate('TermCondidtion', {
                 heading: localizedString.termcondidtionText,
-                url: 'https://rytgo.com/en/terms-and-conditions',
+                url: 'https://rytgo.com/en/terms-and-conditions?mobileview=true',
               })
             }
             style={{...styles.tileContainer, ...RtlStyles.containerRow}}>

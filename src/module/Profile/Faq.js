@@ -21,7 +21,7 @@ const Faq = props => {
       <WebView
         source={{
           // https://nowbuysell.com/faqs_mb?View=Mobile&Lang=en
-          uri:'https://rytgo.com/en//faqs'
+          uri:'https://rytgo.com/en//faqs?mobileview=true'
         }}
         //injectedJavaScript={`document.querySelector('.nofixed').style.display = 'none'`}
         onLoadStart={() => setloading(true)}

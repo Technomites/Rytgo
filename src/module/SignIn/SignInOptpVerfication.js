@@ -1,19 +1,15 @@
-//import liraries
+// import libraries
 import React, {useEffect, useRef, useState} from 'react';
 import {
   View,
   StyleSheet,
   Image,
   ImageBackground,
-  TextInput,
-  ScrollView,
   TouchableOpacity,
 } from 'react-native';
 import Text from '../../shared/components/DerivedText';
-import FlatButton from '../../shared/components/FlatButton';
-import Input from '../../shared/components/Input';
 import {colors, FontFamily} from '../../shared/themes/theme';
-import OTPInputView from '@twotalltotems/react-native-otp-input';
+import {OtpInput} from 'react-native-otp-entry'; // ✅ new package
 import {verifyOtp, ResendOtp} from '../../shared/ApiMiddleware/api';
 import {localizedString} from '../../shared/localization/localization';
 import Loader from '../../shared/components/Loader';
@@ -21,31 +17,30 @@ import Loader from '../../shared/components/Loader';
 // create a component
 const SignInOptpVerfication = ({navigation, route}) => {
   const [errorValidation, seterrorValidation] = useState('');
-  const [code, settcode] = useState('');
+  const [code, setCode] = useState('');
   const [loading, setloading] = useState(false);
 
   const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(60);
-  const [timer, setotpTimer] = useState(true);
-  const inputEl = useRef(null);
+
+  const {phoneNo, name} = route.params;
+
   const NavigateToNextScreen = () => {
     navigation.replace('Mytab');
   };
-  const OtpVerify = codeee => {
-    //console.log(phoneNo);
+
+  const OtpVerify = otpCode => {
     setloading(true);
     setTimeout(() => {
-      settcode('');
+      setCode('');
     }, 300);
 
     const userData = {
-      // future replace Contact field  phoneNo
       Contact: phoneNo,
-      otp: codeee,
+      otp: otpCode,
     };
     verifyOtp(userData)
       .then(res => {
-        //console.log(' res  osama' + JSON.stringify(res));
         setloading(false);
         if (res.status === 'success') {
           if (name === 'profile') {
@@ -59,39 +54,31 @@ const SignInOptpVerfication = ({navigation, route}) => {
       })
       .catch(err => {
         console.log(err);
+        setloading(false);
       });
   };
 
   const ResendVerify = () => {
-    //console.log(phoneNo);
-
     ResendOtp(phoneNo)
       .then(res => {
-        //console.log(' res  osama' + JSON.stringify(res));
         if (res.status === 'success') {
           seterrorValidation('');
           setMinutes(1);
           setSeconds(60);
         } else if (res.status === 'error') {
-          seterrorValidation('Failed to sent OTP');
+          seterrorValidation('Failed to send OTP');
         }
       })
       .catch(err => {
         console.log(err);
       });
   };
-  useEffect(() => {
-    setTimeout(() => {
-      inputEl.current.focusField(0);
-    }, 500);
-  }, []);
 
   useEffect(() => {
     let myInterval = setInterval(() => {
       if (seconds > 0) {
         setSeconds(seconds - 1);
-      }
-      if (seconds === 0) {
+      } else if (seconds === 0) {
         if (minutes === 0) {
           clearInterval(myInterval);
         } else {
@@ -100,13 +87,10 @@ const SignInOptpVerfication = ({navigation, route}) => {
         }
       }
     }, 1000);
-    return () => {
-      clearInterval(myInterval);
-    };
-  });
-  const {phoneNo, name} = route.params;
+    return () => clearInterval(myInterval);
+  }, [seconds, minutes]);
+
   return (
-    // <ScrollView>
     <View style={styles.container}>
       <Loader show={loading} />
       <View style={styles.topContainer}>
@@ -116,6 +100,7 @@ const SignInOptpVerfication = ({navigation, route}) => {
           source={require('../../shared/assests/splash/icon.png')}
         />
       </View>
+
       <View style={styles.bottomContainer}>
         <ImageBackground
           resizeMode="stretch"
@@ -126,16 +111,13 @@ const SignInOptpVerfication = ({navigation, route}) => {
             <Text style={styles.verificationText}>
               {localizedString.verificationheading}
             </Text>
+
             <View style={{width: '100%', flexDirection: 'row'}}>
               <Text
                 style={{fontSize: 14, color: colors.textColor, marginLeft: 20}}>
                 {'+' + phoneNo}
-                {/* 03323669609 */}
               </Text>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.push('SignUp');
-                }}>
+              <TouchableOpacity onPress={() => navigation.push('SignUp')}>
                 <Image
                   resizeMode="stretch"
                   style={{width: 14, height: 14, marginLeft: 6, marginTop: 4}}
@@ -145,62 +127,32 @@ const SignInOptpVerfication = ({navigation, route}) => {
             </View>
 
             <View style={styles.codeBtnContainer}>
-              <View
-                style={{
-                  width: '89%',
-                  //backgroundColor: 'green',
-                  justifyContent: 'center',
-                }}>
-                <Text style={{color: '#19191990'}}>
-                  {' '}
-                  {localizedString.codetext}{' '}
-                </Text>
-                <OTPInputView
-                  ref={inputEl}
-                  style={{
-                    width: '104%',
-                    height: 80,
-                    backgroundColor: 'rgba(0,0,0,0)',
-                    opacity: 0.7,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                  pinCount={4}
-                  code={code}
-                  // code={this.state.code} //You can supply this prop or not. The component will be used as a controlled / uncontrolled component respectively.
-                  // onCodeChanged = {code => { this.setState({code})}}
-                  autoFocusOnLoad={false}
-                  codeInputFieldStyle={styles.codeinput}
-                  codeInputHighlightStyle={{borderColor: colors.blue}}
-                  //clearInputs={isEmptyString(code)}
-                  onCodeChanged={code => {
-                    settcode(code);
-                  }}
-                  onCodeFilled={code => {
-                    console.log(`Code is ${code}, you are good to go!`);
-                    OtpVerify(code);
-                  }}
-                />
-              </View>
-              {/* <FlatButton
-                label={localizedString.proceedHolder}
-                buttonStyle={{
-                  width: '90%',
-                  backgroundColor: colors.blue,
-                  paddingVertical: 14,
+              <Text style={{color: '#19191990'}}>
+                {localizedString.codetext}
+              </Text>
+
+              {/* ✅ NEW OTP COMPONENT */}
+              <OtpInput
+                numberOfDigits={4}
+                focusColor={colors.blue}
+                onTextChange={setCode}
+                onFilled={OtpVerify}
+                theme={{
+                  containerStyle: {marginVertical: 10},
+                  pinCodeContainerStyle: styles.codeinput,
+                  pinCodeTextStyle: {color: 'black', fontSize: 20},
                 }}
-                labelStyle={{fontSize: 14, textTransform: 'uppercase'}}
-                onPress={NavigateToNextScreen}></FlatButton> */}
-              <TouchableOpacity
-                //style={styles.button}
-                onPress={ResendVerify}>
+              />
+
+              <TouchableOpacity onPress={ResendVerify}>
                 <Text style={{color: '#19191990'}}>
                   {localizedString.resendCode}
                 </Text>
               </TouchableOpacity>
+
               <Text style={{fontWeight: 'bold', color: colors.textColor}}>
                 {minutes === 0 && seconds === 0 ? (
-                  <Text> 0 : 0</Text>
+                  <Text>0 : 0</Text>
                 ) : (
                   <Text>
                     {' '}
@@ -209,24 +161,16 @@ const SignInOptpVerfication = ({navigation, route}) => {
                 )}
               </Text>
             </View>
-            <Text
-              style={{
-                textAlign: 'center',
-                fontSize: 11,
-                color: 'red',
-                fontFamily: FontFamily.SemiBold,
-                marginBottom: 5,
-              }}>
-              {errorValidation}
-            </Text>
+
+            <Text style={styles.errorText}>{errorValidation}</Text>
           </View>
         </ImageBackground>
       </View>
     </View>
-    // </ScrollView>
   );
 };
 
+// styles
 const styles = StyleSheet.create({
   container: {
     width: '100%',
@@ -246,20 +190,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bottomContainer: {
-    //height: '50%',
-    //flex: 1,
-    //height: 520,
     height: '70%',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    //backgroundColor: 'green',
   },
   backgroundImg: {
     width: '100%',
     height: '80%',
     justifyContent: 'center',
-    //alignItems: 'center',
     marginTop: 100,
   },
   codeBtnContainer: {
@@ -267,7 +206,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    //backgroundColor: 'red',
   },
   buttonText: {
     fontSize: 23,
@@ -275,39 +213,27 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginHorizontal: 21,
   },
-
   verificationText: {
     fontSize: 14,
     color: colors.textColor,
     marginHorizontal: 21,
   },
-  borderStyleBase: {
-    width: 30,
-    height: 45,
-  },
-
-  borderStyleHighLighted: {
-    borderColor: '#03DAC6',
-  },
-
-  underlineStyleBase: {
-    width: 30,
-    height: 45,
-    borderWidth: 0,
-    borderBottomWidth: 1,
-  },
-
-  underlineStyleHighLighted: {
-    borderColor: colors.blue,
-  },
   codeinput: {
     borderRadius: 13,
     borderWidth: 1,
     borderColor: '#19191933',
-    height: '70%',
-    width: 70,
-    marginRight: 7,
-    color: 'black',
+    height: 60,
+    width: 65,
+    marginHorizontal: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  errorText: {
+    textAlign: 'center',
+    fontSize: 11,
+    color: 'red',
+    fontFamily: FontFamily.SemiBold,
+    marginBottom: 5,
   },
 });
 

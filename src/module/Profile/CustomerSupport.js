@@ -20,7 +20,7 @@ const CustomerSupport = props => {
       />
       <WebView
         source={{
-          uri:'https://rytgo.com/en/customer-support'
+          uri:'https://rytgo.com/en/customer-support?mobileview=true'
             
         }}
         injectedJavaScript={`document.querySelector('.nofixed').style.display = 'none'`}
